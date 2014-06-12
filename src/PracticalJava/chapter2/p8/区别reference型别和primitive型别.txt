@@ -1,0 +1,13 @@
+区别reference型别和primitive型别
+
+
+Java提供了两种截然不同的型别：reference（引用）型别和primitive（基本）型别，后者又称为内置型别。
+每一种primitive型别分别拥有相应的包装类（wrapper classes）。
+
+int i = 5;
+Integer j = new Integer(10);
+
+这两个变量都存储在局部变量表，它们的操作都在Java操作数栈（stack）中进行。
+不论是基本型别int或引用型别，它们都在stack中占据32bits空间，但Integer对象在stack中记录的并不是对象本身，而是对象的reference。
+
+所有Java对象都是通过对象引用来访问的，那是某种形式的指针，该指针指向heap（堆）中的某块区域，heap则为对象的生存提供了真实存储场所。

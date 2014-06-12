@@ -1,0 +1,6 @@
+不要从try区段中返回
+
+
+当执行return语句的时候，会立刻离开执行中的函数。但是在Java语言中，一旦finally出现，这种观点便不再成立。
+try区段中的break或continue语句也可能使控制权进入finally区段。
+所以，不要在try区域中使用return、break或continue语句，如果无法避免，一定要确保finally的存在不会改变函数返回值。

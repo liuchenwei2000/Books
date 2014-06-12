@@ -1,0 +1,18 @@
+运用interfaces支持多重继承
+
+
+Java不支持实现上的多重继承，但它支持接口上的多重继承。换言之，Java class不能扩展（extend）多个classes，却可实现（implement）多个interfaces。
+
+术语interface不但和“interface声明式”的概念密切相关，也可泛指“某个class通过其函数所展现给外界的接口”。
+
+和class颇为相似，interface表现出的是个reference型别，代表一组函数签名（signatures）和预期行为。interface中的每一个函数的返回型别和签名式（signatures），描绘出该函数未来的行为方式。
+
+
+关于标识接口
+
+标识接口是不含任何函数的一种interface，用来表示实现此接口的任何class一定具有某种属性（性质，property）。
+
+标识接口应当提供完备文档，说明实现此接口之class应当表现出什么样的属性。如此一来，一旦想实现某个标识接口，就知道该如何编码，由标识接口指定的属性也就因此得以体现。
+
+
+和class一样，interface声明的是个reference型别。因此如果某个class实现了某个interface，该class object也是那个interface的一个实例（instance）。

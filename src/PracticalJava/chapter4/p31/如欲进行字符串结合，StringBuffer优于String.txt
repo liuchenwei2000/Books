@@ -1,0 +1,8 @@
+如欲进行字符串结合，StringBuffer优于String
+
+
+String用来表示那些建立后就不再改变的字符序列，其对象是不可变的(immutable)。
+StringBuffer用来表示内容可变的字符序列，提供一些函数用来修改底部字符序列的内容。
+这两个类之间的关键差异在于，执行单纯的字符串结合时，StringBuffer比String快很多。
+
+StringBuffer的结合操作比String快数百倍，所以应该尽可能使用StringBuffer进行这类操作。

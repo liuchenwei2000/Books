@@ -1,0 +1,8 @@
+实现clone()时记得调用super.clone()
+
+
+对于支持克隆的类而言，其操作中必须调用Object类中的clone()，这只要在clone()实现代码中调用super.clone()即可。
+
+clone()之中首先必须调用super.clone()，可确保Object.clone()最终会被调用，因而使得克隆件得以被正确的构建出来。
+Object.clone()会创建一个正确型别的新对象，并执行浅克隆，亦即从被克隆对象复制所有值域到新对象上。
+即使需要深克隆，仍然需要调用Object.clone()函数，才能创建对象的正确型别，然后再进行深克隆。

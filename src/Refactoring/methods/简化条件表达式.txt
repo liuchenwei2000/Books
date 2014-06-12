@@ -1,0 +1,22 @@
+                                            简 化 条 件 表 达 式 
+1，Decompose Conditional(分解条件式)
+将一个复杂的条件(if-else)语句的每个分支中分别提炼出独立函数
+2，Consolidate Conditional Expression(合并条件式)
+若某些条件式返回相同的结果，则将这些条件式合并为一个条件式并提炼成一个独立的函数。
+3，Consolidate Duplicate Conditional Fragments(合并重复的条件片段)
+若在条件式的每个分支上都有着相同的一段代码则将这段重复代码搬移到条件式之外。
+4，Remove Control Flag(移除控制标记)
+在一系列布尔表达式中，某个变量带有 控制标记 的作用，以break或者return语句取代控制标记
+5，Replace Nested Conditional with Guard Clauses(以卫语句取代嵌套条件式)
+卫语句：某个条件极其罕见，那就应该单独检查该条件并在其为真的时候及时返回，这样的单独检查被称为卫语句。
+6，Replace Conditional with Polymorphism(以多态取代条件式)
+若存在某个条件式，它根据对象型别的不同而选择不同的行为，将这个条件式的每个分支放进一个子类内的覆盖函数中，然后将原始函数声明为抽象函数。
+7，Introduce Null Object(引入null对象)
+将null value(无效值)替换为null object(无效物)，即将系统的null替换为自定义的null对象。
+这样可以使得这个null对象可以正常的调用各个方法而不会有空指针异常。null objects一定是常量，
+它们的任何成分都不会发生变化，所以要用单例模式来实现。
+作法：
+为源类建立一个子类(null class)，使其行为像源类的null版本，在源类和子类中都加上isNull函数，前者返回false后者返回true。
+找出所有所求源对象却得到一个null的地方，修改这些地方，使它们改而获得一个null object，找出所有将源对象和null最比较的地方，
+修改这些地方，使它们调用isNull方法进行判断。找出这样的程序点：如果对象不是null做A动作，否则做B动作，
+对于每一个这种程序点，在null class中覆盖A动作，使其行为和B动作相同，最后删除对象是否等于null的条件测试。

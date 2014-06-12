@@ -1,0 +1,13 @@
+异常控制流机制
+
+
+一旦某个异常诞生，控制流立即转移到下面三者之一：
+catch block（捕获区段）
+finally block（终结区段）
+calling method（调用端）
+
+如果同时存在catch区段和finally区段，则控制流会先转移到catch区段，然后再跳转到finally区段。
+如果没有catch区段，控制流便转移到finally区段。
+
+如果函数正常结束，或因异常被迫退出，该函数创建的所有对象都会自动被解除引用。
+因此不需要手工对这些object references解除引用，然而必须明确清理非内存资源。

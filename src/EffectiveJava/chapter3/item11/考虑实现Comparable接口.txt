@@ -1,0 +1,44 @@
+                                                             考虑实现Comparable接口
+
+compareTo方法在Object中并没有被声明。相反，它是java.lang.Comparable接口中唯一的方法。
+compareTo方法允许进行简单的相等比较，也允许执行顺序比较。
+一个类实现了Comparable接口，就表明它的实例具有内在的排序关系，若一个数组中的对象实现了Comparable接口，则对这个数组进行排序非常简单：Arrays.sort(array);
+
+一旦类实现了Comparable接口，它就可以跟许多泛型算法以及依赖于该接口的集合类实现进行协作。
+Java平台库中的所有值类(value class)都实现了这个接口。
+如果一个值类，它具有非常明显的内在排序关系，比如按字母表顺序、按数值顺序或者按年代顺序，那么几乎总是应该考虑实现这个接口。
+
+下面是Comparable接口的规范：
+
+将当前这个对象与指定的对象进行顺序比较。当该对象小于、等于或者大于指定对象的时候，分别返回一个负整数、零或者正整数。
+如果由于指定对象的类型而使得无法进行比较，则抛出ClassCastException。
+
+记号sgn(expression)表示数学上的符号函数，它根据expression的值为负数、零和正数，分别返回-1、0和1。
+
+1，必须保证对于所有的x和y，满足sgn(x.compareTo(y)) == -sgn(y.compareTo(x))。
+这也暗示着，当x.compareTo(y)抛出一个异常的时候，y.compareTo(x)也必须抛出一个异常。
+
+2，必须保证这个比较关系是可传递的：
+x.compareTo(y)>0 && y.compareTo(z)>0 则暗示着 x.compareTo(z)。
+
+3，必须保证x.compareTo(y) == 0暗示着：
+对于所有的z，sgn(x.compareTo(z)) == sgn(y.compareTo(z))。
+
+4，强烈建议(x.compareTo(y) == 0) == (x.equals(y))，但这不是严格要求。
+一般而言，任何实现了Comparable接口的类，若违反了这个条件，应该明确予以说明。
+比如：注意：该类具有内在的排序功能，但是与equals不一致。
+与equals不同的是，在跨越不同类的时候，compareTo可以不做比较，直接抛出ClassCastException即可。
+
+注意：如果一个有序集合(sorted collection)包含了该类的元素，则这个集合可能无法遵守某些集合接口的通用约定。
+这是因为，对于这些接口的通用约定是按照equals方法来定义的，但是有序集合使用了compareTo方法而不是equals方法施加的相等测试。
+比如将new BigDecimal("1")和new BigDecimal("2")这两个对象加入到HashSet中，则集合中包含两个对象；而将这两个对象加入到TreeSet中，则集合中只包含一个对象。
+
+
+下面是实现Comparable接口的指导意见：
+
+1，比较对象引用域可以通过递归的调用compareTo方法来实现。
+如果一个域没有实现Comparable接口，或者需要使用一个自定义的排序关系，那么可以使用一个显式的Comparator进行比较。
+2，比较原语类型的域，可以使用关系操作符<、>和=。
+3，比较数组域时，可以把这些指导原则应用到每一个元素上。
+4，如果一个类有多个关键域，则要从最关键的域开始比较，逐步向下进行。
+如果有一个域的比较产生了非零的结果，则整个比较操作结束，并返回结果。否则要继续比较次关键的域……如果所有的域都是相等的，则对象是相等的，返回零。

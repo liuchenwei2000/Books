@@ -1,0 +1,23 @@
+审慎的定义和实现immutable classes(不可变类)
+
+
+immutable object(不可变对象)是面向对象程序设计中颇具价值且必要的一种构件，因为有时候会希望禁止某个对象被改动内容。
+
+immutable object是一种一旦构建好就不会再变化的object，在其生存期间不可被改变内容。immutable classes通常用来表述字符串、颜色和数字。
+
+immutable object提供了极具价值的服务。由于它们保证自己的状态从构建之后就一定不会改变，因此它们天生具备线程安全性。
+
+
+class的定义和实现多方面合作才可能造就不变性：
+1.将class中的所有数据声明为private。
+2.只提供取值函数（getter），不提供设值函数（setter）。
+3.声明class为final。
+4.在构造函数中设定class内含的所有instance数据，必须确保这个class没有任何函数会改变内部数据。
+5.从获取器返回mutable objects的引用之前，先克隆那些mutable objects。
+6.将传递给构造函数之mutable objects的引用先克隆一份。
+
+
+对于5和6，解释如下：
+实现immutable class时，必须对传入或传出之mutable objects(可变对象)进行克隆动作。如果一个object及其引用的所有mutable objects都不会被改变，则该object便为恒常不变的。如果不实施克隆动作，那对象不变性就得不到保证。这是因为别的地方可能会保留了这个不可变对象内的某个可变对象的引用，并对其进行了修改，从而冲破了不变性的界限。
+
+7.如果缺省的浅克隆不能符合immutable object的正常行为，那就必须实现深克隆。

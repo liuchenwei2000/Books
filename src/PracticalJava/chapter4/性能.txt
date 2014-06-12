@@ -1,0 +1,22 @@
+性能
+
+
+一些所谓的Java性能问题，实际上是由于设计不佳引起的，与Java本身无关。
+
+有关优化的事项：
+1.
+除非证实必须优化，否则不要优化你的代码。证明这一点的唯一方法，是运用你自己的计时技术或运用某个测评器(profiler)。
+2.
+如果优化工作进行得不够小心细致，可能会引入BUG。
+3.
+实施优化之后，应该再次进行评测，以验证是否达到了预期效果。
+4.
+适用于所有JVM的成本模型是不存在的，因此在某个JVM中令代码更快捷的技术，未必在另一个JVM中也能得到相同的效果。
+
+
+一种计时技术：
+
+long start = System.currentTimeMillis();
+// code to time
+long end = System.currentTimeMillis();
+long time = end - start; 
