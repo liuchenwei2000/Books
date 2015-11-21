@@ -4,26 +4,26 @@
 package chapter5.p46;
 
 /**
- * synchronizedÓÃ·¨Ê¾Àý
+ * synchronizedç”¨æ³•ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-9
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-9
  */
 public class SynchronizedDemo {
 
 	/**
-	 * synchronizedÐÞÊÎ·½·¨
+	 * synchronizedä¿®é¥°æ–¹æ³•
 	 */
 	public synchronized void method1() {
 		// ...
 	}
 
 	/**
-	 * synchronizedÐÞÊÎ¶ÔÏó
+	 * synchronizedä¿®é¥°å¯¹è±¡
 	 * <p>
-	 * ±¾·½·¨ºÍÉÏÃæµÄ·½·¨ÔÚ¶ÔÏóËø¶¨·½Ãæ¹¦ÄÜÒ»ÖÂ£¬ËäÈ»´úÂëÊýÁ¿ºÍÖ´ÐÐ·½Ê½ÓÐËù²»Í¬¡£
-	 * Á½Õß¶¼ÊÇ¶Ôthis½øÐÐÍ¬²½¿ØÖÆ£¬»»¾ä»°Ëµ£¬»ñµÃµÄlock½«¸øÓèµ÷ÓÃ´Ëº¯ÊýµÄ¶ÔÏó(Ò²¾ÍÊÇthis)¡£
+	 * æœ¬æ–¹æ³•å’Œä¸Šé¢çš„æ–¹æ³•åœ¨å¯¹è±¡é”å®šæ–¹é¢åŠŸèƒ½ä¸€è‡´ï¼Œè™½ç„¶ä»£ç æ•°é‡å’Œæ‰§è¡Œæ–¹å¼æœ‰æ‰€ä¸åŒã€‚
+	 * ä¸¤è€…éƒ½æ˜¯å¯¹thisè¿›è¡ŒåŒæ­¥æŽ§åˆ¶ï¼Œæ¢å¥è¯è¯´ï¼ŒèŽ·å¾—çš„lockå°†ç»™äºˆè°ƒç”¨æ­¤å‡½æ•°çš„å¯¹è±¡(ä¹Ÿå°±æ˜¯this)ã€‚
 	 */
 	public void method2() {
 		synchronized (this) {
@@ -32,9 +32,9 @@ public class SynchronizedDemo {
 	}
 
 	/**
-	 * synchronizedÐÞÊÎ¶ÔÏó
+	 * synchronizedä¿®é¥°å¯¹è±¡
 	 * <p>
-	 * ±¾·½·¨Í¬²½¿ØÖÆobjectËùÖ¸µÄÄÇ¸ö¶ÔÏó¡£
+	 * æœ¬æ–¹æ³•åŒæ­¥æŽ§åˆ¶objectæ‰€æŒ‡çš„é‚£ä¸ªå¯¹è±¡ã€‚
 	 */
 	public void method3(Object object) {
 		synchronized (object) {

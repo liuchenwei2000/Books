@@ -1,6 +1,6 @@
-¶àÌ¬ÓÅÓÚinstanceof
+å¤šæ€ä¼˜äºŽinstanceof
 
 
-JavaÌá¹©instanceof²Ù×÷·û£¬×÷ÎªÔÚÔËÐÐÆÚÈ·¶¨Ä³¸ö¶ÔÏóÁ¥ÊôÓÚÄÄ¸öclassµÄ»úÖÆ£¬µ«Ëü¾­³£±»ÀÄÓÃ¡£
-¿ÉÒÔÍ¨¹ý¶àÌ¬À´±ÜÃâÐí¶à³£¼ûµÄinstanceofÀÄÓÃÇé¿ö¡£Õâ²»½ö¿ÉÒÔÌá¸ß³ÌÐòµÄÃæÏò¶ÔÏó´¿¶È£¬»¹¿ÉÒÔÊ¹³ÌÐòÓµÓÐ½ÏºÃµÄÀ©Õ¹ÐÔ¡£
-Èç¹ûÔ´Âë²»¿ÉµÃ£¬ÄÇ¾ÍÖ»ÄÜ²ÉÓÃinstanceof½øÐÐÅÐ¶ÏÁË¡£
+Javaæä¾›instanceofæ“ä½œç¬¦ï¼Œä½œä¸ºåœ¨è¿è¡ŒæœŸç¡®å®šæŸä¸ªå¯¹è±¡éš¶å±žäºŽå“ªä¸ªclassçš„æœºåˆ¶ï¼Œä½†å®ƒç»å¸¸è¢«æ»¥ç”¨ã€‚
+å¯ä»¥é€šè¿‡å¤šæ€æ¥é¿å…è®¸å¤šå¸¸è§çš„instanceofæ»¥ç”¨æƒ…å†µã€‚è¿™ä¸ä»…å¯ä»¥æé«˜ç¨‹åºçš„é¢å‘å¯¹è±¡çº¯åº¦ï¼Œè¿˜å¯ä»¥ä½¿ç¨‹åºæ‹¥æœ‰è¾ƒå¥½çš„æ‰©å±•æ€§ã€‚
+å¦‚æžœæºç ä¸å¯å¾—ï¼Œé‚£å°±åªèƒ½é‡‡ç”¨instanceofè¿›è¡Œåˆ¤æ–­äº†ã€‚

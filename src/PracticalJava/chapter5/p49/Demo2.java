@@ -4,15 +4,15 @@
 package chapter5.p49;
 
 /**
- * Í¬²½¿ØÖÆÊ¾Àı
+ * åŒæ­¥æ§åˆ¶ç¤ºä¾‹
  * <p>
- * ÎªÁËĞŞÕıDemo1µÄÎÊÌâ£¬ĞèÒªÎªÒ»¸ö¶ÔÏóÅä±¸¶à¸ölocks¡£
- * Java×ÔÉí²¢Ã»ÓĞÌá¹©ÕâÑùµÄ¹¦ÄÜ£¬Òò´Ë²»µÃ²»ÉèÁ¢×Ô¼ºµÄ»úÖÆ¡£
- * Ò»ÖÖ×ö·¨ÊÇ´´½¨Ò»Ğ©¶ÔÏó×÷ÎªinstanceÊı¾İ£¬ÕâĞ©¶ÔÏó½ö½öÓÃÀ´Ìá¹©locks¡£
+ * ä¸ºäº†ä¿®æ­£Demo1çš„é—®é¢˜ï¼Œéœ€è¦ä¸ºä¸€ä¸ªå¯¹è±¡é…å¤‡å¤šä¸ªlocksã€‚
+ * Javaè‡ªèº«å¹¶æ²¡æœ‰æä¾›è¿™æ ·çš„åŠŸèƒ½ï¼Œå› æ­¤ä¸å¾—ä¸è®¾ç«‹è‡ªå·±çš„æœºåˆ¶ã€‚
+ * ä¸€ç§åšæ³•æ˜¯åˆ›å»ºä¸€äº›å¯¹è±¡ä½œä¸ºinstanceæ•°æ®ï¼Œè¿™äº›å¯¹è±¡ä»…ä»…ç”¨æ¥æä¾›locksã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-11
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-11
  */
 public class Demo2 {
 	
@@ -25,30 +25,30 @@ public class Demo2 {
 	private byte[] doubleArrayLock = new byte[0];
 	
 	/*
-	 * ÏÂÃæÕâÖÖÊµÏÖ·½Ê½£¬Ê¹µÃÍ¬²½¿ØÖÆµÃÒÔ·¢ÉúÔÚ²»Í¬µÄ¶ÔÏóÉíÉÏ£¬ÈÃ²¢·¢¶È¸ü¸ß¡£
+	 * ä¸‹é¢è¿™ç§å®ç°æ–¹å¼ï¼Œä½¿å¾—åŒæ­¥æ§åˆ¶å¾—ä»¥å‘ç”Ÿåœ¨ä¸åŒçš„å¯¹è±¡èº«ä¸Šï¼Œè®©å¹¶å‘åº¦æ›´é«˜ã€‚
 	 */
 	
 	public void modifyIntArray1() {
 		synchronized (intArrayLock) {
-			// ·ÃÎÊ²¢²Ù×÷ intArray
+			// è®¿é—®å¹¶æ“ä½œ intArray
 		}
 	}
 
 	public void modifyIntArray2() {
 		synchronized (intArrayLock) {
-			// ·ÃÎÊ²¢²Ù×÷ intArray
+			// è®¿é—®å¹¶æ“ä½œ intArray
 		}
 	}
 
 	public void modifyDoubleArray1() {
 		synchronized (doubleArrayLock) {
-			// ·ÃÎÊ²¢²Ù×÷ intArray
+			// è®¿é—®å¹¶æ“ä½œ intArray
 		}
 	}
 
 	public void modifyDoubleArray2() {
 		synchronized (doubleArrayLock) {
-			// ·ÃÎÊ²¢²Ù×÷ intArray
+			// è®¿é—®å¹¶æ“ä½œ intArray
 		}
 	}
 }

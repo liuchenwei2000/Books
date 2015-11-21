@@ -1,8 +1,8 @@
-                                  Copier�������˼·
+                                  Copier程序设计思路
 
-Copier�����������Ʋ�������ԣ�����Ϊ����������ϵ�ķ��򡣿�һ��ͼagile\v3\before\�����ͼ.PNG��
-Copierģ��ֱ��������KeyboardReader��PrinterWriter��
-����������У�Copierģ����һ���߲�ģ�飬���ƶ���Ӧ�õĲ��ԣ���֪������ȥ�����ַ���
-�����ǣ���Ҳ�����ڼ��̺ʹ�ӡ���ĵײ�ϸ�ڡ�������ײ�ϸ�ڱ仯ʱ���߲���Ի��ܵ�Ӱ�졣
+Copier程序最初的设计不具灵活性，是因为它的依赖关系的方向。看一下图agile\v3\before\设计类图.PNG。
+Copier模块直接依赖于KeyboardReader和PrinterWriter。
+在这个程序中，Copier模块是一个高层模块，它制定了应用的策略，它知道怎样去拷贝字符。
+糟糕的是，它也依赖于键盘和打印机的底层细节。因而当底层细节变化时，高层策略会受到影响。
 
-һ����¶�������������ԣ����ݿ�����Ա��Ӧ��֪����Copierģ�鵽�����豸��������ϵ��Ҫ�����ã�����Copierģ��Ͳ��������������豸��
+一旦暴露出了这个不灵活性，敏捷开发人员就应该知道从Copier模块到输入设备的依赖关系需要被倒置，这样Copier模块就不再依赖于输入设备。

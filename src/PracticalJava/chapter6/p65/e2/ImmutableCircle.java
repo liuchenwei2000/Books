@@ -4,15 +4,15 @@
 package chapter6.p65.e2;
 
 /**
- * ²»¿É±äCircleÀà
+ * ä¸å¯å˜Circleç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public final class ImmutableCircle implements Circle {
 
-	private double redius;// °ë¾¶
+	private double redius;// åŠå¾„
 
 	public ImmutableCircle(double redius) {
 		this.redius = redius;

@@ -9,11 +9,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * �ڸ��쳣ʾ��
+ * 掩盖异常示例
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2012-11-24
+ * 创建日期：2012-11-24
  */
 public class HiddenException {
 
@@ -25,11 +25,11 @@ public class HiddenException {
 			test();
 		} catch (Exception e) {
 			/*
-			 * �����Exception in main(),caught by:Third Exception
+			 * 输出：Exception in main(),caught by:Third Exception
 			 * 
-			 * 1�׳����쳣��2�׳����쳣�ڸ��ˣ�2�׳����쳣��3�׳����쳣�ڸ��ˡ�
-			 * ����3�׳����쳣�������������׳����쳣(�Է���ʱ�����)
-			 * ���ԣ����ͳ�Ϊ��������������ɵ��쳣�������쳣�����ڸ��ˡ�
+			 * 1抛出的异常被2抛出的异常掩盖了，2抛出的异常被3抛出的异常掩盖了。
+			 * 由于3抛出的异常是这个函数最后抛出的异常(以发生时间而言)
+			 * 所以，它就成为这个函数最终生成的异常，其他异常都被掩盖了。
 			 */
 			System.out.println("Exception in main(),caught by:"
 					+ e.getMessage());
@@ -48,8 +48,8 @@ public class HiddenException {
 	}
 	
 	/**
-	 * �����ڸ��쳣�������ڳ���Java������Ҳ�ܳ��������������ʾ����
-	 * 1����׳�FileNotFoundException�����п��ܻᱻ2�׳���IOException�ڸǡ�
+	 * 上述掩盖异常的现象在常规Java代码中也很常见，看这个方法示例：
+	 * 1如果抛出FileNotFoundException，则有可能会被2抛出的IOException掩盖。
 	 */
 	public static void readFile() throws FileNotFoundException, IOException {
 		BufferedReader br = null;

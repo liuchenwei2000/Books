@@ -1,10 +1,10 @@
-�ڵ�һ���������������õ��Ķ���
+在单一操作中锁定所有用到的对象
 
 
-ĳ�������Բ�ֻһ��������в��������Ǻܳ��������Ρ������Դ˺�������ͬ�����ƣ�δ�ؾ����ó���ӵ�ж��̰߳�ȫ�ԡ�
-������ϸ��������������Щ�����Լ���β�����
+某个函数对不只一个对象进行操作，这是很常见的情形。仅仅对此函数进行同步控制，未必就能让程序拥有多线程安全性。
+必须仔细分析它操作了哪些对象，以及如何操作。
 
-���ĳ��synchronized����������ĳ����synchronized��instance�������޸Ķ������Ƕ��̰߳�ȫ�ġ�
-��Ϊһ����synchronized������synchronized�������ã���Ҳ�ͱ�Ϊsynchronized��
-�����һ��synchronized����ֱ�Ӳ��ݵĶ��󲢷Ǵ˺����������private instance���ݣ�����򲻾��ж��̰߳�ȫ�ԡ�
-ʾ����Demo.java��
+如果某个synchronized函数调用了某个非synchronized的instance函数来修改对象，它是多线程安全的。
+因为一旦非synchronized函数被synchronized函数调用，它也就变为synchronized。
+但如果一个synchronized函数直接操纵的对象并非此函数所属类的private instance数据，则程序不具有多线程安全性。
+示例见Demo.java。

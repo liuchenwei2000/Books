@@ -1,35 +1,35 @@
-                                                             �����ĸ�дclone
+                                                             谨慎的改写clone
 
-Cloneable�ӿڵ�Ŀ������Ϊ�����һ�����ͽӿڣ����������Ķ���������¡��
-���ҵ��ǣ�����û�гɹ��Ĵﵽ���Ŀ�ġ�����Ҫ��ȱ�����ڣ���ȱ��һ��clone������Object��clone�����Ǳ�������(protected)��
-���ܽ�����Ϊһ������ʵ����Cloneable���Ϳ��Ե���clone������
+Cloneable接口的目的是作为对象的一个混型接口，表明这样的对象允许克隆。
+不幸的是，它并没有成功的达到这个目的。其主要的缺陷在于，它缺少一个clone方法，Object的clone方法是被保护的(protected)。
+不能仅仅因为一个对象实现了Cloneable，就可以调用clone方法。
 
-Cloneable�ӿڲ�û�а����κη�������������Object���ܱ�����clone����ʵ�ֵ���Ϊ��
-���һ����ʵ����Cloneable��������ʵ��clone����ʱͨ��super.clone()����Object�е�clone��������Object��clone�������ظö�������򿽱���
-����Ļ������׳�һ��CloneNotSupportedException�����ǽӿڵ�һ�ּ��˷ǵ��͵��÷���Ҳ��ֵ��Ч�¡�
+Cloneable接口并没有包含任何方法，它决定了Object中受保护的clone方法实现的行为：
+如果一个类实现了Cloneable，该类在实现clone方法时通过super.clone()调用Object中的clone方法，则Object的clone方法返回该对象的逐域拷贝；
+否则的话，它抛出一个CloneNotSupportedException。这是接口的一种极端非典型的用法，也不值得效仿。
 
-�����ľ�ȷ����ȡ���ڸö�����࣬һ��ĺ����ǣ������κζ���x������ʽ x.clone() != x ������true��
-���ұ���ʽ x.clone().getClass() == x.getClass() ������true��������Щ�����Ǿ��Ե�Ҫ��
-ͨ������£�����ʽ x.clone().equals(x) ������true�����ǣ���Ҳ����һ�����Ե�Ҫ��
+拷贝的精确含义取决于该对象的类，一般的含义是，对于任何对象x，表达式 x.clone() != x 将会是true，
+并且表达式 x.clone().getClass() == x.getClass() 将会是true，但是这些都不是绝对的要求。
+通常情况下，表达式 x.clone().equals(x) 将会是true，但是，这也不是一个绝对的要求。
 
-Cloneable�ӿڲ�û�������ָ����һ������ʵ������ӿ�ʱӦ�óе���Щ���Ρ��淶����ָ������ʵ������ӿڻ������ַ�ʽӰ�쵽Object��cloneʵ�ֵ���Ϊ��
-ʵ���ϣ�����ʵ����Cloneable���࣬��������������Ҳ�ṩ��һ�������ʵ��Ĺ���(public)clone����(��ͨ��super.clone���ϵ���Object.clone)��
-��ͨ������£����Ǹ�������г��඼�ṩ��һ����Ϊ���õ�cloneʵ�֣������ǹ��еģ������ܱ����ģ��������ǲ����ܵġ�
+Cloneable接口并没有清楚地指明，一个类在实现这个接口时应该承担哪些责任。规范仅仅指出来：实现这个接口会以哪种方式影响到Object的clone实现的行为。
+实际上，对于实现了Cloneable的类，我们总是期望它也提供了一个功能适当的公有(public)clone方法(即通过super.clone向上调用Object.clone)。
+但通常情况下，除非该类的所有超类都提供了一个行为良好的clone实现，不管是公有的，还是受保护的，否则，这是不可能的。
 
-clone��������һ�����캯��������ȷ���������˺���ԭʼ�Ķ��󣬲�����ȷ�Ľ����𱻿�¡�����е�Լ����ϵ��
-clone�ṹ��ָ��ɱ�����final��������÷��ǲ����ݵġ�
+clone方法是另一个构造函数，必须确保它不会伤害到原始的对象，并且正确的建立起被克隆对象中的约束关系。
+clone结构与指向可变对象的final域的正常用法是不兼容的。
 
-����ʵ����Cloneable�ӿڵ��඼Ӧ����һ�����еķ�����дclone���˹��з������ȵ���super.clone��Ȼ��������Ҫ��������
-����ζ��Ҫ�����κΰ����ڲ����ṹ�Ŀɱ���󣬲�����ָ���¶�������ô���ԭ��ָ����Щ��������á�
-��Ȼ��Щ�ڲ�����������������ͨ���ݹ�ĵ���clone����ɣ�����ͨ����������ѷ�����
-�������ֻ����ԭ�����͵��򣬻���ָ��ǿɱ��������ã���ô���������û������Ҫ������
+所有实现了Cloneable接口的类都应该用一个公有的方法改写clone。此公有方法首先调用super.clone，然后修正需要修正的域。
+这意味着要拷贝任何包含内部深层结构的可变对象，并且用指向新对象的引用代替原来指向这些对象的引用。
+虽然这些内部拷贝操作往往可以通过递归的调用clone来完成，但这通常并不是最佳方法。
+如果该类只包含原语类型的域，或者指向非可变对象的引用，那么多半的情况是没有域需要修正。
 
-��һ��ʵ�ֶ��󿽱��ĺð취���ṩһ���������캯������ν�������캯������Ҳ��һ�����캯������Ψһ�Ĳ����������ǰ����ù��캯�����ࡣ
+另一个实现对象拷贝的好办法是提供一个拷贝构造函数。所谓拷贝构造函数，它也是一个构造函数，其唯一的参数的类型是包含该构造函数的类。
 
 public MyClass(MyClass myclass);
 
-��һ�ַ������ṩһ����̬���������湹�캯����
+另一种方法是提供一个静态工厂来代替构造函数：
 
 public static MyClass newInstance(MyClass myclass);
 
-���ַ�ʽ��Cloneable/clone�������и�������ƣ����ǲ�������ĳһ�ֺ��з��յġ�����֮��Ķ��󴴽����ơ�
+这种方式比Cloneable/clone方法具有更多的优势，它们不依赖于某一种很有风险的、语言之外的对象创建机制。

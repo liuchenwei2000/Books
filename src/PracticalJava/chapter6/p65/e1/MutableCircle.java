@@ -4,15 +4,15 @@
 package chapter6.p65.e1;
 
 /**
- * ÊµÏÖÁËImmutableCircle½Ó¿ÚµÄ¿É±äCircleÀà
+ * å®ç°äº†ImmutableCircleæ¥å£çš„å¯å˜Circleç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class MutableCircle implements ImmutableCircle {
 
-	private double redius;// °ë¾¶
+	private double redius;// åŠå¾„
 
 	public MutableCircle(double redius) {
 		this.redius = redius;

@@ -6,22 +6,22 @@ package TDD.mockobject.v1;
 import junit.framework.TestCase;
 
 /**
- * ´æ¿î¼ÆËãÆ÷²âÊÔ
+ * å­˜æ¬¾è®¡ç®—å™¨æµ‹è¯•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-21
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-21
  */
 public class SavingCalculatorTest extends TestCase {
 
 	public void testSave4OneYearFixed() {
 		// assert what?
-		// ÒòÎª²»ÖªµÀÀûÂÊ£¬ËùÒÔÎŞ·¨½øĞĞ²âÊÔ
+		// å› ä¸ºä¸çŸ¥é“åˆ©ç‡ï¼Œæ‰€ä»¥æ— æ³•è¿›è¡Œæµ‹è¯•
 	}
 }
 
 /**
- * ´æ¿î¼ÆËãÆ÷
+ * å­˜æ¬¾è®¡ç®—å™¨
  */
 class SavingCalculator {
 
@@ -32,10 +32,10 @@ class SavingCalculator {
 	}
 
 	/**
-	 * ·µ»Ø1Äê¶¨ÆÚµÄ±¾Ï¢
+	 * è¿”å›1å¹´å®šæœŸçš„æœ¬æ¯
 	 * 
 	 * @param amount
-	 *            ±¾½ğ
+	 *            æœ¬é‡‘
 	 */
 	public double save4OneYearFixed(double amount) {
 		return amount * (1 + bank.getInterestRate());

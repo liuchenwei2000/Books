@@ -1,12 +1,12 @@
-15��Replace Type Code with State/Strategy(��State/Strategyȡ���ͱ���)
-���е�ĳ���ͱ����Ӱ�������Ϊ���������޷�ʹ�����໯���ع�����
-��ʱ����state object(ר����������״̬�Ķ���)ȡ���ͱ��롣
-���ͱ����ֵ�ڶ����������лᷢ���仯���������಻�ܱ����໯ʱ��Ҫ�øø��ַ���
+15，Replace Type Code with State/Strategy(以State/Strategy取代型别码)
+类中的某个型别码会影响类的行为，但是你无法使用子类化来重构它，
+这时就以state object(专门用来描述状态的对象)取代型别码。
+当型别码的值在对象生命期中会发生变化或者宿主类不能被子类化时就要用该该手法。
 
-������
-���ͱ������ҷ�װ�������½�һ���࣬�����ͱ������;Ϊ�������������һ��state object
-Ϊ����½������������࣬ÿ�����඼��Ӧһ���ͱ��룬
-�ڻ����н���һ������Ĳ�ѯ�������Է����ͱ��룬Ϊÿ�������и��Ǹú�����������ȷ���ͱ��롣
-��Դ���н���һ��ֵ�����Ա����½���state object��
-����Դ���и����ѯ�ͱ���ĺ���������ѯ����ת����state object������
-����Դ����Ϊ�ͱ�����ֵ�ĺ�������һ��ǡ����state object���ำֵ������state object���Ǹ�ֵ��
+作法：
+将型别码自我封装起来，新建一个类，根据型别码的用途为它命名，这就是一个state object
+为这个新建的类添加子类，每个子类都对应一种型别码，
+在基类中建立一个抽象的查询函数用以返回型别码，为每个子类中覆盖该函数，返回正确的型别码。
+在源类中建立一个值域用以保存新建的state object，
+调整源类中负责查询型别码的函数，将查询动作转发给state object处理，
+调整源类中为型别码设值的函数，将一个恰当的state object子类赋值给保存state object的那个值域。

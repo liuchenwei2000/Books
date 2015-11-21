@@ -4,19 +4,19 @@
 package principle.DIP.v2;
 
 /**
- * ²ã´Î»¯ÑİÊ¾Àà
+ * å±‚æ¬¡åŒ–æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-31
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-31
  */
 public class LayerDemo {
 }
 
 /**
- * ÉÌÒµ²ßÂÔ²ã
+ * å•†ä¸šç­–ç•¥å±‚
  * <p>
- * Í¨¹ıµ¹ÖÃÒÀÀµ¹ØÏµ£¬Ê¹µÃ¸ß²ãºÍµÍ²ã¶¼ÒÀÀµÓÚ³éÏó£¬´Ó¶ø½â³ıÁË¸÷²ã¼äµÄÒÀÀµ¹ØÏµ¡£
+ * é€šè¿‡å€’ç½®ä¾èµ–å…³ç³»ï¼Œä½¿å¾—é«˜å±‚å’Œä½å±‚éƒ½ä¾èµ–äºæŠ½è±¡ï¼Œä»è€Œè§£é™¤äº†å„å±‚é—´çš„ä¾èµ–å…³ç³»ã€‚
  */
 class PolicyLayer {
 
@@ -32,13 +32,13 @@ class PolicyLayer {
 }
 
 /**
- * ÉÌÒµ²ßÂÔ²ãËùĞèÒªµÄµÍ²ã·şÎñ½Ó¿Ú
+ * å•†ä¸šç­–ç•¥å±‚æ‰€éœ€è¦çš„ä½å±‚æœåŠ¡æ¥å£
  */
 interface PolicyLayerService {
 }
 
 /**
- * »úÖÆ²ã
+ * æœºåˆ¶å±‚
  */
 class MechanismLayer implements PolicyLayerService {
 
@@ -55,13 +55,13 @@ class MechanismLayer implements PolicyLayerService {
 }
 
 /**
- * »úÖÆ²ãËùĞèÒªµÄµÍ²ã·şÎñ½Ó¿Ú
+ * æœºåˆ¶å±‚æ‰€éœ€è¦çš„ä½å±‚æœåŠ¡æ¥å£
  */
 interface MechanismLayerService {
 }
 
 /**
- * ¹¤¾ß²ã
+ * å·¥å…·å±‚
  */
 class UtilityLayer implements MechanismLayerService {
 

@@ -4,25 +4,25 @@
 package chapter4.p32;
 
 /**
- * Ê¾Àı
+ * ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-1
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-1
  */
 public class Demo {
 
 }
 class Light {
 	
-	// ³õÊ¼¸³ÖµÓï¾ä
+	// åˆå§‹èµ‹å€¼è¯­å¥
 	@SuppressWarnings("unused")
 	private int value = 1;
 	
 	@SuppressWarnings("unused")
 	private boolean isLight;
 	
-	// ³õÊ¼»¯Çø¶Î
+	// åˆå§‹åŒ–åŒºæ®µ
 	{
 		isLight = true;
 	}

@@ -4,17 +4,17 @@
 package principle.LSP.v2;
 
 /**
- * ¾ØĞÎÕı·½ĞÎÑİÊ¾Àà
+ * çŸ©å½¢æ­£æ–¹å½¢æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-29
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-29
  */
 public class RectangleSquareDemo {
 }
 
 /**
- * ¾ØĞÎÀà
+ * çŸ©å½¢ç±»
  */
 class Rectangle {
 
@@ -39,7 +39,7 @@ class Rectangle {
 }
 
 /**
- * Õı·½ĞÎÀà£¬²»ÔÙ¼Ì³ĞRectangle
+ * æ­£æ–¹å½¢ç±»ï¼Œä¸å†ç»§æ‰¿Rectangle
  */
 class Square {
 
@@ -55,7 +55,7 @@ class Square {
 }
 
 /**
- * Ãæ»ıÀà
+ * é¢ç§¯ç±»
  */
 class Area {
 

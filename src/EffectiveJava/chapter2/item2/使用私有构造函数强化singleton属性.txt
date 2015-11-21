@@ -1,20 +1,20 @@
-                                                                                    ʹ��˽�й��캯��ǿ��singleton����
+                                                                                    使用私有构造函数强化singleton属性
 
 
-singleton��ָ�������࣬��ֻ�ܱ�ʵ����һ�Ρ�ͨ��������������Щ�����Ͼ���Ψһ�Ե�ϵͳ�����
+singleton是指这样的类，它只能被实例化一次。通常被用来代表那些本质上具有唯一性的系统组件。
 
-�����ַ�������ʵ��singleton�����Ƕ���Ҫ�ѹ��캯������Ϊ˽�У������ṩһ����̬��Ա���Ա������ͻ��ܹ�����Ψһ��ʵ����
-ʾ���� SingletonDemo.java
+有两种方法可以实现singleton，它们都需要把构造函数保持为私有，并且提供一个静态成员，以便允许客户能够访问唯一的实例。
+示例见 SingletonDemo.java
 
-Singleton1��ʵ�ַ����ĺô��ǣ������ĳ�Ա������������ı������������һ��singleton��
-���еľ�̬����final�ģ����Ը������ǰ�����ͬ�Ķ������á�
+Singleton1的实现方法的好处是，组成类的成员的生命很清楚的表明了这个类是一个singleton：
+公有的静态域是final的，所以该域将总是包含相同的对象引用。
 
-Singleton2��ʵ�ַ����ĺô��ǣ����ṩ������ԣ�
-�ڲ��ı�API��ǰ���£������ı��뷨���Ѹ�������singleton�����߲�����singleton��
-singleton�ľ�̬�����������ظ����Ωһʵ������Ҳ�����ױ��޸ġ�
+Singleton2的实现方法的好处是，它提供了灵活性：
+在不改变API的前提下，允许改变想法，把该类做成singleton，或者不做成singleton。
+singleton的静态工厂方法返回该类的惟一实例，它也很容易被修改。
 
-���ȷ�Ÿ��ཫ��Զ��һ��singleton����ôʹ�õ�һ�ַ�����������ġ����ϣ��������أ���ʹ�õڶ��ַ�����
+如果确信该类将永远是一个singleton，那么使用第一种方法是有意义的。如果希望留有余地，就使用第二种方法。
 
-Ϊ��ʹһ��singleton���ɿ����л���(serializable)����������"implements Serializable"�ǲ����ġ�
-Ϊ��ά��singleton�ԣ�����ҲҪ�ṩһ��readResolve����������һ�����л���ʵ����ÿ�η����л���ʱ�򣬶��ᴴ��һ���µ�ʵ����
-ʾ���� SingletonDemo.java
+为了使一个singleton类变成可序列化的(serializable)，仅仅加上"implements Serializable"是不够的。
+为了维护singleton性，必须也要提供一个readResolve方法，否则一个序列化的实例在每次反序列化的时候，都会创建一个新的实例。
+示例见 SingletonDemo.java

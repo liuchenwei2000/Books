@@ -7,11 +7,11 @@ import java.io.ObjectStreamException;
 import java.io.Serializable;
 
 /**
- * singletonÑİÊ¾
+ * singletonæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-18
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-18
  */
 public class SingletonDemo {
 	
@@ -19,7 +19,7 @@ public class SingletonDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Client¶ËÈçºÎÊ¹ÓÃsingletonÀà
+		// Clientç«¯å¦‚ä½•ä½¿ç”¨singletonç±»
 		System.out.println(Singleton1.INSTANCE);
 		System.out.println(Singleton2.getInstance());
 	}
@@ -27,11 +27,11 @@ public class SingletonDemo {
 
 class Singleton1 {
 
-	// ÉùÃ÷Ò»¸ö¹«ÓĞ¾²Ì¬³ÉÔ±
+	// å£°æ˜ä¸€ä¸ªå…¬æœ‰é™æ€æˆå‘˜
 	public static final Singleton1 INSTANCE = new Singleton1();
 
 	/**
-	 * Ë½ÓĞµÄ¹¹Ôìº¯Êı£¬±£Ö¤ÁËSingleton1ÊµÀıµÄÈ«¾ÖÎ¨Ò»ĞÔ£¬Ö»ÓĞÒ»¸öÊµÀı(INSTANCE)´æÔÚ
+	 * ç§æœ‰çš„æ„é€ å‡½æ•°ï¼Œä¿è¯äº†Singleton1å®ä¾‹çš„å…¨å±€å”¯ä¸€æ€§ï¼Œåªæœ‰ä¸€ä¸ªå®ä¾‹(INSTANCE)å­˜åœ¨
 	 */
 	private Singleton1() {
 		// do something
@@ -45,28 +45,28 @@ class Singleton2 implements Serializable {
 	 */
 	private static final long serialVersionUID = -2892082535158192922L;
 	
-	// ÉùÃ÷Ò»¸öË½ÓĞ¾²Ì¬³ÉÔ±
+	// å£°æ˜ä¸€ä¸ªç§æœ‰é™æ€æˆå‘˜
 	private static final Singleton2 INSTANCE = new Singleton2();
 
 	/**
-	 * Ë½ÓĞµÄ¹¹Ôìº¯Êı£¬±£Ö¤ÁËSingleton2ÊµÀıµÄÈ«¾ÖÎ¨Ò»ĞÔ£¬Ö»ÓĞÒ»¸öÊµÀı(INSTANCE)´æÔÚ
+	 * ç§æœ‰çš„æ„é€ å‡½æ•°ï¼Œä¿è¯äº†Singleton2å®ä¾‹çš„å…¨å±€å”¯ä¸€æ€§ï¼Œåªæœ‰ä¸€ä¸ªå®ä¾‹(INSTANCE)å­˜åœ¨
 	 */
 	private Singleton2() {
 		// do something
 	}
 
 	/**
-	 * Í¨¹ı¾²Ì¬·½·¨·µ»ØÍ¬Ò»¸öSingleton2ÊµÀı
+	 * é€šè¿‡é™æ€æ–¹æ³•è¿”å›åŒä¸€ä¸ªSingleton2å®ä¾‹
 	 */
 	public static Singleton2 getInstance() {
 		return INSTANCE;
 	}
 	
 	/**
-	 * Èç¹ûsingletonÀàÊÇ¿ÉĞòÁĞ»¯µÄ£¬ÒªĞ¡ĞÄ·´ĞòÁĞ»¯µÄÊ±ºò
-	 * ÎªÁË±ÜÃâÍ¨¹ı·´ĞòÁĞ»¯µÄ·½Ê½´´½¨ĞÂµÄÊµÀı£¬ÒªÊµÏÖ±¾·½·¨
+	 * å¦‚æœsingletonç±»æ˜¯å¯åºåˆ—åŒ–çš„ï¼Œè¦å°å¿ƒååºåˆ—åŒ–çš„æ—¶å€™
+	 * ä¸ºäº†é¿å…é€šè¿‡ååºåˆ—åŒ–çš„æ–¹å¼åˆ›å»ºæ–°çš„å®ä¾‹ï¼Œè¦å®ç°æœ¬æ–¹æ³•
 	 */
 	private Object readResolve() throws ObjectStreamException {
-		return INSTANCE;// ·µ»ØÕæÕıµÄsingletonÊµÀı£¬¶ø²»ÊÇ·´ĞòÁĞ»¯»ØÀ´µÄÊµÀı
+		return INSTANCE;// è¿”å›çœŸæ­£çš„singletonå®ä¾‹ï¼Œè€Œä¸æ˜¯ååºåˆ—åŒ–å›æ¥çš„å®ä¾‹
 	}
 }

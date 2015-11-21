@@ -1,6 +1,6 @@
-����ʹ�����飬Ȼ��ſ���Vector��ArrayList
+优先使用数组，然后才考虑Vector和ArrayList
 
 
-�����������Ϊ�ؼ��ĳ�����������ʹ�����顣
-�����ҪVector�Ĺ��ܣ����ֲ���Ҫ����ͬ�����ԣ��Ǿ�ʹ��ArrayList��
-ֻ���ڼ���ҪVector�Ĺ�������Ҫ�����е�ͬ������ʱ����ʹ��Vector��
+当面对性能至为关键的程序任务，优先使用数组。
+如果需要Vector的功能，但又不需要它的同步特性，那就使用ArrayList。
+只有在既需要Vector的功能又需要它固有的同步特性时，才使用Vector。

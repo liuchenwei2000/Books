@@ -4,11 +4,11 @@
 package chapter5.p47;
 
 /**
- * synchronized¸ß½×µÄÊ¾Àý2
+ * synchronizedé«˜é˜¶çš„ç¤ºä¾‹2
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-9
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-9
  */
 public class AdvDemo2 {
 
@@ -18,31 +18,31 @@ public class AdvDemo2 {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Bar b1 = new Bar();
-		new Thread(b1).start();// ´ËÏß³ÌÆô¶¯
-		b1.printM2(b1);// Ö÷Ïß³ÌÖÐÖ´ÐÐ
+		new Thread(b1).start();// æ­¤çº¿ç¨‹å¯åŠ¨
+		b1.printM2(b1);// ä¸»çº¿ç¨‹ä¸­æ‰§è¡Œ
 		
 		/*
-		 * ´òÓ¡ÈçÏÂ£º
+		 * æ‰“å°å¦‚ä¸‹ï¼š
 		 * 1 1 1 1 2 2 2 1 1 1 1 1 2 2 2 1 1 ....
 		 * 
-		 * ¿ÉÒÔ¿´µ½£¬Á½¸ö´òÓ¡·½·¨²¢·¢Ö´ÐÐÁË¡£
-		 * ÕâÊÇÒòÎªprintM1()·½·¨»ñÈ¡µÄÊÇ¶ÔÏóf1µÄlock£¬¶øprintM2()·½·¨»ñÈ¡µÄÊÇFoo.classÕâ¸ö¶ÔÏóµÄlock¡£
+		 * å¯ä»¥çœ‹åˆ°ï¼Œä¸¤ä¸ªæ‰“å°æ–¹æ³•å¹¶å‘æ‰§è¡Œäº†ã€‚
+		 * è¿™æ˜¯å› ä¸ºprintM1()æ–¹æ³•èŽ·å–çš„æ˜¯å¯¹è±¡f1çš„lockï¼Œè€ŒprintM2()æ–¹æ³•èŽ·å–çš„æ˜¯Foo.classè¿™ä¸ªå¯¹è±¡çš„lockã€‚
 		 */
 	}
 }
 
 /**
- * Èç¹ûÐèÒªÍ¬²½¿ØÖÆFooÀàµÄÁ½¸ö·½·¨£¬»òÕßÁ½¸öº¯Êý¹²ÏíÒ»±Ê×ÊÔ´£¬
- * ÎªÁË±£»¤Õâ±Ê×ÊÔ´£¬´úÂë±ØÐëÓÐÕýÈ·µÄÍ¬²½£¬ÒÔ±ÜÃâ³åÍ»¡£
+ * å¦‚æžœéœ€è¦åŒæ­¥æŽ§åˆ¶Fooç±»çš„ä¸¤ä¸ªæ–¹æ³•ï¼Œæˆ–è€…ä¸¤ä¸ªå‡½æ•°å…±äº«ä¸€ç¬”èµ„æºï¼Œ
+ * ä¸ºäº†ä¿æŠ¤è¿™ç¬”èµ„æºï¼Œä»£ç å¿…é¡»æœ‰æ­£ç¡®çš„åŒæ­¥ï¼Œä»¥é¿å…å†²çªã€‚
  * 
- * ¿ÉÒÔ²ÉÓÃÏÂÃæµÄ·½·¨½â¾ö£º
- * Í¬²½¿ØÖÆÒ»¸öÌØÊâµÄinstance±äÁ¿¡£
+ * å¯ä»¥é‡‡ç”¨ä¸‹é¢çš„æ–¹æ³•è§£å†³ï¼š
+ * åŒæ­¥æŽ§åˆ¶ä¸€ä¸ªç‰¹æ®Šçš„instanceå˜é‡ã€‚
  */
 class Bar implements Runnable {
 
 	/*
-	 * ÓÉÓÚÖ»ÄÜËø¶¨¶ÔÏó£¬ËùÒÔÊ¹ÓÃµÄinstance±äÁ¿±ØÐëÊÇ¸ö¶ÔÏó¡£
-	 * ÎªÊ²Ã´Ê¹ÓÃÒ»¸öÔªËØ¸öÊýÎª0µÄbyteÊý×é£¬ÒòÎªÕâÊÇ×î¾­¼ÃµÄ×ö·¨¡£
+	 * ç”±äºŽåªèƒ½é”å®šå¯¹è±¡ï¼Œæ‰€ä»¥ä½¿ç”¨çš„instanceå˜é‡å¿…é¡»æ˜¯ä¸ªå¯¹è±¡ã€‚
+	 * ä¸ºä»€ä¹ˆä½¿ç”¨ä¸€ä¸ªå…ƒç´ ä¸ªæ•°ä¸º0çš„byteæ•°ç»„ï¼Œå› ä¸ºè¿™æ˜¯æœ€ç»æµŽçš„åšæ³•ã€‚
 	 */
 	private byte[] lock = new byte[0];
 

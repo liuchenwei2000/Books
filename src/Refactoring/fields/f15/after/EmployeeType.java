@@ -4,11 +4,11 @@
 package fields.f15.after;
 
 /**
- * ¹ÍÔ±ÀàĞÍ(state object)
+ * é›‡å‘˜ç±»å‹(state object)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public abstract class EmployeeType {
 
@@ -17,7 +17,7 @@ public abstract class EmployeeType {
 	public static final int MANAGER = 2;
 
 	/**
-	 * ¸ù¾İÀàĞÍ±àºÅ´´½¨Ò»¸öĞÂÀàĞÍ
+	 * æ ¹æ®ç±»å‹ç¼–å·åˆ›å»ºä¸€ä¸ªæ–°ç±»å‹
 	 */
 	public static EmployeeType newType(int code) {
 		switch (code) {
@@ -28,12 +28,12 @@ public abstract class EmployeeType {
 		case MANAGER:
 			return new Manager();
 		default:
-			throw new RuntimeException("·Ç·¨ÓÃ»§");
+			throw new RuntimeException("éæ³•ç”¨æˆ·");
 		}
 	}
 
 	/**
-	 * ·µ»Ø¹ÍÔ±ÀàĞÍ
+	 * è¿”å›é›‡å‘˜ç±»å‹
 	 */
 	public abstract int getTypeCode();
 }

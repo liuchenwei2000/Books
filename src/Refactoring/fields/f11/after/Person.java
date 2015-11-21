@@ -11,23 +11,23 @@ import java.util.Set;
 import fields.f11.Course;
 
 /**
- * ÈËÀà(ĞÂ)
+ * äººç±»(æ–°)
  * 
- * ½øĞĞ¶Ô¼¯ºÏµÄ·â×°Ö®ºó£¬Ö»ÄÜÍ¨¹ıaddºÍremove·½·¨ĞŞ¸Ä¼¯ºÏ
+ * è¿›è¡Œå¯¹é›†åˆçš„å°è£…ä¹‹åï¼Œåªèƒ½é€šè¿‡addå’Œremoveæ–¹æ³•ä¿®æ”¹é›†åˆ
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class Person {
 
-	private Set<Course> courses = new HashSet<Course>();// ¿Î³Ì
+	private Set<Course> courses = new HashSet<Course>();// è¯¾ç¨‹
 
 	public Person() {
 	}
 
 	/**
-	 * ·µ»Ø²»¿ÉĞŞ¸ÄµÄ¼¯ºÏÊÓÍ¼
+	 * è¿”å›ä¸å¯ä¿®æ”¹çš„é›†åˆè§†å›¾
 	 * 
 	 * @return the courses
 	 */
@@ -36,7 +36,7 @@ public class Person {
 	}
 
 //	/**
-//	 * ³õÊ¼»¯¼¯ºÏ
+//	 * åˆå§‹åŒ–é›†åˆ
 //	 * 
 //	 * @param courses
 //	 *            the courses to init
@@ -47,7 +47,7 @@ public class Person {
 //	}
 
 	/**
-	 * Ìí¼ÓĞÂ¿Î³Ì
+	 * æ·»åŠ æ–°è¯¾ç¨‹
 	 * 
 	 * @param course
 	 */
@@ -56,7 +56,7 @@ public class Person {
 	}
 
 	/**
-	 * É¾³ı¿Î³Ì
+	 * åˆ é™¤è¯¾ç¨‹
 	 * 
 	 * @param course
 	 */
@@ -65,7 +65,7 @@ public class Person {
 	}
 
 	/**
-	 * ·µ»Ø¸ß¼¶¿Î³ÌÊıÄ¿
+	 * è¿”å›é«˜çº§è¯¾ç¨‹æ•°ç›®
 	 * 
 	 * @return int
 	 */
@@ -86,12 +86,12 @@ public class Person {
 	public static void main(String[] args) {
 		Person person = new Person();
 		Course math = new Course("Math", true);
-		// Ôö¼Ó¿Î³Ì(Ö»ÄÜÍ¨¹ıÕâÖÖ·½·¨ÉèÖÃ¿Î³Ì)
+		// å¢åŠ è¯¾ç¨‹(åªèƒ½é€šè¿‡è¿™ç§æ–¹æ³•è®¾ç½®è¯¾ç¨‹)
 		person.addCourse(new Course("English", false));
 		person.addCourse(math);
-		// É¾³ı¿Î³Ì
+		// åˆ é™¤è¯¾ç¨‹
 		person.removeCourse(math);
-		// ²é¿´¸ß¼¶¿Î³ÌÊıÄ¿
+		// æŸ¥çœ‹é«˜çº§è¯¾ç¨‹æ•°ç›®
 		person.getNumberOfAdvancedCourses();
 	}
 }

@@ -4,17 +4,17 @@
 package principle.LSP.v1;
 
 /**
- * ¾ØÐÎÕý·½ÐÎÑÝÊ¾Àà
+ * çŸ©å½¢æ­£æ–¹å½¢æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-29
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-29
  */
 public class RectangleSquareDemo {
 }
 
 /**
- * ¾ØÐÎÀà
+ * çŸ©å½¢ç±»
  */
 class Rectangle {
 	
@@ -36,18 +36,18 @@ class Rectangle {
 }
 
 /**
- * Õý·½ÐÎÀà
+ * æ­£æ–¹å½¢ç±»
  * <p>
- * Ò»°ãÒâÒåÉÏ½²£¬Ò»¸öÕý·½ÐÎ¾ÍÊÇÒ»¸ö(is-a)¾ØÐÎ
- * Òò´Ë½«SquareÊÓÎªRectangleµÄ×ÓÀàÊÇºÏºõÂß¼­µÄ
+ * ä¸€èˆ¬æ„ä¹‰ä¸Šè®²ï¼Œä¸€ä¸ªæ­£æ–¹å½¢å°±æ˜¯ä¸€ä¸ª(is-a)çŸ©å½¢
+ * å› æ­¤å°†Squareè§†ä¸ºRectangleçš„å­ç±»æ˜¯åˆä¹Žé€»è¾‘çš„
  * <p>
- * µ«ÊÇ»á´øÀ´ÈçÏÂµÄÁ½¸öÎÊÌâ£º
- * 1£¬Õý·½ÐÎ²»Í¬Ê±ÐèÒªwidthºÍheight£¬Ö»ÐèÒªÒ»¸ö¾Í¹»ÁË
- * ÕâµãËäÈ»ÎÞ¹Ø½ôÒª£¬µ«Èç¹û±ØÐëÒª´´½¨ÉÏÇ§¸öSquare¶ÔÏóÊ±£¬¾Í»áÔì³É¾Þ´óµÄÄÚ´æÀË·Ñ
- * 2£¬Õý·½ÐÎµÄ±ß³¤ÊÇÏàµÈµÄ£¬µ±ÉèÖÃwidthÊ±£¬heightÒ²ÒªËæÖ®¸Ä±ä£¬·´Ö®ÒàÈ»
- * ÎÒÃÇÍ¨¹ýÖØÐ´¾ØÐÎÖÐµÄsetWidth()ºÍsetHeight()·½·¨À´´ïµ½Ä¿µÄ
+ * ä½†æ˜¯ä¼šå¸¦æ¥å¦‚ä¸‹çš„ä¸¤ä¸ªé—®é¢˜ï¼š
+ * 1ï¼Œæ­£æ–¹å½¢ä¸åŒæ—¶éœ€è¦widthå’Œheightï¼Œåªéœ€è¦ä¸€ä¸ªå°±å¤Ÿäº†
+ * è¿™ç‚¹è™½ç„¶æ— å…³ç´§è¦ï¼Œä½†å¦‚æžœå¿…é¡»è¦åˆ›å»ºä¸Šåƒä¸ªSquareå¯¹è±¡æ—¶ï¼Œå°±ä¼šé€ æˆå·¨å¤§çš„å†…å­˜æµªè´¹
+ * 2ï¼Œæ­£æ–¹å½¢çš„è¾¹é•¿æ˜¯ç›¸ç­‰çš„ï¼Œå½“è®¾ç½®widthæ—¶ï¼Œheightä¹Ÿè¦éšä¹‹æ”¹å˜ï¼Œåä¹‹äº¦ç„¶
+ * æˆ‘ä»¬é€šè¿‡é‡å†™çŸ©å½¢ä¸­çš„setWidth()å’ŒsetHeight()æ–¹æ³•æ¥è¾¾åˆ°ç›®çš„
  * <p>
- * Êµ¼ÊÉÏ£¬µ±¼Ì³Ð×ÔÒ»¸ö¾ßÌåÀà»òÕßÖØÐ´Ò»¸ö»ùÀàµÄ¾ßÌå·½·¨Ê±£¬¶¼ÒâÎ¶×ÅÉè¼ÆÊÇÓÐÈ±ÏÝµÄ
+ * å®žé™…ä¸Šï¼Œå½“ç»§æ‰¿è‡ªä¸€ä¸ªå…·ä½“ç±»æˆ–è€…é‡å†™ä¸€ä¸ªåŸºç±»çš„å…·ä½“æ–¹æ³•æ—¶ï¼Œéƒ½æ„å‘³ç€è®¾è®¡æ˜¯æœ‰ç¼ºé™·çš„
  */
 class Square extends Rectangle {
 
@@ -63,21 +63,21 @@ class Square extends Rectangle {
 }
 
 /**
- * Ãæ»ýÀà
+ * é¢ç§¯ç±»
  */
 class Area {
 
 	/**
-	 * ËäÈ»ÉÏÃæµÄ¾ØÐÎÕý·½ÐÎµÄÉè¼ÆËÆºõÊÇ×ÔÏàÈÝµÄ¡¢ÕýÈ·µÄ
-	 * µ«Ò»¸ö×ÔÏàÈÝµÄÉè¼ÆÎ´±Ø¾ÍºÍËùÓÐµÄÓÃ»§³ÌÐòÏàÈÝ£¬Èç±¾·½·¨¡£
+	 * è™½ç„¶ä¸Šé¢çš„çŸ©å½¢æ­£æ–¹å½¢çš„è®¾è®¡ä¼¼ä¹Žæ˜¯è‡ªç›¸å®¹çš„ã€æ­£ç¡®çš„
+	 * ä½†ä¸€ä¸ªè‡ªç›¸å®¹çš„è®¾è®¡æœªå¿…å°±å’Œæ‰€æœ‰çš„ç”¨æˆ·ç¨‹åºç›¸å®¹ï¼Œå¦‚æœ¬æ–¹æ³•ã€‚
 	 * <p>
-	 * ±¾·½·¨µÄ±íÏÖËµÃ÷Ò»Ð©Ê¹ÓÃRectangle¶ÔÏóµÄ·½·¨²»ÄÜÕýÈ·µÄ²Ù×÷Square¶ÔÏó
-	 * ¶ÔÓÚÕâÐ©·½·¨¶øÑÔ£¬Square²»ÄÜÌæ»»Rectangle£¬Òò´ËSquareºÍRectangleÖ®¼äµÄ¹ØÏµÊÇÎ¥·´LSPµÄ
+	 * æœ¬æ–¹æ³•çš„è¡¨çŽ°è¯´æ˜Žä¸€äº›ä½¿ç”¨Rectangleå¯¹è±¡çš„æ–¹æ³•ä¸èƒ½æ­£ç¡®çš„æ“ä½œSquareå¯¹è±¡
+	 * å¯¹äºŽè¿™äº›æ–¹æ³•è€Œè¨€ï¼ŒSquareä¸èƒ½æ›¿æ¢Rectangleï¼Œå› æ­¤Squareå’ŒRectangleä¹‹é—´çš„å…³ç³»æ˜¯è¿åLSPçš„
 	 */
 	public static void test(Rectangle r) {
 		r.setWidth(5);
 		r.setHeight(4);
-		// Õâ¸ö¶ÏÑÔ¶ÔÓÚRectangleÊÇÕýÈ·µÄ£¬µ«ÊÇ¶ÔÓÚSquare¾Í²»¶ÔÁË
+		// è¿™ä¸ªæ–­è¨€å¯¹äºŽRectangleæ˜¯æ­£ç¡®çš„ï¼Œä½†æ˜¯å¯¹äºŽSquareå°±ä¸å¯¹äº†
 		assert (20 == r.getWidth() * r.getHeight());
 	}
 }

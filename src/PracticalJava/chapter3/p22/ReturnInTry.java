@@ -4,11 +4,11 @@
 package chapter3.p22;
 
 /**
- * ÔÚtryÇø¶ÎÖĞ·µ»ØÖµÊ¾Àı
+ * åœ¨tryåŒºæ®µä¸­è¿”å›å€¼ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-27
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-27
  */
 public class ReturnInTry {
 
@@ -16,7 +16,7 @@ public class ReturnInTry {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ´òÓ¡ÈçÏÂ£ºmethod returns 2
+		// æ‰“å°å¦‚ä¸‹ï¼šmethod returns 2
 		System.out.println("method returns " + method());
 	}
 

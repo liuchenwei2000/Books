@@ -1,27 +1,27 @@
-                                                                 ²âÊÔµÄÄÑµã
+                                                                 æµ‹è¯•çš„éš¾ç‚¹
 
-¼«ÏÞ±à³ÌÖ¸³öÎÒÃÇÒª²âÊÔÄÇÐ©ÓÐ¿ÉÄÜ»á³ö´íµÄ³ÌÐò¡£
+æžé™ç¼–ç¨‹æŒ‡å‡ºæˆ‘ä»¬è¦æµ‹è¯•é‚£äº›æœ‰å¯èƒ½ä¼šå‡ºé”™çš„ç¨‹åºã€‚
 
-ÎªÊ²Ã´ÓÐÐ©¶ÔÏó¿´ÆðÀ´ºÜÄÑ²âÊÔ£¿
-1£¬ÒÀÀµÓÚÆäËû¶ÔÏóµÄ¶ÔÏó(Ð­×÷¶ÔÏó)
-2£¬GUI
-3£¬Êý¾Ý¿â
-4£¬Servlets/EJB
+ä¸ºä»€ä¹ˆæœ‰äº›å¯¹è±¡çœ‹èµ·æ¥å¾ˆéš¾æµ‹è¯•ï¼Ÿ
+1ï¼Œä¾èµ–äºŽå…¶ä»–å¯¹è±¡çš„å¯¹è±¡(åä½œå¯¹è±¡)
+2ï¼ŒGUI
+3ï¼Œæ•°æ®åº“
+4ï¼ŒServlets/EJB
 
-Ð­×÷¶ÔÏóµÄÒÀÀµÐÔ¿ÉÒÔÍ¨¹ýÊ¹ÓÃÒ»¸ö½Ó¿ÚÀ´´òÆÆ£¬±ÈÈç£º
+åä½œå¯¹è±¡çš„ä¾èµ–æ€§å¯ä»¥é€šè¿‡ä½¿ç”¨ä¸€ä¸ªæŽ¥å£æ¥æ‰“ç ´ï¼Œæ¯”å¦‚ï¼š
 
-A-->B  AÖ±½ÓÒÀÀµB
+A-->B  Aç›´æŽ¥ä¾èµ–B
 
-¿ÉÒÔ±ä³É  
+å¯ä»¥å˜æˆ  
 
-A-->IB(interface) BÊµÏÖIB
+A-->IB(interface) Bå®žçŽ°IB
 
-ÕâÑùÒÀÀµ¾Í±»µ¹ÖÃÁË£¬AºÍB¶¼ÒÀÀµÓÚ½Ó¿ÚIB
+è¿™æ ·ä¾èµ–å°±è¢«å€’ç½®äº†ï¼ŒAå’ŒBéƒ½ä¾èµ–äºŽæŽ¥å£IB
 
-ÕâÑùA¾Í²»ÔÙÐèÒªÒÀÀµ¾ßÌåµÄBÁË£¬¿ÉÒÔÍ¨¹ýÒ»¸öMockBÀ´²âÊÔA¡£
-MockBÊµÏÖIB£¬ÔÚAµÄ²âÊÔÀàATestµÄ¿ØÖÆÏÂÌá¹©²âÊÔ»·¾³£¬ÉõÖÁÊÇATest¿ÉÒÔ×Ô¼ºÊµÏÖIBÀ´³äµ±²âÊÔ×®(stub)¶ø²»ÐèMockB¡£
+è¿™æ ·Aå°±ä¸å†éœ€è¦ä¾èµ–å…·ä½“çš„Bäº†ï¼Œå¯ä»¥é€šè¿‡ä¸€ä¸ªMockBæ¥æµ‹è¯•Aã€‚
+MockBå®žçŽ°IBï¼Œåœ¨Açš„æµ‹è¯•ç±»ATestçš„æŽ§åˆ¶ä¸‹æä¾›æµ‹è¯•çŽ¯å¢ƒï¼Œç”šè‡³æ˜¯ATestå¯ä»¥è‡ªå·±å®žçŽ°IBæ¥å……å½“æµ‹è¯•æ¡©(stub)è€Œä¸éœ€MockBã€‚
 
-Ê²Ã´Ê±ºòÐèÒªÊ¹ÓÃ×®(stub)£¿
-µ±ÕæÕýµÄ¶ÔÏóÊ¹ÓÃÆðÀ´ºÜÀ§ÄÑµÄÊ±ºò£¬ÐèÒªÊ¹ÓÃ×®¡£±ÈÈçÓ²¼þ¡¢Êý¾Ý¿â¡¢ÒÀÀµµÄ¶ÔÏóÃ»Íê³É¡£
-¶øValue ObjectºÍÒÀÀµ¶ÔÏóÒÑÖª¿ÉÓÃÊ±²»ÐèÒªÊ¹ÓÃstub¡£
-×®»¹¿ÉÒÔ±»ÓÃÀ´¼ÇÂ¼ÈÕÖ¾ºÍÊµÏÖNullObjectÄ£Ê½¡£
+ä»€ä¹ˆæ—¶å€™éœ€è¦ä½¿ç”¨æ¡©(stub)ï¼Ÿ
+å½“çœŸæ­£çš„å¯¹è±¡ä½¿ç”¨èµ·æ¥å¾ˆå›°éš¾çš„æ—¶å€™ï¼Œéœ€è¦ä½¿ç”¨æ¡©ã€‚æ¯”å¦‚ç¡¬ä»¶ã€æ•°æ®åº“ã€ä¾èµ–çš„å¯¹è±¡æ²¡å®Œæˆã€‚
+è€ŒValue Objectå’Œä¾èµ–å¯¹è±¡å·²çŸ¥å¯ç”¨æ—¶ä¸éœ€è¦ä½¿ç”¨stubã€‚
+æ¡©è¿˜å¯ä»¥è¢«ç”¨æ¥è®°å½•æ—¥å¿—å’Œå®žçŽ°NullObjectæ¨¡å¼ã€‚

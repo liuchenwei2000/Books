@@ -4,16 +4,16 @@
 package fields.f16.after;
 
 /**
- * ÈËÀà
+ * äººç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public class Person {
 
-	private final boolean isMale;// ÊÇ·ñÎªÄĞ
-	private final char code;// ĞÔ±ğÂë
+	private final boolean isMale;// æ˜¯å¦ä¸ºç”·
+	private final char code;// æ€§åˆ«ç 
 
 	private Person(boolean isMale, char code) {
 		this.isMale = isMale;
@@ -21,14 +21,14 @@ public class Person {
 	}
 
 	/**
-	 * ´´½¨ÄĞĞÔ
+	 * åˆ›å»ºç”·æ€§
 	 */
 	public static Person createMale() {
 		return new Person(true, 'M');
 	}
 
 	/**
-	 * ´´½¨Å®ĞÔ
+	 * åˆ›å»ºå¥³æ€§
 	 */
 	public static Person createFemale() {
 		return new Person(false, 'F');

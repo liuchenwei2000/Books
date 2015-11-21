@@ -4,17 +4,17 @@
 package chapter5.p50;
 
 /**
- * volatileÊ¾Àı
+ * volatileç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-13
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-13
  */
 public class VolatileDemo {
 
 	class Foo {
 		
-		// ¹²Ïí±äÁ¿Ê¹ÓÃvolatileĞŞÊÎ£¬ÒÔ±£Ö¤°²È«¡£
+		// å…±äº«å˜é‡ä½¿ç”¨volatileä¿®é¥°ï¼Œä»¥ä¿è¯å®‰å…¨ã€‚
 		private volatile int value;
 
 		public int getValue() {

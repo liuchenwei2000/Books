@@ -4,20 +4,20 @@
 package principle.ISP.v2.after;
 
 /**
- * ���ж�ʱ���ܵ�����ʾ��
+ * 具有定时功能的门演示类
  * <p>
- * ���ڶ�ʱ����Ҫ��¼ÿ�ζ�ʱ����Ϣ���Ա��ڶ�ʱ����֮�����ʶ��
- * Ҳ����˵��ʱ��ϵͳ��Ҫ�����Լ��Ľӿڣ���ѭISP
+ * 现在定时器需要记录每次定时的信息，以便于定时到了之后进行识别
+ * 也就是说定时器系统需要调整自己的接口，遵循ISP
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-10-31
+ * 创建日期：2010-10-31
  */
 public class TimedDoorDemo {
 }
 
 /**
- * ����
+ * 门类
  */
 abstract class Door {
 
@@ -29,7 +29,7 @@ abstract class Door {
 }
 
 /**
- * ľ�ţ��ŵ�һ����ͨʵ����
+ * 木门，门的一个普通实现类
  */
 class WoodDoor extends Door {
 
@@ -47,21 +47,21 @@ class WoodDoor extends Door {
 }
 
 /**
- * ��ʱ����
+ * 定时器类
  * <p>
- * �ı��˽ӿڣ�������һ������
+ * 改变了接口，增加了一个参数
  */
 class Timer {
 
 	/**
-	 * ע��һ����ʱ�ͻ���
+	 * 注册一个定时客户端
 	 * 
 	 * @param timerClient
-	 *            ��ʱ���ͻ���
+	 *            定时器客户端
 	 * @param timeout
-	 *            ��ʱ����
+	 *            超时秒数
 	 * @param timeOutID 
-	 *            ��ʱID
+	 *            超时ID
 	 */
 	public void register(TimerClient timerClient, int timeout, int timeOutID) {
 		for (int i = timeout; i > 0; i--) {
@@ -71,31 +71,31 @@ class Timer {
 				e.printStackTrace();
 			}
 		}
-		// ��ʱʱ�䵽��֮��֪ͨ��ʱ���ͻ���ִ�в���
+		// 定时时间到了之后通知定时器客户端执行操作
 		timerClient.timeOut(timeOutID);
 	}
 }
 
 /**
- * ��ʱ�ͻ���
+ * 定时客户端
  * <p>
- * �ı��˽ӿڣ�������һ������
+ * 改变了接口，增加了一个参数
  */
 interface TimerClient {
 
 	/**
-	 * ���˶�ʱʱ�����Ĳ���
+	 * 到了定时时间做的操作
 	 * 
 	 * @param timeOutID
-	 *            ��ʱID
+	 *            超时ID
 	 */
 	public void timeOut(int timeOutID);
 }
 
 /**
- * ���ж�ʱ���ܵ���
+ * 具有定时功能的门
  * <p>
- * ��ʱ��Ҫ�޸ĵ�ֻ�б��࣬��Door�����༰��ͻ���������Ķ���Ҳ������Ķ�ʱϵͳ�ı仯
+ * 此时需要修改的只有本类，而Door的子类及其客户程序都无需改动，也无需关心定时系统的变化
  */
 class TimedDoor extends Door {
 
@@ -114,9 +114,9 @@ class TimedDoor extends Door {
 }
 
 /**
- * TimedDoor�����������Ա��ڿ�����ɶ�ʱ����
+ * TimedDoor的适配器，以便于可以完成定时功能
  * <p>
- * ����������Ҫ�޸ģ���������ΪTimerClient�ӿڱ仯���µ�
+ * 适配器类需要修改，但是是因为TimerClient接口变化导致的
  */
 class TimedDoorAdapter implements TimerClient {
 

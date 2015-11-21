@@ -4,25 +4,25 @@
 package principle.DIP.v1;
 
 /**
- * ²ã´Î»¯ÑİÊ¾Àà
+ * å±‚æ¬¡åŒ–æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-31
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-31
  */
 public class LayerDemo {
 }
 
 /**
- * ÉÌÒµ²ßÂÔ²ã
+ * å•†ä¸šç­–ç•¥å±‚
  * <p>
- * ÕâÑùµÄÉè¼Æµ¼ÖÂPolicyLayerÒÀÀµÓÚMechanismLayer
- * ¶øMechanismLayerÒÀÀµÓÚUtilityLayer£¬½ø¶øPolicyLayerÒ²ÒÀÀµÓÚUtilityLayer
- * µ¼ÖÂPolicyLayer¶ÔÓÚÆäÏÂÒ»Ö±µ½UtilityLayerµÄ¸Ä¶¯¶¼ÊÇÃô¸ĞµÄ
+ * è¿™æ ·çš„è®¾è®¡å¯¼è‡´PolicyLayerä¾èµ–äºMechanismLayer
+ * è€ŒMechanismLayerä¾èµ–äºUtilityLayerï¼Œè¿›è€ŒPolicyLayerä¹Ÿä¾èµ–äºUtilityLayer
+ * å¯¼è‡´PolicyLayerå¯¹äºå…¶ä¸‹ä¸€ç›´åˆ°UtilityLayerçš„æ”¹åŠ¨éƒ½æ˜¯æ•æ„Ÿçš„
  */
 class PolicyLayer {
 
-	// ÒÀÀµÓÚµÍ²ãµÄ MechanismLayer
+	// ä¾èµ–äºä½å±‚çš„ MechanismLayer
 	private MechanismLayer mechanismLayer;
 
 	public MechanismLayer getMechanismLayer() {
@@ -35,11 +35,11 @@ class PolicyLayer {
 }
 
 /**
- * »úÖÆ²ã
+ * æœºåˆ¶å±‚
  */
 class MechanismLayer {
 
-	// ÒÀÀµÓÚµÍ²ãµÄ UtilityLayer
+	// ä¾èµ–äºä½å±‚çš„ UtilityLayer
 	private UtilityLayer utilityLayer;
 
 	public UtilityLayer getUtilityLayer() {
@@ -52,7 +52,7 @@ class MechanismLayer {
 }
 
 /**
- * ¹¤¾ß²ã
+ * å·¥å…·å±‚
  */
 class UtilityLayer {
 

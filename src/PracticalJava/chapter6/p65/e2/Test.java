@@ -4,11 +4,11 @@
 package chapter6.p65.e2;
 
 /**
- * ¿Í»§¶Ë²âÊÔÀà 
+ * å®¢æˆ·ç«¯æµ‹è¯•ç±» 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class Test {
 
@@ -21,7 +21,7 @@ public class Test {
 		
 		ImmutableCircle ic = new ImmutableCircle(5);
 		useImmutable(ic);
-		// ´ËÊ±×ªĞÍ(cast)¾ÍÎŞ·¨´òÆÆ¿É±äĞÔÁË£¬ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// æ­¤æ—¶è½¬å‹(cast)å°±æ— æ³•æ‰“ç ´å¯å˜æ€§äº†ï¼Œä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 		// useMutable((MutableCircle) ic);
 		
 		useCircle(mc);
@@ -29,19 +29,19 @@ public class Test {
 	}
 
 	/**
-	 * ĞèÒª¿É±ä¶ÔÏóµÄº¯Êı
+	 * éœ€è¦å¯å˜å¯¹è±¡çš„å‡½æ•°
 	 */
 	public static void useMutable(MutableCircle mc) {
 	}
 
 	/**
-	 * ĞèÒª²»¿É±ä¶ÔÏóµÄº¯Êı
+	 * éœ€è¦ä¸å¯å˜å¯¹è±¡çš„å‡½æ•°
 	 */
 	public static void useImmutable(ImmutableCircle mc) {
 	}
 
 	/**
-	 * ²»ÔÚºõ¶ÔÏó¿É±äĞÔµÄº¯Êı
+	 * ä¸åœ¨ä¹å¯¹è±¡å¯å˜æ€§çš„å‡½æ•°
 	 */
 	public static void useCircle(Circle c) {
 	}

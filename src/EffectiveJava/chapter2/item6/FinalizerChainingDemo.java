@@ -4,11 +4,11 @@
 package chapter2.item6;
 
 /**
- * �սắ������ʾ
+ * 终结函数链演示
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-12-25
+ * 创建日期：2010-12-25
  */
 public class FinalizerChainingDemo {
 }
@@ -23,12 +23,12 @@ class BaseClass {
 class SubClass extends BaseClass {
 
 	/**
-	 * ������սắ��
+	 * 子类的终结函数
 	 */
 	protected void finalize() throws Throwable {
 		/*
-		 * Ӧ����һ��try�����ս����࣬�����ڶ�Ӧ��finally���е��ó�����սắ���� 
-		 * �����ܱ�֤��ʹ������ս�����׳����쳣��������սắ��Ҳ�ᱻִ�У���֮��Ȼ��
+		 * 应该在一个try块中终结子类，并且在对应的finally块中调用超类的终结函数。 
+		 * 这样能保证即使子类的终结过程抛出了异常，超类的终结函数也会被执行，反之亦然。
 		 */
 		try {
 			// do something

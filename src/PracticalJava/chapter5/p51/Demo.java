@@ -4,11 +4,11 @@
 package chapter5.p51;
 
 /**
- * Ê¾Àý
+ * ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-16
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-16
  */
 public class Demo {
 
@@ -18,16 +18,16 @@ public class Demo {
 	public static void main(String[] args) {
 		int[] a1 = { 1, 2, 3, 4, 5 };
 		int[] a2 = { 9, 8, 7, 6, 5 };
-		// ´«Èëº¯ÊýµÄÁ½¸öÊý×é²¢·ÇÊÇDemo¶ÔÏóµÄinstanceÊý¾Ý
+		// ä¼ å…¥å‡½æ•°çš„ä¸¤ä¸ªæ•°ç»„å¹¶éžæ˜¯Demoå¯¹è±¡çš„instanceæ•°æ®
 		Demo demo = new Demo();
 		demo.sumArrays(a1, a2);
 	}
 	
 	/**
-	 * Õâ¸ö·½·¨ËäÈ»ÉùÃ÷Îªsynchronized£¬µ«ÈÔÈ»²»¾ßÓÐÏß³Ì°²È«ÐÔ¡£
+	 * è¿™ä¸ªæ–¹æ³•è™½ç„¶å£°æ˜Žä¸ºsynchronizedï¼Œä½†ä»ç„¶ä¸å…·æœ‰çº¿ç¨‹å®‰å…¨æ€§ã€‚
 	 * 
-	 * ÕâÊÇÒòÎªsynchronizedËø¶¨µÄÊÇ¶ÔÏó£¬¶ø·Çº¯Êý»ò´úÂë£¬±¾·½·¨Ëù²Ù×ÝµÄÁ½¸öÊý×é¶ÔÏó²¢Ã»ÓÐ±»Ëø¶¨¡£
-	 * µ±ÁíÒ»¸öÏß³Ì¸Ä±äÎ´Ëø¶¨Ö®¶ÔÏóµÄÊ±ºò£¬±¾º¯ÊýÒÀÈ»¿ÉÒÔÖ´ÐÐ£¬½á¹û¾Í´íÁË¡£
+	 * è¿™æ˜¯å› ä¸ºsynchronizedé”å®šçš„æ˜¯å¯¹è±¡ï¼Œè€Œéžå‡½æ•°æˆ–ä»£ç ï¼Œæœ¬æ–¹æ³•æ‰€æ“çºµçš„ä¸¤ä¸ªæ•°ç»„å¯¹è±¡å¹¶æ²¡æœ‰è¢«é”å®šã€‚
+	 * å½“å¦ä¸€ä¸ªçº¿ç¨‹æ”¹å˜æœªé”å®šä¹‹å¯¹è±¡çš„æ—¶å€™ï¼Œæœ¬å‡½æ•°ä¾ç„¶å¯ä»¥æ‰§è¡Œï¼Œç»“æžœå°±é”™äº†ã€‚
 	 */
 	public synchronized int sumArrays(int[] a1, int[] a2) {
 		int value = 0;
@@ -41,8 +41,8 @@ public class Demo {
 	}
 	
 	/**
-	 * ËùÒÔ£¬ÓÐÊ±ºò½ö½öÍ¬²½¿ØÖÆÒ»¸öº¯ÊýÊÇ²»¹»µÄ£¬»¹±ØÐëÍ¬²½¿ØÖÆ´Ëº¯ÊýËù´¦ÀíµÄ¶ÔÏó¡£
-	 * ±¾·½·¨¶Ôº¯ÊýÖÐ²Ù×÷µÄÃ¿Ò»¸ö¶ÔÏó¶¼¼ÓËø¿ØÖÆ£¬±£Ö¤ÁËÏß³Ì°²È«ÐÔ¡£
+	 * æ‰€ä»¥ï¼Œæœ‰æ—¶å€™ä»…ä»…åŒæ­¥æŽ§åˆ¶ä¸€ä¸ªå‡½æ•°æ˜¯ä¸å¤Ÿçš„ï¼Œè¿˜å¿…é¡»åŒæ­¥æŽ§åˆ¶æ­¤å‡½æ•°æ‰€å¤„ç†çš„å¯¹è±¡ã€‚
+	 * æœ¬æ–¹æ³•å¯¹å‡½æ•°ä¸­æ“ä½œçš„æ¯ä¸€ä¸ªå¯¹è±¡éƒ½åŠ é”æŽ§åˆ¶ï¼Œä¿è¯äº†çº¿ç¨‹å®‰å…¨æ€§ã€‚
 	 */
 	public int sumArrays2(int[] a1, int[] a2) {
 		int value = 0;

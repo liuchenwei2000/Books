@@ -4,11 +4,11 @@
 package principle.OCP.v1;
 
 /**
- * Client-ServerÊ¾Àı
+ * Client-Serverç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-28
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-28
  */
 public class ClientServerDemo {
 
@@ -18,16 +18,16 @@ public class ClientServerDemo {
 	public static void main(String[] args) {
 		Client client = new Client();
 		client.connect();
-		// Èç¹ûClient¶ÔÏóÏ£ÍûÊ¹ÓÃÁíÍâÒ»¸ö²»Í¬µÄ·şÎñÆ÷¶ÔÏó£¬¾ÍÖ»ÄÜĞŞ¸ÄClientµÄÔ´ÂëÁË
+		// å¦‚æœClientå¯¹è±¡å¸Œæœ›ä½¿ç”¨å¦å¤–ä¸€ä¸ªä¸åŒçš„æœåŠ¡å™¨å¯¹è±¡ï¼Œå°±åªèƒ½ä¿®æ”¹Clientçš„æºç äº†
 	}
 }
 
 /**
- * ¼È²»¿ª·ÅÒ²²»·â±ÕµÄClientÀà
+ * æ—¢ä¸å¼€æ”¾ä¹Ÿä¸å°é—­çš„Clientç±»
  */
 class Client {
 	
-	private Server server;// Ö±½ÓÒÀÀµÓÚ¾ßÌåµÄServer
+	private Server server;// ç›´æ¥ä¾èµ–äºå…·ä½“çš„Server
 
 	public void connect(){
 		System.out.println(server);

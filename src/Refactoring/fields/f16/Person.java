@@ -4,21 +4,21 @@
 package fields.f16;
 
 /**
- * ÈËÀà
+ * äººç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public abstract class Person {
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇÄĞĞÔ
+	 * åˆ¤æ–­æ˜¯å¦æ˜¯ç”·æ€§
 	 */
 	public abstract boolean isMale();
 
 	/**
-	 * ·µ»ØĞÔ±ğÂë
+	 * è¿”å›æ€§åˆ«ç 
 	 */
 	public abstract char getCode();
 }

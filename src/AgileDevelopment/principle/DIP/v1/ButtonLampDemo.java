@@ -4,23 +4,23 @@
 package principle.DIP.v1;
 
 /**
- * ��ť���Ƶ���ʾ��
+ * 按钮控制灯演示类
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-10-31
+ * 创建日期：2010-10-31
  */
 public class ButtonLampDemo {
 }
 
 /**
- * ��ť��
+ * 按钮类
  * <p>
- * ������Υ����DIP���߲����û�к͵Ͳ�ʵ�ַ��롣
+ * 这个设计违反了DIP，高层策略没有和低层实现分离。
  */
 class Button {
 
-	// ֱ�������ڵͲ��Lamp��
+	// 直接依赖于低层的Lamp类
 	private Lamp lamp;
 
 	public void press() {
@@ -46,7 +46,7 @@ class Button {
 }
 
 /**
- * ����
+ * 灯类
  */
 class Lamp {
 

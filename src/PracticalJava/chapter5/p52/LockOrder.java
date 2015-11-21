@@ -4,22 +4,22 @@
 package chapter5.p52;
 
 /**
- * ¶ÔÏóº¬ÓĞËøË³ĞòĞÅÏ¢ÒÔ±ÜÃâËÀËø¡£
+ * å¯¹è±¡å«æœ‰é”é¡ºåºä¿¡æ¯ä»¥é¿å…æ­»é”ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-16
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-16
  */
 public class LockOrder {
 
 	/**
-	 * ÖØĞÂ¶¨ÒåsumArrays·½·¨£¬Ê¹ÓÃArrayWithLockOrder
+	 * é‡æ–°å®šä¹‰sumArraysæ–¹æ³•ï¼Œä½¿ç”¨ArrayWithLockOrder
 	 */
 	public int sumArrays(ArrayWithLockOrder a1, ArrayWithLockOrder a2) {
 		int value = 0;
 		int length = a1.getArray().length;
 		if (length == a2.getArray().length) {
-			// ¸ù¾İ¶ÔÏóµÄËøĞòºÅÈ·¶¨¼ÓËøË³Ğò
+			// æ ¹æ®å¯¹è±¡çš„é”åºå·ç¡®å®šåŠ é”é¡ºåº
 			Object firstLock = a1;
 			Object lastLock = a2;
 			if (a1.getLockOrder() > a2.getLockOrder()) {
@@ -39,15 +39,15 @@ public class LockOrder {
 }
 class ArrayWithLockOrder {
 	
-	// ¶ÔÏóËø¼ÆÊıÆ÷£¬Àà±äÁ¿
+	// å¯¹è±¡é”è®¡æ•°å™¨ï¼Œç±»å˜é‡
 	private static long numberOfLocks = 0;
 	
-	private long lockOrder;// ¶ÔÏóËøĞòºÅ
+	private long lockOrder;// å¯¹è±¡é”åºå·
 	private int[] array;
 
 	public ArrayWithLockOrder(int[] array) {
 		this.array = array;
-		// ³õÊ¼»¯¶ÔÏóËøĞòºÅ£¬±£Ö¤²¢·¢°²È«¡£
+		// åˆå§‹åŒ–å¯¹è±¡é”åºå·ï¼Œä¿è¯å¹¶å‘å®‰å…¨ã€‚
 		synchronized (ArrayWithLockOrder.class) {
 			numberOfLocks++;
 			lockOrder = numberOfLocks;

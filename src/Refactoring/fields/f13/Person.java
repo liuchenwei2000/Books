@@ -4,21 +4,21 @@
 package fields.f13;
 
 /**
- * ÈËÀà(¾É)
+ * äººç±»(æ—§)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class Person {
 
-	/** ËÄÖÖÑªĞÍ³£Á¿ */
+	/** å››ç§è¡€å‹å¸¸é‡ */
 	public static final int O = 0;
 	public static final int A = 1;
 	public static final int B = 2;
 	public static final int AB = 3;
 
-	private int bloodGroup;// ÑªĞÍ
+	private int bloodGroup;// è¡€å‹
 
 	public Person(int bloodGroup) {
 		this.bloodGroup = bloodGroup;
@@ -42,9 +42,9 @@ public class Person {
 	public static void main(String[] args) {
 		Person p1 = new Person(Person.A);
 		p1.getBloodGroup();
-		// ÕâÑùÊ¹ÓÃËäÈ»Âß¼­ÊÇ´íÎóµÄµ«ÊÇ±àÒëÆ÷²¢²»¼ì²é
+		// è¿™æ ·ä½¿ç”¨è™½ç„¶é€»è¾‘æ˜¯é”™è¯¯çš„ä½†æ˜¯ç¼–è¯‘å™¨å¹¶ä¸æ£€æŸ¥
 		p1.setBloodGroup(6);
-		// ÕâÑùÊ¹ÓÃËäÈ»Âß¼­ÊÇ´íÎóµÄµ«ÊÇ±àÒëÆ÷²¢²»¼ì²é
+		// è¿™æ ·ä½¿ç”¨è™½ç„¶é€»è¾‘æ˜¯é”™è¯¯çš„ä½†æ˜¯ç¼–è¯‘å™¨å¹¶ä¸æ£€æŸ¥
 		Person p2 = new Person(5);
 		p2.getBloodGroup();
 	}

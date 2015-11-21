@@ -6,17 +6,17 @@ package chapter5.item22;
 import java.io.Serializable;
 
 /**
- * ����ģʽʵ����ʾ
+ * 策略模式实现演示
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2011-3-13
+ * 创建日期：2011-3-13
  */
 public class StrategyDemo {
 }
 
 /**
- * �Ƚ����ӿ�(���Խӿ�)
+ * 比较器接口(策略接口)
  */
 interface Comparator {
 
@@ -24,7 +24,7 @@ interface Comparator {
 }
 
 /**
- * �ַ������ȱȽ����ĵ�һ��ʵ��
+ * 字符串长度比较器的第一种实现
  */
 class StringLengthComparator1 implements Comparator {
 
@@ -35,15 +35,15 @@ class StringLengthComparator1 implements Comparator {
 }
 
 /**
- * �ַ������ȱȽ����ĵڶ���ʵ��
+ * 字符串长度比较器的第二种实现
  * <p>
- * ��Ϊһ�����͵ľ�������࣬StringLengthComparator����״̬�ģ�
- * ��û������������������ʵ���ڹ����϶����໥�ȼ۵ġ�
- * ��ˣ�����Ϊһ������(singleton)�Ƿǳ����ʵģ��Ӷ���ʡ����Ҫ�Ķ��󴴽�������
+ * 作为一个典型的具体策略类，StringLengthComparator是无状态的：
+ * 它没有域，所以这个类的所有实例在功能上都是相互等价的。
+ * 因此，它作为一个单例(singleton)是非常合适的，从而节省不必要的对象创建开销。
  */
 class StringLengthComparator2 implements Comparator {
 
-	/** ���� */
+	/** 单例 */
 	public static final StringLengthComparator2 INSTANCE = new StringLengthComparator2();
 
 	private StringLengthComparator2() {
@@ -56,22 +56,22 @@ class StringLengthComparator2 implements Comparator {
 }
 
 /**
- * �ַ������ȱȽ����ĵ�����ʵ��
+ * 字符串长度比较器的第三种实现
  * <p>
- * ��Ϊ���Խӿڱ��������о������ʵ�������ͣ����Բ�����ҪΪ�˵���һ�������������Ѿ�����������ɹ��еġ�
- * �෴����������Ե���һ�����еľ�̬����߾�̬����������������Ϊ���Խӿڣ����Ҿ��������������������һ��˽��Ƕ���ࡣ
+ * 因为策略接口被用做所有具体策略实例的类型，所以并不需要为了导出一个具体策略类而把具体策略类做成公有的。
+ * 相反，宿主类可以导出一个公有的静态域或者静态工厂方法，其类型为策略接口，并且具体策略类可以是宿主类的一个私有嵌套类。
  * <p>
- * String��ʹ��������ģʽ��ͨ������String.CASE_INSENSITIVE_ORDER�򵼳�һ����Сд�����еıȽ�����
+ * String类使用了这种模式，通过它的String.CASE_INSENSITIVE_ORDER域导出一个大小写不敏感的比较器。
  */
 class Host {
 
-	/** ���� */
+	/** 单例 */
 	public static final Comparator STRING_LENGTH_COMPARATOR = new StringLengthComparator3();
 
 	/**
-	 * ˽��Ƕ����
+	 * 私有嵌套类
 	 * <p>
-	 * ����ʹ�õ��Ǿ�̬��Ա�࣬�����������࣬�Ա������þ�����������ʵ�ֵڶ����ӿڡ�
+	 * 这里使用的是静态成员类，而不是匿名类，以便允许该具体策略类可以实现第二个接口。
 	 */
 	private static class StringLengthComparator3 implements Comparator, Serializable  {
 

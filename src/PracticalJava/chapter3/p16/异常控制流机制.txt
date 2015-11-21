@@ -1,13 +1,13 @@
-Òì³£¿ØÖÆÁ÷»úÖÆ
+å¼‚å¸¸æŽ§åˆ¶æµæœºåˆ¶
 
 
-Ò»µ©Ä³¸öÒì³£µ®Éú£¬¿ØÖÆÁ÷Á¢¼´×ªÒÆµ½ÏÂÃæÈýÕßÖ®Ò»£º
-catch block£¨²¶»ñÇø¶Î£©
-finally block£¨ÖÕ½áÇø¶Î£©
-calling method£¨µ÷ÓÃ¶Ë£©
+ä¸€æ—¦æŸä¸ªå¼‚å¸¸è¯žç”Ÿï¼ŒæŽ§åˆ¶æµç«‹å³è½¬ç§»åˆ°ä¸‹é¢ä¸‰è€…ä¹‹ä¸€ï¼š
+catch blockï¼ˆæ•èŽ·åŒºæ®µï¼‰
+finally blockï¼ˆç»ˆç»“åŒºæ®µï¼‰
+calling methodï¼ˆè°ƒç”¨ç«¯ï¼‰
 
-Èç¹ûÍ¬Ê±´æÔÚcatchÇø¶ÎºÍfinallyÇø¶Î£¬Ôò¿ØÖÆÁ÷»áÏÈ×ªÒÆµ½catchÇø¶Î£¬È»ºóÔÙÌø×ªµ½finallyÇø¶Î¡£
-Èç¹ûÃ»ÓÐcatchÇø¶Î£¬¿ØÖÆÁ÷±ã×ªÒÆµ½finallyÇø¶Î¡£
+å¦‚æžœåŒæ—¶å­˜åœ¨catchåŒºæ®µå’ŒfinallyåŒºæ®µï¼Œåˆ™æŽ§åˆ¶æµä¼šå…ˆè½¬ç§»åˆ°catchåŒºæ®µï¼Œç„¶åŽå†è·³è½¬åˆ°finallyåŒºæ®µã€‚
+å¦‚æžœæ²¡æœ‰catchåŒºæ®µï¼ŒæŽ§åˆ¶æµä¾¿è½¬ç§»åˆ°finallyåŒºæ®µã€‚
 
-Èç¹ûº¯ÊýÕý³£½áÊø£¬»òÒòÒì³£±»ÆÈÍË³ö£¬¸Ãº¯Êý´´½¨µÄËùÓÐ¶ÔÏó¶¼»á×Ô¶¯±»½â³ýÒýÓÃ¡£
-Òò´Ë²»ÐèÒªÊÖ¹¤¶ÔÕâÐ©object references½â³ýÒýÓÃ£¬È»¶ø±ØÐëÃ÷È·ÇåÀí·ÇÄÚ´æ×ÊÔ´¡£
+å¦‚æžœå‡½æ•°æ­£å¸¸ç»“æŸï¼Œæˆ–å› å¼‚å¸¸è¢«è¿«é€€å‡ºï¼Œè¯¥å‡½æ•°åˆ›å»ºçš„æ‰€æœ‰å¯¹è±¡éƒ½ä¼šè‡ªåŠ¨è¢«è§£é™¤å¼•ç”¨ã€‚
+å› æ­¤ä¸éœ€è¦æ‰‹å·¥å¯¹è¿™äº›object referencesè§£é™¤å¼•ç”¨ï¼Œç„¶è€Œå¿…é¡»æ˜Žç¡®æ¸…ç†éžå†…å­˜èµ„æºã€‚

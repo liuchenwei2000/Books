@@ -4,11 +4,11 @@
 package chapter4.p35;
 
 /**
- * Ê¾Àı
+ * ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-2
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-2
  */
 public class Demo {
 
@@ -17,11 +17,11 @@ public class Demo {
 	private int instanceSum;
 
 	/**
-	 * Í¨¹ıstack±äÁ¿½øĞĞÔËËã
+	 * é€šè¿‡stackå˜é‡è¿›è¡Œè¿ç®—
 	 * <p>
-	 * ±¾·½·¨±ÈÏÂÃæÁ½ÖÖ·½·¨Ò²¿ìÉÏ2-3±¶¡£
-	 * ·ÃÎÊstack±äÁ¿Ö®ËùÒÔÄÜ¹»Èç´ËÖ®¿ì£¬ÊÇÒòÎªJVMËù×öµÄÏàÓ¦¹¤×÷
-	 * Ô¶ÉÙÓÚ·ÃÎÊstatic±äÁ¿»òinstance±äÁ¿Ëù×öµÄ¹¤×÷¡£
+	 * æœ¬æ–¹æ³•æ¯”ä¸‹é¢ä¸¤ç§æ–¹æ³•ä¹Ÿå¿«ä¸Š2-3å€ã€‚
+	 * è®¿é—®stackå˜é‡ä¹‹æ‰€ä»¥èƒ½å¤Ÿå¦‚æ­¤ä¹‹å¿«ï¼Œæ˜¯å› ä¸ºJVMæ‰€åšçš„ç›¸åº”å·¥ä½œ
+	 * è¿œå°‘äºè®¿é—®staticå˜é‡æˆ–instanceå˜é‡æ‰€åšçš„å·¥ä½œã€‚
 	 */
 	public int stackAcces(int n) {
 		int sum = 0;
@@ -32,7 +32,7 @@ public class Demo {
 	}
 
 	/**
-	 * Í¨¹ıstatic±äÁ¿½øĞĞÔËËã
+	 * é€šè¿‡staticå˜é‡è¿›è¡Œè¿ç®—
 	 */
 	public int staticAcces(int n) {
 		for (int i = 0; i < n; i++) {
@@ -42,7 +42,7 @@ public class Demo {
 	}
 
 	/**
-	 * Í¨¹ıinstance±äÁ¿½øĞĞÔËËã
+	 * é€šè¿‡instanceå˜é‡è¿›è¡Œè¿ç®—
 	 */
 	public int instanceAcces(int n) {
 		for (int i = 0; i < n; i++) {
@@ -52,7 +52,7 @@ public class Demo {
 	}
 	
 	/**
-	 * ÏÂÃæÁ½¸ö·½·¨£¬¿ÉÒÔÔÚÂú×ãĞèÒªµÄÇé¿öÏÂ´ó·ùÌáÉıĞÔÄÜ¡£
+	 * ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•ï¼Œå¯ä»¥åœ¨æ»¡è¶³éœ€è¦çš„æƒ…å†µä¸‹å¤§å¹…æå‡æ€§èƒ½ã€‚
 	 */
 	public int staticAcces2(int n) {
 		int sum = staticSum;

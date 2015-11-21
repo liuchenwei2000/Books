@@ -6,11 +6,11 @@ package chapter6.item27;
 import java.util.Arrays;
 
 /**
- * ·µ»ØÁã³¤¶ÈµÄÊı×é¶ø²»ÊÇnullÑİÊ¾
+ * è¿”å›é›¶é•¿åº¦çš„æ•°ç»„è€Œä¸æ˜¯nullæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-15
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-15
  */
 public class NullArrayDemo {
 
@@ -19,12 +19,12 @@ public class NullArrayDemo {
 	 */
 	public static void main(String[] args) {
 		int[] array = getArray1();
-		// ·µ»Ønull»áÒªÇó¿Í»§·½±ØĞëÓĞ¶îÍâµÄ´úÂëÀ´´¦Àínull·µ»ØÖµ£¬Ã¿´ÎÓÃµ½¸Ã·½·¨¶¼»áĞèÒªÕâÖÖÇúÕÛµÄ´¦Àí·½Ê½¡£
-		// ÁíÍâ£¬·µ»ØnullµÄ·½Ê½Ò²»áÊÇ·µ»ØÊı×éµÄ·½·¨±¾Éí¸ü¼Ó¸´ÔÓ¡£
+		// è¿”å›nullä¼šè¦æ±‚å®¢æˆ·æ–¹å¿…é¡»æœ‰é¢å¤–çš„ä»£ç æ¥å¤„ç†nullè¿”å›å€¼ï¼Œæ¯æ¬¡ç”¨åˆ°è¯¥æ–¹æ³•éƒ½ä¼šéœ€è¦è¿™ç§æ›²æŠ˜çš„å¤„ç†æ–¹å¼ã€‚
+		// å¦å¤–ï¼Œè¿”å›nullçš„æ–¹å¼ä¹Ÿä¼šæ˜¯è¿”å›æ•°ç»„çš„æ–¹æ³•æœ¬èº«æ›´åŠ å¤æ‚ã€‚
 		if (array == null || Arrays.asList(array).contains(1)) {
 			System.out.println("1");
 		}
-		// ·µ»ØÁã³¤¶ÈÊı×é¸üºÃÒ»Ğ©£¬²¢ÇÒĞÔÄÜ²»ÊÇÎÊÌâ¡£
+		// è¿”å›é›¶é•¿åº¦æ•°ç»„æ›´å¥½ä¸€äº›ï¼Œå¹¶ä¸”æ€§èƒ½ä¸æ˜¯é—®é¢˜ã€‚
 		array = getArray2();
 		if (Arrays.asList(array).contains(1)) {
 			System.out.println("1");
@@ -32,14 +32,14 @@ public class NullArrayDemo {
 	}
 
 	/**
-	 * »á·µ»ØnullµÄ·½·¨
+	 * ä¼šè¿”å›nullçš„æ–¹æ³•
 	 */
 	private static int[] getArray1() {
 		return null;
 	}
 	
 	/**
-	 * »á·µ»ØÁã³¤¶ÈµÄÊı×éµÄ·½·¨
+	 * ä¼šè¿”å›é›¶é•¿åº¦çš„æ•°ç»„çš„æ–¹æ³•
 	 */
 	private static int[] getArray2() {
 		return new int[0];

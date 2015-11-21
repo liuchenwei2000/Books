@@ -4,11 +4,11 @@
 package chapter6.p66;
 
 /**
- * ²»ÕıÈ·µÄ·½Ê½ÊµÏÖclone()
+ * ä¸æ­£ç¡®çš„æ–¹å¼å®ç°clone()
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class CloneIncorrectly {
 
@@ -17,7 +17,7 @@ public class CloneIncorrectly {
 	 */
 	public static void main(String[] args) {
 		Derived derived = new Derived();
-		// ÏÂÃæµÄÓï¾ä»á²úÉúÔËĞĞÊ±Òì³£
+		// ä¸‹é¢çš„è¯­å¥ä¼šäº§ç”Ÿè¿è¡Œæ—¶å¼‚å¸¸
 		Derived cloned = (Derived) derived.clone();
 		System.out.println(cloned);
 	}
@@ -25,7 +25,7 @@ public class CloneIncorrectly {
 	static class Base implements Cloneable {
 
 		/**
-		 * Õâ´Î²ÉÓÃÁËÁíÒ»ÖÖ·½Ê½ÊµÏÖclone()·½·¨
+		 * è¿™æ¬¡é‡‡ç”¨äº†å¦ä¸€ç§æ–¹å¼å®ç°clone()æ–¹æ³•
 		 */
 		public Object clone() {
 			return new Base();
@@ -33,7 +33,7 @@ public class CloneIncorrectly {
 	}
 
 	/**
-	 * ÅÉÉúÀàÃ»ÓĞÔÙÊµÏÖclone()
+	 * æ´¾ç”Ÿç±»æ²¡æœ‰å†å®ç°clone()
 	 */
 	static class Derived extends Base {
 	}

@@ -4,11 +4,11 @@
 package chapter5.p50;
 
 /**
- * synchronizedÊ¾Àı
+ * synchronizedç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-13
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-13
  */
 public class SynchronizedDemo {
 
@@ -16,7 +16,7 @@ public class SynchronizedDemo {
 		
 		private int value;
 
-		// ÏÂÃæÁ½¸ö·½·¨¶¼ÓÃsynchronizedĞŞÊÎ£¬ÒÔ±£Ö¤°²È«¡£
+		// ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•éƒ½ç”¨synchronizedä¿®é¥°ï¼Œä»¥ä¿è¯å®‰å…¨ã€‚
 		
 		public synchronized int getValue() {
 			return value;

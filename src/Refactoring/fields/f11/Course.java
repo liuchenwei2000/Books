@@ -4,16 +4,16 @@
 package fields.f11;
 
 /**
- * ¿Î³ÌÀà
+ * è¯¾ç¨‹ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class Course {
 
-	private String name;// ¿Î³ÌÃû
-	private boolean isAdvanced;// ÊÇ·ñÊÇ¸ß¼¶¿Î³Ì
+	private String name;// è¯¾ç¨‹å
+	private boolean isAdvanced;// æ˜¯å¦æ˜¯é«˜çº§è¯¾ç¨‹
 	
 	public Course(String name, boolean isAdvanced) {
 		this.name = name;

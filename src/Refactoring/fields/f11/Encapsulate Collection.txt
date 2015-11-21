@@ -1,21 +1,21 @@
-11��Encapsulate Collection(��װȺ��)
-��ĳ�����һ��ֵ���������Ⱥ��(����vector��list��set��map��)
-�Ǿ�������getter�������ظ�Ⱥ����һ��ֻ��ӳ��
-������������ṩ"����/ɾ��"(add/remove)Ⱥ��Ԫ�صĺ���
-getter�������÷���Ⱥ����������Ϊ�⽫���û������޸�Ⱥ�����ݶ�Ⱥ��ӵ����ȥ��֪��
-��Ҳ����û���¶����Ķ����ڲ����ݽṹ����Ϣ
-���һ��getter����ȷʵ��Ҫ���غܶ�ֵ����Ӧ�ñ����û�ֱ�Ӳ��������ڱ����Ⱥ��
-���ⲻӦ��Ϊ������Ⱥ���ṩһ��setter��������Ӧ���ṩadd/removeԪ�صĺ���
-�����ή��Ⱥ�����ڵ�����û�֮�����϶�
+11，Encapsulate Collection(封装群集)
+若某个类的一个值域的类型是群集(包括vector、list、set、map等)
+那就让它的getter函数返回该群集的一个只读映件
+并在这个类中提供"添加/删除"(add/remove)群集元素的函数
+getter函数不该返回群集本身，因为这将让用户得以修改群集内容而群集拥有者去不知道
+这也会对用户暴露过多的对象内部数据结构的信息
+如果一个getter函数确实需要返回很多值，它应该避免用户直接操作对象内保存的群集
+另外不应该为这整个群集提供一个setter函数，但应该提供add/remove元素的函数
+这样会降低群集所在的类和用户之间的耦合度
 
-������
-1��
-�����м���"Ⱥ������/ɾ��Ԫ��"�ĺ����������ڱ���Ⱥ����ֵ���ʼ��Ϊһ����Ⱥ��(����null)
-2��
-�ҵ����еĵ���Ⱥ��setter�����ĵ㣬�޸�Ϊ�����µ�add/remove����
-3��
-�ҵ�����ͨ��getter�������Ⱥ�����޸������ݵĺ���
-4��
-�޸���Щ���������Ǹ����µ�add/remove����������޸�getter��������
-5��
-�������ظ�Ⱥ����һ��ֻ��ӳ��(Collections.unmodifiableXXX�෽������ʵ�ָù���)
+作法：
+1，
+在类中加入"群集增加/删除元素"的函数，将用于保存群集的值域初始化为一个空群集(不是null)
+2，
+找到所有的调用群集setter方法的点，修改为调用新的add/remove方法
+3，
+找到所有通过getter方法获得群集并修改其内容的函数
+4，
+修改这些函数让它们改用新的add/remove方法，最后修改getter方法本身
+5，
+让它返回该群集的一个只读映件(Collections.unmodifiableXXX类方法可以实现该功能)

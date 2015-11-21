@@ -1,71 +1,71 @@
-                                                  �� �� �� ֯ �� ��
-1��Self Encapsulate Field(�Է�װֵ��)
-Ϊֵ����ȡֵ/��ֵ����������ֻ����Щ����������ֵ��
-��ֵ�����ڵ����п�����ʹ��ֱ�ӷ��ʷ�ʽ����ֵ��֪�����ַ�ʽ�����鷳�ٻ��ɼ�ӷ��ʷ�ʽ��
-һ����˵�����ú�������ΪӦ���ڶ��󴴽����ʹ�ã����Գ�ʼ�������е���Ϊ�п�����ȡֵ��������Ϊ��ͬ��������Ӧ���ڹ��캯����ֱ�ӷ���ֵ��
-2��Replace Data Value with Object(�Զ���ȡ������ֵ)
-��ĳ��������Ҫ��������ݻ�����Ϊ��Ӧ�ð�������ɶ����ˡ�
-������
-�����滻�����½�һ���࣬����������һ��finalֵ�������ͺ�Դ���еĴ��滻��������һ��
-Ȼ���������м������ֵ���ȡֵ�������ټ���һ�����մ�ֵ��Ϊ�����Ĺ��캯��������޸����õ㣬���ɶԶ���Ĵ�����ȡֵ����ֵ��
-3��Change Value to Reference(��ʵֵ�����Ϊ���ö���)
-����ĳ�����������������ʵ�壬��ʱ�ɽ������滻Ϊ��һ����Ҳ���ǽ�Value Object(ʵֵ����)���һ��Reference Object(���ö���)��
-ʵֵ��������"����""Ǯ"�����Ķ�����������������������ֵ������ģ������Ƿ������Ҫ������д��equals������
-���ö�����"�ͻ�""�˻�"�����Ķ�����ÿ�����󶼴�����ʵ�����е�һ��ʵ���ȫ������==��������������������Ƿ���ȡ�
-4��Change Reference to Value(�����ö����Ϊʵֵ����)
-����һ�����ö����С�Ҳ��ɱ���Ҳ��׹����ͽ������һ��ʵֵ����
-Ҫ��һ�����ö����Ϊʵֵ����ؼ��Ǽ�����Ƿ�Ϊimmutable(���ɱ�)��������ǾͲ���ʹ�ñ����ع�����Ϊ�ɱ�ʵֵ�������ɱ�������
-5��Replace Array with Object(�Զ����������)
-��ĳ�������е�Ԫ�ظ��Դ�����ͬ�Ķ������Ǿ��Զ����滻���飬���������е�ÿ��Ԫ�أ���һ��ֵ���ʾ������Ӧ���������һ�����ƶ���
-6��Duplicate Observed Data(���Ʊ���������)
-7��Change Undirectional Association to Bidirectional(�����������Ϊ˫��)
-�������඼��Ҫʹ�öԷ����ԣ������ֻ��һ���������ӣ���ʱ������һ������ָ�룬
-��ʹ�޸ĺ����ܹ�ͬʱ�����������ӡ��ڱ����õ���������һ��ֵ�����Ա���"����ָ�롣
-8��Change Bidirectional Association to Undirectional(��˫�������Ϊ����)
-���������֮����˫�������������һ���಻����Ҫ��һ��������Ե�ʱ���ȥ������Ҫ�Ĺ�����
-9��Replace Magic Number with Symbolic Constant(�Գ���ȡ��ħ����)
-ħ������ӵ����������ȴ�ֲ�����ȷ���ֳ�������������֡�
-������һ��������ֵ�����ر����壬�ʹ���һ������������������Ϊ��������������������ֵ�滻Ϊ���������
-(��Ҫ��Ϊ���Ժ��޸ĵķ������߿ɶ���)
-10��Encapsulate Filed(��װֵ��)
-�����е�publicֵ������Ϊprivate�����ṩ��Ӧ�ķ��ʺ�����
-11��Encapsulate Collection(��װȺ��)
-��ĳ�����һ��ֵ���������Ⱥ��(����vector��list��set��map��)���Ǿ�������getter�������ظ�Ⱥ����һ��ֻ��ӳ����
-������������ṩ"����/ɾ��"(add/remove)Ⱥ��Ԫ�صĺ�����
-getter�������÷���Ⱥ����������Ϊ�⽫���û������޸�Ⱥ�����ݶ�Ⱥ��ӵ����ȥ��֪����
-��Ҳ����û���¶����Ķ����ڲ����ݽṹ����Ϣ�����һ��getter����ȷʵ��Ҫ���غܶ�ֵ����Ӧ�ñ����û�ֱ�Ӳ��������ڱ����Ⱥ����
-���ⲻӦ��Ϊ������Ⱥ���ṩһ��setter��������Ӧ���ṩadd/removeԪ�صĺ����������ή��Ⱥ�����ڵ�����û�֮�����϶ȡ�
-������
-�����м���"Ⱥ������/ɾ��Ԫ��"�ĺ����������ڱ���Ⱥ����ֵ���ʼ��Ϊһ����Ⱥ��(����null)��
-�ҵ����еĵ���Ⱥ��setter�����ĵ㣬�޸�Ϊ�����µ�add/remove�������ҵ�����ͨ��getter�������Ⱥ�����޸������ݵĺ�����
-�޸���Щ���������Ǹ����µ�add/remove����������޸�getter����������
-�������ظ�Ⱥ����һ��ֻ��ӳ��(Collections.unmodifiableXXX�෽������ʵ�ָù���)��
-12��Replace Record woth Data Class(��������ȡ����¼)
-Ϊ�ü�¼����һ��"��"���ݶ���(dumb data object)
-������
-�½�һ�����ʾ�����¼�����ڼ�¼�е�ÿһ����������½������н���һ����Ӧ��privateֵ�򣬲��ṩ��Ӧ��getter/setter������
-13��Replace Type Code with Class(����ȡ���ͱ���)
-��������һ����ֵ�ͱ��뵫������Ӱ�������Ϊ������һ���µ����滻����ֵ�ͱ��롣
-��Ȼ�ͱ���Ҳ����һ���Ŀɶ��ԣ������������ñ����������ͱ���飬������������ͱ��뻻��һ���࣬
-�������Ϳ��Զ����������ͱ�����ˣ�ֻҪΪ������ṩfactory methods�Ϳ���ʼ�ձ�ֻ֤�кϷ���ʵ��Żᱻ����������
-�������Ƕ��ᱻ���ݸ���ȷ����������ֻ�е��ͱ����Ǵ������ݵ�ʱ��(Ҳ�����ͱ��벻����Ϊswitch���Ĳ���ʱ)�ſ���������ȡ������
-������
-Ϊ�ͱ��뽨��һ���࣬���������Ҫһ�����Լ�¼�ͱ����ֵ�������Ӧ�ú��ͱ�����ͬ����Ӧ���ж�Ӧ��ȡֵ������
-���⻹Ӧ��һ��static��������"����������"��ʵ�壬����һ��static��������ԭ�����ͱ��뷵�غ��ʵ�ʵ�塣
-�޸�Դ���ʵ���룬����ʹ���½����࣬�޸��ͱ�����غ����������Ǵ��½������л�����ݡ�
-�������룬ʹ����ʹ���ͱ���ĵط������ʹ���µ��ࡣ
-14��Relplace Type Code with Subclass(������ȡ���ͱ���)
-��������һ�����ɱ���ͱ��룬����Ӱ�������Ϊ����һ������ȡ������ͱ��룬��������ö�̬�������仯��Ϊ��
-���ĺô����ڣ��ѶԲ�ͬ��Ϊ���˽�����û�����ת�Ƶ����������������Ҫ�ټ����µ���Ϊ�仯��ֻ��Ҫ����һ���µ���������ˡ�
-������
-���ͱ������ҷ�װ����������������ݸ����캯��������Ҫ�ѹ��캯������factory method
-Ϊ�ͱ����ÿһ����ֵ����һ����Ӧ�����࣬����ÿ����������д�ͱ����getter����ʹ�䷵����Ӧ���ͱ���ֵ��
-�ӻ�����ɾ�������ͱ����ֵ�򣬽��ͱ���getter��������Ϊ���󷽷���
-15��Replace Type Code with State/Strategy(��State/Strategyȡ���ͱ���)
-���е�ĳ���ͱ����Ӱ�������Ϊ���������޷�ʹ�����໯���ع�������ʱ����state object(ר����������״̬�Ķ���)ȡ���ͱ��롣
-���ͱ����ֵ�ڶ����������лᷢ���仯���������಻�ܱ����໯ʱ��Ҫ�øø��ַ���
-������
-���ͱ������ҷ�װ�������½�һ���࣬�����ͱ������;Ϊ�������������һ��state object
-Ϊ����½������������࣬ÿ�����඼��Ӧһ���ͱ��룬�ڻ����н���һ������Ĳ�ѯ�������Է����ͱ��룬Ϊÿ�������и��Ǹú�����������ȷ���ͱ��롣��Դ���н���һ��ֵ�����Ա����½���state object ������Դ���и����ѯ�ͱ���ĺ���������ѯ����ת����state object����������Դ����Ϊ�ͱ�����ֵ�ĺ�������һ��ǡ����state object ���ำֵ������state object ���Ǹ�ֵ��
-16��Replace Subclass with Fields(��ֵ��ȡ������)
-�������Ψһ���ֻ�ڷ��س������ݵĺ����ϣ��޸���Щ������ʹ���Ƿ��ػ����е�ĳ������ֵ��Ȼ���������ࡣ
+                                                  重 新 组 织 数 据
+1，Self Encapsulate Field(自封装值域)
+为值域建立取值/设值函数，并且只以这些函数来访问值域。
+在值域所在的类中可以先使用直接访问方式访问值域，知道这种方式带来麻烦再换成间接访问方式。
+一般来说，设置函数被认为应该在对象创建后才使用，所以初始化过程中的行为有可能与取值函数的行为不同，这样就应该在构造函数中直接访问值域。
+2，Replace Data Value with Object(以对象取代数据值)
+若某个数据需要额外的数据或者行为就应该把它抽象成对象了。
+作法：
+将待替换数据新建一个类，在其中声明一个final值域，其类型和源类中的待替换数据类型一样
+然后在新类中加入这个值域的取值函数，再加上一个接收此值域为参数的构造函数。最后修改引用点，换成对对象的创建，取值和设值。
+3，Change Value to Reference(将实值对象改为引用对象)
+若有某个类衍生出许多相等实体，这时可将它们替换为单一对象，也就是将Value Object(实值对象)变成一个Reference Object(引用对象)。
+实值对象：像是"日期""钱"这样的东西，它们是由所含的数据值来定义的，它们是否相等需要调用重写的equals方法。
+引用对象：像"客户""账户"这样的东西，每个对象都代表真实世界中的一个实物，完全可以用==操作符来检查两个对象是否相等。
+4，Change Reference to Value(将引用对象改为实值对象)
+若有一个引用对象很小且不可变而且不易管理就将它变成一个实值对象。
+要把一个引用对象变为实值对象关键是检查它是否为immutable(不可变)，如果不是就不能使用本项重构，因为可变实值对象会造成别名现象。
+5，Replace Array with Object(以对象替代数组)
+若某个数组中的元素各自代表不同的东西，那就以对象替换数组，对于数组中的每个元素，以一个值域表示。数组应该用来存放一组相似对象。
+6，Duplicate Observed Data(复制被监视数据)
+7，Change Undirectional Association to Bidirectional(将单向关联改为双向)
+若两个类都需要使用对方特性，但其间只有一条单向链接，这时可增加一个反向指针，
+并使修改函数能够同时更新两条链接。在被引用的类中增加一个值域，用以保存"反向指针。
+8，Change Bidirectional Association to Undirectional(将双向关联改为单向)
+如果两个类之间有双相关联，但其中一个类不再需要另一个类的特性的时候就去除不必要的关联。
+9，Replace Magic Number with Symbolic Constant(以常量取代魔法数)
+魔法数：拥有特殊意义却又不能明确变现出这种意义的数字。
+若存在一个字面数值带有特别意义，就创造一个常量，根据其意义为它命名，并将该字面数值替换为这个常量。
+(主要是为了以后修改的方便和提高可读性)
+10，Encapsulate Filed(封装值域)
+将类中的public值域声明为private，并提供相应的访问函数。
+11，Encapsulate Collection(封装群集)
+若某个类的一个值域的类型是群集(包括vector、list、set、map等)，那就让它的getter函数返回该群集的一个只读映件，
+并在这个类中提供"添加/删除"(add/remove)群集元素的函数。
+getter函数不该返回群集本身，因为这将让用户得以修改群集内容而群集拥有者去不知道，
+这也会对用户暴露过多的对象内部数据结构的信息，如果一个getter函数确实需要返回很多值，它应该避免用户直接操作对象内保存的群集。
+另外不应该为这整个群集提供一个setter函数，但应该提供add/remove元素的函数。这样会降低群集所在的类和用户之间的耦合度。
+作法：
+在类中加入"群集增加/删除元素"的函数，将用于保存群集的值域初始化为一个空群集(不是null)，
+找到所有的调用群集setter方法的点，修改为调用新的add/remove方法，找到所有通过getter方法获得群集并修改其内容的函数，
+修改这些函数让它们改用新的add/remove方法，最后修改getter方法本身，
+让它返回该群集的一个只读映件(Collections.unmodifiableXXX类方法可以实现该功能)。
+12，Replace Record woth Data Class(以数据类取代记录)
+为该记录创建一个"哑"数据对象(dumb data object)
+作法：
+新建一个类表示这个记录，对于记录中的每一笔数据项，在新建的类中建立一个对应的private值域，并提供相应的getter/setter方法。
+13，Replace Type Code with Class(以类取代型别码)
+若类中有一个数值型别码但它不会影响类的行为，则用一个新的类替换该数值型别码。
+虽然型别码也具有一定的可读性，但是它不能让编译器进行型别检验，如果把这样的型别码换成一个类，
+编译器就可以对这个类进行型别检验了，只要为这个类提供factory methods就可以始终保证只有合法的实体才会被创建出来，
+而其他们都会被传递给正确的宿主对象。只有当型别码是纯粹数据的时候(也就是型别码不会作为switch语句的参数时)才可以用类来取代它。
+作法：
+为型别码建立一个类，这个类内需要一个用以记录型别码的值域，其类别应该和型别码相同，并应该有对应的取值函数，
+此外还应用一组static变量保存"允许被创建"的实体，并以一个static函数根据原本的型别码返回合适的实体。
+修改源类的实现码，让它使用新建的类，修改型别码相关函数，让它们从新建的类中获得数据。
+提炼代码，使所有使用型别码的地方都变成使用新的类。
+14，Relplace Type Code with Subclass(以子类取代型别码)
+若类中有一个不可变的型别码，它会影响类的行为，以一个子类取代这个型别码，这是最好用多态来处理变化行为。
+它的好处在于：把对不同行为的了解从类用户那里转移到了类自身，如果需要再加入新的行为变化，只需要添加一个新的子类就行了。
+作法：
+将型别码自我封装起来，如果它被传递给构造函数，就需要把构造函数换成factory method
+为型别码的每一个数值建立一个相应的子类，并在每个子类中重写型别码的getter函数使其返回相应的型别码值，
+从基类中删掉保存型别码的值域，将型别码getter方法声明为抽象方法。
+15，Replace Type Code with State/Strategy(以State/Strategy取代型别码)
+类中的某个型别码会影响类的行为，但是你无法使用子类化来重构它，这时就以state object(专门用来描述状态的对象)取代型别码。
+当型别码的值在对象生命期中会发生变化或者宿主类不能被子类化时就要用该该手法。
+作法：
+将型别码自我封装起来，新建一个类，根据型别码的用途为它命名，这就是一个state object
+为这个新建的类添加子类，每个子类都对应一种型别码，在基类中建立一个抽象的查询函数用以返回型别码，为每个子类中覆盖该函数，返回正确的型别码。在源类中建立一个值域用以保存新建的state object ，调整源类中负责查询型别码的函数，将查询动作转发给state object处理，调整源类中为型别码设值的函数，将一个恰当的state object 子类赋值给保存state object 的那个值域。
+16，Replace Subclass with Fields(以值域取代子类)
+若子类的唯一差别只在返回常量数据的函数上，修改这些函数，使它们返回基类中的某个新增值域，然后销毁子类。

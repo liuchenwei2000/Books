@@ -4,23 +4,23 @@
 package chapter5.item21;
 
 /**
- * ÆË¿ËÅÆ»¨É«Ã¶¾Ù
+ * æ‰‘å…‹ç‰ŒèŠ±è‰²æšä¸¾
  * <p>
- * Ê¹ÓÃÀàĞÍ°²È«Ã¶¾ÙÄ£Ê½ÊµÏÖ¡£
+ * ä½¿ç”¨ç±»å‹å®‰å…¨æšä¸¾æ¨¡å¼å®ç°ã€‚
  * <p>
- * ÒòÎª¿Í»§Ã»ÓĞ°ì·¨´´½¨Õâ¸öÀàµÄ¶ÔÏó£¬Ò²ÎŞ·¨À©Õ¹Õâ¸öÀà£¬
- * ËùÒÔ£¬³ıÁËÕâĞ©¹«ÓĞµÄ¾²Ì¬finalÓòÉùÃ÷µÄSuit¶ÔÏóÖ®Íâ£¬²»»áÔÙÓĞ±ğµÄ¶ÔÏó´æÔÚ¡£
+ * å› ä¸ºå®¢æˆ·æ²¡æœ‰åŠæ³•åˆ›å»ºè¿™ä¸ªç±»çš„å¯¹è±¡ï¼Œä¹Ÿæ— æ³•æ‰©å±•è¿™ä¸ªç±»ï¼Œ
+ * æ‰€ä»¥ï¼Œé™¤äº†è¿™äº›å…¬æœ‰çš„é™æ€finalåŸŸå£°æ˜çš„Suitå¯¹è±¡ä¹‹å¤–ï¼Œä¸ä¼šå†æœ‰åˆ«çš„å¯¹è±¡å­˜åœ¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-14
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-14
  */
 public class Suit {
 
-	public static final Suit CLUBS = new Suit("clubs");// ºÚÌÒ
-	public static final Suit DIAMONDS = new Suit("diamonds");// ·½¿é
-	public static final Suit HEARTS = new Suit("hearts");// ºìÌÒ
-	public static final Suit SPADES = new Suit("spades");// Ã·»¨
+	public static final Suit CLUBS = new Suit("clubs");// é»‘æ¡ƒ
+	public static final Suit DIAMONDS = new Suit("diamonds");// æ–¹å—
+	public static final Suit HEARTS = new Suit("hearts");// çº¢æ¡ƒ
+	public static final Suit SPADES = new Suit("spades");// æ¢…èŠ±
 
 	private final String name;
 
@@ -29,10 +29,10 @@ public class Suit {
 	}
 
 	/**
-	 * ÒòÎªÀàĞÍ°²È«Ã¶¾ÙÀàÊÇÍêÈ«ÒâÒåÉÏµÄÀà£¬ËùÒÔ¿ÉÒÔÏñÒÔÇ°½éÉÜµÄÄÇÑù¸ÄĞ´
-	 * toString·½·¨£¬´Ó¶øÔÊĞíÆäÖĞµÄÖµ±»×ª»»Îª¿É´òÓ¡µÄ×Ö·û´®¡£
-	 * ×¢Òâ£¬Ö»ÓĞtoString·½·¨ÓÃµ½ÁË×Ö·û´®Ãû×Ö£¬equals±È½Ï²Ù×÷²¢Ã»ÓĞÓÃµ½Ëü£¬
-	 * ÒòÎª´ÓObject¼Ì³ĞµÃÀ´µÄequalsÊµÏÖÖ»Ö´ĞĞÒıÓÃ±È½Ï¡£
+	 * å› ä¸ºç±»å‹å®‰å…¨æšä¸¾ç±»æ˜¯å®Œå…¨æ„ä¹‰ä¸Šçš„ç±»ï¼Œæ‰€ä»¥å¯ä»¥åƒä»¥å‰ä»‹ç»çš„é‚£æ ·æ”¹å†™
+	 * toStringæ–¹æ³•ï¼Œä»è€Œå…è®¸å…¶ä¸­çš„å€¼è¢«è½¬æ¢ä¸ºå¯æ‰“å°çš„å­—ç¬¦ä¸²ã€‚
+	 * æ³¨æ„ï¼Œåªæœ‰toStringæ–¹æ³•ç”¨åˆ°äº†å­—ç¬¦ä¸²åå­—ï¼Œequalsæ¯”è¾ƒæ“ä½œå¹¶æ²¡æœ‰ç”¨åˆ°å®ƒï¼Œ
+	 * å› ä¸ºä»Objectç»§æ‰¿å¾—æ¥çš„equalså®ç°åªæ‰§è¡Œå¼•ç”¨æ¯”è¾ƒã€‚
 	 * 
 	 * @see java.lang.Object#toString()
 	 */

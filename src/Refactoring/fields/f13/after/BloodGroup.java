@@ -4,21 +4,21 @@
 package fields.f13.after;
 
 /**
- * ÑªĞÍÀà
+ * è¡€å‹ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class BloodGroup {
 
-	/** ÔÊĞí´´½¨µÄÑªĞÍÊµÌå */
+	/** å…è®¸åˆ›å»ºçš„è¡€å‹å®ä½“ */
 	public static final BloodGroup O = new BloodGroup(0);
 	public static final BloodGroup A = new BloodGroup(1);
 	public static final BloodGroup B = new BloodGroup(2);
 	public static final BloodGroup AB = new BloodGroup(3);
 	
-	private int code;// ÑªĞÍ±àÂë
+	private int code;// è¡€å‹ç¼–ç 
 
 	private BloodGroup(int code) {
 		this.code = code;

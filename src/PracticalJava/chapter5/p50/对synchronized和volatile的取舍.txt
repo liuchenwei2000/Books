@@ -1,14 +1,14 @@
-��synchronized��volatile��ȡ��
+对synchronized和volatile的取舍
 
 
-��������Ժ���Ҫ�����Ҳ���Ҫ���ºܶ����������Կ���ʹ��volatile��
-�����Ҫ���ºܶ������ʹ��volatile����Ҫ��ʹ��synchronized����ִ���ٶȣ���ʱ���Կ���ʹ��synchronized��
-�������ԸΪÿ�η��ʶ�����һ�»����ۣ����ߴ���ȡ�������ԣ��ɿ���ʹ��synchronized��
+如果并发性很重要，而且不需要更新很多变量，则可以考虑使用volatile。
+如果需要更新很多变量，使用volatile可能要比使用synchronized降低执行速度，这时可以考虑使用synchronized。
+如果不情愿为每次访问都付出一致化代价，或者打算取消并发性，可考虑使用synchronized。
 
 
-            ����                                            �ŵ�                                                                            ȱ��
+            技术                                            优点                                                                            缺点
             
-synchronized       ȡ�ú��ͷ�lockʱ������һ�»���            �����˲����ԵĿ��ܡ�
-volatile           ���������ԡ�                                                          ÿ�η��ʱ���ʱ���ͽ���һ�»���   
+synchronized       取得和释放lock时，进行一致化。            消除了并发性的可能。
+volatile           允许并发性。                                                          每次访问变量时，就进行一致化。   
 
-һ�»���ָ˽��ר�ø��������ڴ�������һ�»���
+一致化是指私有专用副本和主内存正本的一致化。

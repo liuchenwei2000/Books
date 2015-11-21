@@ -4,17 +4,17 @@
 package chapter2.p13;
 
 /**
- * ʾ��
+ * 示例
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2012-11-22
+ * 创建日期：2012-11-22
  */
 public class Demo {
 }
 
 /**
- * ʵ����equals()�Ļ���
+ * 实现了equals()的基类
  */
 class Base {
 	
@@ -32,7 +32,7 @@ class Base {
 }
 
 /**
- * ��ͳ��ʽʵ��equals()��������
+ * 传统方式实现equals()的派生类
  */
 class Derived1 extends Base {
 	
@@ -50,11 +50,11 @@ class Derived1 extends Base {
 }
 
 /**
- * �򻯷�ʽʵ��equals()��������
+ * 简化方式实现equals()的派生类
  * <p>
- * ����������ּ򻯷�ʽ�������û����Դ�룬ȷ�������������ʵ���鹤����
- * �������ּ򻯷�ʽʹ�㲻�ò��е�ĳЩ���ա������������п�����Ϊδ��classes�̳���ϵ���޸Ķ��ܵ��𻵡�
- * ���ԣ�ֻ�е�ɾ����Щ�����뽫�������ֵ��������������Ҿ���û�к������յ�����£��Ż�ʹ������ʵ�ַ�ʽ��
+ * 如果采用这种简化方式，必须获得基类的源码，确保在那里做了适当检查工作。
+ * 而且这种简化方式使你不得不承担某些风险————程序有可能因为未来classes继承体系被修改而受到损坏。
+ * 所以，只有当删除那些检查代码将会带来充分的性能提升，而且绝对没有后续风险的情况下，才会使用这种实现方式。
  */
 class Derived2 extends Base {
 	

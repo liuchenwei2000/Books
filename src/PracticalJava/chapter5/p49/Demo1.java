@@ -4,13 +4,13 @@
 package chapter5.p49;
 
 /**
- * ÎŞÎ½µÄÍ¬²½¿ØÖÆÊ¾Àı
+ * æ— è°“çš„åŒæ­¥æ§åˆ¶ç¤ºä¾‹
  * <p>
- * ÓÉÓÚsynchronized¹Ø¼ü´ÊÊµÏÖ·½Ê½µÄÔµ¹Ê£¬³£³£µ¼ÖÂÎŞÎ½µÄÍ¬²½¿ØÖÆ£¬Ôì³É²¢·¢¶ÈµÄ½µµÍ¡£
+ * ç”±äºsynchronizedå…³é”®è¯å®ç°æ–¹å¼çš„ç¼˜æ•…ï¼Œå¸¸å¸¸å¯¼è‡´æ— è°“çš„åŒæ­¥æ§åˆ¶ï¼Œé€ æˆå¹¶å‘åº¦çš„é™ä½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-11
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-11
  */
 public class Demo1 {
 	
@@ -20,26 +20,26 @@ public class Demo1 {
 	private double[] doubleArray;
 	
 	/*
-	 * ÏÂÃæËÄ¸ö·½·¨£¬È«¶¼ÊÇsynchronized£¬ÕâÑùÊ¹µÃ±¾ÀàÊÇÏß³Ì°²È«µÄ¡£
-	 * µ«ÊÇ£¬Ç°Á½¸ö·½·¨²Ù×İµÄÖ»ÓĞ intArray£¬ºóÁ½¸ö·½·¨²Ù×İµÄÖ»ÓĞ doubleArray¡£
-	 * µ«ÕâËÄ¸ö·½·¨È´ÒªÊ¼ÖÕ¾ºÕùÍ¬Ò»¸ölock¡£
+	 * ä¸‹é¢å››ä¸ªæ–¹æ³•ï¼Œå…¨éƒ½æ˜¯synchronizedï¼Œè¿™æ ·ä½¿å¾—æœ¬ç±»æ˜¯çº¿ç¨‹å®‰å…¨çš„ã€‚
+	 * ä½†æ˜¯ï¼Œå‰ä¸¤ä¸ªæ–¹æ³•æ“çºµçš„åªæœ‰ intArrayï¼Œåä¸¤ä¸ªæ–¹æ³•æ“çºµçš„åªæœ‰ doubleArrayã€‚
+	 * ä½†è¿™å››ä¸ªæ–¹æ³•å´è¦å§‹ç»ˆç«äº‰åŒä¸€ä¸ªlockã€‚
 	 * 
-	 * ÕâÊÇÒòÎªJavaÍ¬²½¿ØÖÆ»úÖÆ²¢²»Ê®·ÖÁ£¶È»¯µ¼ÖÂµÄ£¬Ëü¶ÔÃ¿¸ö¶ÔÏóÖ»Ìá¹©Ò»¸ölock¡£
+	 * è¿™æ˜¯å› ä¸ºJavaåŒæ­¥æ§åˆ¶æœºåˆ¶å¹¶ä¸ååˆ†ç²’åº¦åŒ–å¯¼è‡´çš„ï¼Œå®ƒå¯¹æ¯ä¸ªå¯¹è±¡åªæä¾›ä¸€ä¸ªlockã€‚
 	 */
 	
 	public synchronized void modifyIntArray1(){
-		// ·ÃÎÊ²¢²Ù×÷ intArray
+		// è®¿é—®å¹¶æ“ä½œ intArray
 	}
 	
 	public synchronized void modifyIntArray2(){
-		// ·ÃÎÊ²¢²Ù×÷ intArray
+		// è®¿é—®å¹¶æ“ä½œ intArray
 	}
 	
 	public synchronized void modifyDoubleArray1(){
-		// ·ÃÎÊ²¢²Ù×÷ doubleArray
+		// è®¿é—®å¹¶æ“ä½œ doubleArray
 	}
 	
 	public synchronized void modifyDoubleArray2(){
-		// ·ÃÎÊ²¢²Ù×÷ doubleArray
+		// è®¿é—®å¹¶æ“ä½œ doubleArray
 	}
 }

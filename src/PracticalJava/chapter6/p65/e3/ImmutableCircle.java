@@ -6,24 +6,24 @@ package chapter6.p65.e3;
 import chapter6.p65.MutableCircle;
 
 /**
- * ²»¿É±äCircleÀà
+ * ä¸å¯å˜Circleç±»
  * <p>
- * Õâ¾ÍÊÇËùÎ½µÄ ²»¿É±äµÄÎ¯ÍĞÀà¡£
- * ±¾ÀàÖ»°üº¬immutableº¯Êı£¬²¢½«Íâ½ç¶ÔËüÃÇµÄµ÷ÓÃÈÎÎñÎ¯ÍĞ¸øÄÚº¬µÄmutable object¡£
+ * è¿™å°±æ˜¯æ‰€è°“çš„ ä¸å¯å˜çš„å§”æ‰˜ç±»ã€‚
+ * æœ¬ç±»åªåŒ…å«immutableå‡½æ•°ï¼Œå¹¶å°†å¤–ç•Œå¯¹å®ƒä»¬çš„è°ƒç”¨ä»»åŠ¡å§”æ‰˜ç»™å†…å«çš„mutable objectã€‚
  * <p>
- * µ±ÎŞ·¨ĞŞ¸Ä¼ÈÓĞÖ®mutable classÔ´ÂëÊ±£¬Õâ¸ö°ì·¨ÓÈÆäÓĞÓÃ¡£
+ * å½“æ— æ³•ä¿®æ”¹æ—¢æœ‰ä¹‹mutable classæºç æ—¶ï¼Œè¿™ä¸ªåŠæ³•å°¤å…¶æœ‰ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public final class ImmutableCircle {
 
-	private MutableCircle circle;// ÄÚº¬µÄmutable object
+	private MutableCircle circle;// å†…å«çš„mutable object
 
 	/**
-	 * µ±´´½¨Ò»¸öImmutableCircle¶ÔÏóÊ±£¬Ò²´´½¨ÁËÒ»¸öMutableCircle¶ÔÏó£¬²»¹ı
-	 * Ç°ÕßµÄÓÃ»§²»µÃ·ÃÎÊºóÕß£¨ÒòÎªºóÕßÊÇprivate£©£¬Ö»ÄÜ·ÃÎÊÓÉImmutableCircleÌá¹©µÄimmutable·½·¨¡£
+	 * å½“åˆ›å»ºä¸€ä¸ªImmutableCircleå¯¹è±¡æ—¶ï¼Œä¹Ÿåˆ›å»ºäº†ä¸€ä¸ªMutableCircleå¯¹è±¡ï¼Œä¸è¿‡
+	 * å‰è€…çš„ç”¨æˆ·ä¸å¾—è®¿é—®åè€…ï¼ˆå› ä¸ºåè€…æ˜¯privateï¼‰ï¼Œåªèƒ½è®¿é—®ç”±ImmutableCircleæä¾›çš„immutableæ–¹æ³•ã€‚
 	 */
 	public ImmutableCircle(double redius) {
 		this.circle = new MutableCircle(redius);

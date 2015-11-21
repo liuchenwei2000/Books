@@ -4,25 +4,25 @@
 package chapter4.p42;
 
 /**
- * ¸´ÓÃ¶ÔÏóÊ¾Àý
+ * å¤ç”¨å¯¹è±¡ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-6
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-6
  */
 public class ReuseObjectDemo {
 	
 	/**
-	 * ÏÂÃæµÄÈý¸ö·½·¨¶¼ÊÇ¼ÆËãËùÓÐ¹ÍÔ±µÄÐ½Ë®×Ü¶î
+	 * ä¸‹é¢çš„ä¸‰ä¸ªæ–¹æ³•éƒ½æ˜¯è®¡ç®—æ‰€æœ‰é›‡å‘˜çš„è–ªæ°´æ€»é¢
 	 */
 	
 	/**
-	 * ±¾·½·¨´óÁ¿µÄ´´½¨ÁË¶ÔÏó£¬Ôì³ÉÁË²»±ØÒªµÄÐÔÄÜ¿ªÏú¡£
+	 * æœ¬æ–¹æ³•å¤§é‡çš„åˆ›å»ºäº†å¯¹è±¡ï¼Œé€ æˆäº†ä¸å¿…è¦çš„æ€§èƒ½å¼€é”€ã€‚
 	 */
 	public static int totalSalary(int[] ids, String[] names) {
 		int total = 0;
 		for (int i = 0; i < ids.length; i++) {
-			// ´´½¨´óÁ¿Employee¶ÔÏó
+			// åˆ›å»ºå¤§é‡Employeeå¯¹è±¡
 			Employee employee = new Employee(ids[i], names[i]);
 			total += employee.salary();
 		}
@@ -30,13 +30,13 @@ public class ReuseObjectDemo {
 	}
 	
 	/**
-	 * ±¾·½·¨¸´ÓÃÁËÍ¬Ò»¸ö¶ÔÏó£¬Ìá¸ßÁËÐÔÄÜ¡£
+	 * æœ¬æ–¹æ³•å¤ç”¨äº†åŒä¸€ä¸ªå¯¹è±¡ï¼Œæé«˜äº†æ€§èƒ½ã€‚
 	 */
 	public static int totalSalary2(int[] ids, String[] names) {
 		Employee employee = new Employee();
 		int total = 0;
 		for (int i = 0; i < ids.length; i++) {
-			// ÎªÁËÊ¹·þÓÃ¼¼Êõ·¢»Ó×÷ÓÃ£¬EmployeeÀà±ØÐëÌá¹©Ò»Ð©º¯Êý£¬ÓÃÀ´ÉèÖÃ¶ÔÏóµÄ¸÷¸öÖµÓò¡£
+			// ä¸ºäº†ä½¿æœç”¨æŠ€æœ¯å‘æŒ¥ä½œç”¨ï¼ŒEmployeeç±»å¿…é¡»æä¾›ä¸€äº›å‡½æ•°ï¼Œç”¨æ¥è®¾ç½®å¯¹è±¡çš„å„ä¸ªå€¼åŸŸã€‚
 			employee.setId(ids[i]);
 			employee.setName(names[i]);
 			total += employee.salary();
@@ -45,14 +45,14 @@ public class ReuseObjectDemo {
 	}
 	
 	/**
-	 * Èç¹ûEmployeeÀàÃ»ÓÐÌá¹©setterº¯Êý£¬¶øÄãÓÖ¿ÉÒÔ½Ó´¥Ô´Âë£¬¿ÉÒÔÊ¹ÓÃÒ»ÖÖ¸ü¸ßÐ§µÄ¼¼Êõ£º
-	 * ²»ÔÙµ÷ÓÃ¶à¸öº¯ÊýÀ´ÉèÖÃ¶ÔÏóµÄ¸÷ÖµÓò£¬¶øÊÇÌá¹©Ò»¸öÖØÐÂ³õÊ¼»¯º¯Êý£¬ÒÔÒ»´Îµ÷ÓÃ´úÌæ¶à´Îµ÷ÓÃ¡£
+	 * å¦‚æžœEmployeeç±»æ²¡æœ‰æä¾›setterå‡½æ•°ï¼Œè€Œä½ åˆå¯ä»¥æŽ¥è§¦æºç ï¼Œå¯ä»¥ä½¿ç”¨ä¸€ç§æ›´é«˜æ•ˆçš„æŠ€æœ¯ï¼š
+	 * ä¸å†è°ƒç”¨å¤šä¸ªå‡½æ•°æ¥è®¾ç½®å¯¹è±¡çš„å„å€¼åŸŸï¼Œè€Œæ˜¯æä¾›ä¸€ä¸ªé‡æ–°åˆå§‹åŒ–å‡½æ•°ï¼Œä»¥ä¸€æ¬¡è°ƒç”¨ä»£æ›¿å¤šæ¬¡è°ƒç”¨ã€‚
 	 */
 	public static int totalSalary3(int[] ids, String[] names) {
 		Employee employee = new Employee();
 		int total = 0;
 		for (int i = 0; i < ids.length; i++) {
-			// µ÷ÓÃÖØÐÂ³õÊ¼»¯º¯Êý
+			// è°ƒç”¨é‡æ–°åˆå§‹åŒ–å‡½æ•°
 			employee.reinitialize(ids[i], names[i]);
 			total += employee.salary();
 		}
@@ -61,11 +61,11 @@ public class ReuseObjectDemo {
 }
 
 /**
- * ¹ÍÔ±Àà
+ * é›‡å‘˜ç±»
  */
 class Employee {
 	
-	private int id;// Ô±¹¤±àºÅ
+	private int id;// å‘˜å·¥ç¼–å·
 	private String name;
 	
 	public Employee() {
@@ -77,10 +77,10 @@ class Employee {
 	}
 	
 	/**
-	 * ¹ÍÔ±Ð½Ë®
+	 * é›‡å‘˜è–ªæ°´
 	 */
 	public int salary(){
-		// ²éÑ¯Êý¾Ý¿â²Ù×÷
+		// æŸ¥è¯¢æ•°æ®åº“æ“ä½œ
 		return 100;
 	}
 	
@@ -101,7 +101,7 @@ class Employee {
 	}
 	
 	/**
-	 * Ê¹ÓÃ²ÎÊýÖØÐÂ³õÊ¼»¯¶ÔÏó
+	 * ä½¿ç”¨å‚æ•°é‡æ–°åˆå§‹åŒ–å¯¹è±¡
 	 */
 	public void reinitialize(int id, String name) {
 		this.id = id;

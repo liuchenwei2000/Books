@@ -4,17 +4,17 @@
 package chapter6.p65;
 
 /**
- * ¿É±äµÄCircleÀà
+ * å¯å˜çš„Circleç±»
  * <p>
- * e1/e2/e3ÕâÈı¸ö°üÒÔÈıÖÖ²»Í¬µÄ·½Ê½À´ÊµÏÖ²»¿É±äµÄCircleÀà¡£
+ * e1/e2/e3è¿™ä¸‰ä¸ªåŒ…ä»¥ä¸‰ç§ä¸åŒçš„æ–¹å¼æ¥å®ç°ä¸å¯å˜çš„Circleç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class MutableCircle {
 
-	private double redius;// °ë¾¶
+	private double redius;// åŠå¾„
 
 	public MutableCircle(double redius) {
 		this.redius = redius;

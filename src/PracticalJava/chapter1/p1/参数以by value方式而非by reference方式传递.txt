@@ -1,9 +1,9 @@
-²ÎÊýÒÔby value·½Ê½¶ø·Çby reference·½Ê½´«µÝ
+å‚æ•°ä»¥by valueæ–¹å¼è€Œéžby referenceæ–¹å¼ä¼ é€’
 
 
-¶ÔÓÚ·½·¨ÖÐµÄ²ÎÊý£º
+å¯¹äºŽæ–¹æ³•ä¸­çš„å‚æ•°ï¼š
 
-1.»ù´¡ÀàÐÍ(Èçint)µÄ²ÎÊý£¬´«µÝµÄÊÇËüµÄÒ»¸ö¸±±¾¡£
-2.¶ÔÏóÀàÐÍµÄ²ÎÊý£¬´«µÝµÄÊÇ¸Ã¶ÔÏóÒýÓÃ(reference)µÄÒ»¸ö¸±±¾£¬¸Ã¸±±¾ÈÔÖ¸ÏòÔ­¶ÔÏó¡£
+1.åŸºç¡€ç±»åž‹(å¦‚int)çš„å‚æ•°ï¼Œä¼ é€’çš„æ˜¯å®ƒçš„ä¸€ä¸ªå‰¯æœ¬ã€‚
+2.å¯¹è±¡ç±»åž‹çš„å‚æ•°ï¼Œä¼ é€’çš„æ˜¯è¯¥å¯¹è±¡å¼•ç”¨(reference)çš„ä¸€ä¸ªå‰¯æœ¬ï¼Œè¯¥å‰¯æœ¬ä»æŒ‡å‘åŽŸå¯¹è±¡ã€‚
 
-×ÛÉÏ£¬²ÎÊý½øÐÐ´«µÝµÄÊ±ºò¶¼ÊÇÖµ´«µÝ(by value)¡£
+ç»¼ä¸Šï¼Œå‚æ•°è¿›è¡Œä¼ é€’çš„æ—¶å€™éƒ½æ˜¯å€¼ä¼ é€’(by value)ã€‚

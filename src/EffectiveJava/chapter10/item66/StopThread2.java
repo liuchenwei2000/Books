@@ -6,15 +6,15 @@ package chapter10.item66;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ÕıÈ·Ê¾Àı£º¸ÃÏß³Ì»áÔÚÒ»ÃëÖÓºóÍ£Ö¹¡£
+ * æ­£ç¡®ç¤ºä¾‹ï¼šè¯¥çº¿ç¨‹ä¼šåœ¨ä¸€ç§’é’Ÿååœæ­¢ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê1ÔÂ26ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´1æœˆ26æ—¥
  */
 public class StopThread2 {
 	
-	// ÎªÕâ¸ö¹²Ïí±äÁ¿Ìá¹©ÁËÍ¬²½¿ØÖÆµÄ¶ÁĞ´·½·¨
+	// ä¸ºè¿™ä¸ªå…±äº«å˜é‡æä¾›äº†åŒæ­¥æ§åˆ¶çš„è¯»å†™æ–¹æ³•
 	private static boolean stop;
 	
 	public synchronized static boolean isStop() {
@@ -31,7 +31,7 @@ public class StopThread2 {
 			@Override
 			public void run() {
 				int i = 0;
-				// ÕâÀïÊ¹ÓÃ·½·¨À´¶ÁÈ¡ stop ±äÁ¿µÄÖµ
+				// è¿™é‡Œä½¿ç”¨æ–¹æ³•æ¥è¯»å– stop å˜é‡çš„å€¼
 				while(!StopThread2.isStop()){
 					i++;
 				}
@@ -44,7 +44,7 @@ public class StopThread2 {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		// ÕâÀïÊ¹ÓÃ·½·¨À´ĞŞ¸Ä±äÁ¿µÄÖµ
+		// è¿™é‡Œä½¿ç”¨æ–¹æ³•æ¥ä¿®æ”¹å˜é‡çš„å€¼
 		StopThread2.setStop(true);
 	}
 

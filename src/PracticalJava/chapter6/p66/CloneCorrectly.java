@@ -4,11 +4,11 @@
 package chapter6.p66;
 
 /**
- * ÕıÈ·µÄ·½Ê½ÊµÏÖclone()
+ * æ­£ç¡®çš„æ–¹å¼å®ç°clone()
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class CloneCorrectly {
 
@@ -17,7 +17,7 @@ public class CloneCorrectly {
 	 */
 	public static void main(String[] args) {
 		Derived derived = new Derived();
-		// Object.clone()È·±£µÃÒÔ´´½¨³öÕıÈ·µÄDerive¶ÔÏó
+		// Object.clone()ç¡®ä¿å¾—ä»¥åˆ›å»ºå‡ºæ­£ç¡®çš„Deriveå¯¹è±¡
 		Derived cloned = (Derived) derived.clone();
 		System.out.println(cloned);
 	}
@@ -25,7 +25,7 @@ public class CloneCorrectly {
 	static class Base implements Cloneable {
 
 		/**
-		 * Ê×ÏÈµ÷ÓÃsuper.clone()
+		 * é¦–å…ˆè°ƒç”¨super.clone()
 		 */
 		public Object clone() {
 			try {
@@ -37,7 +37,7 @@ public class CloneCorrectly {
 	}
 
 	/**
-	 * ÅÉÉúÀàÃ»ÓĞÔÙÊµÏÖclone()
+	 * æ´¾ç”Ÿç±»æ²¡æœ‰å†å®ç°clone()
 	 */
 	static class Derived extends Base {
 	}

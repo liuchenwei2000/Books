@@ -4,11 +4,11 @@
 package agile.v2;
 
 /**
- * CopierÊ¾Àı 
+ * Copierç¤ºä¾‹ 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-24
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-24
  */
 public class CopierDemo {
 	
@@ -17,21 +17,21 @@ public class CopierDemo {
 	 */
 	public static void main(String[] args) {
 		Copier copier = new Copier();
-		// Èç¹ûÏëÒª´ÓÖ½´øÉÏ¶ÁÈ¡£¬ĞèÒªĞŞ¸Ämain·½·¨(¼´¿Í»§¶Ë³ÌĞò)£¬Ò²ĞèÒªĞŞ¸ÄCopier
-		// Èç¹ûÔÙÔö¼ÓÒ»ÖÖÊäÈëÆ÷£¬Copier¾ÍĞèÒªÔÙ´ÎĞŞ¸ÄÁË£¬Éè¼ÆºÜ½©Ó²
+		// å¦‚æœæƒ³è¦ä»çº¸å¸¦ä¸Šè¯»å–ï¼Œéœ€è¦ä¿®æ”¹mainæ–¹æ³•(å³å®¢æˆ·ç«¯ç¨‹åº)ï¼Œä¹Ÿéœ€è¦ä¿®æ”¹Copier
+		// å¦‚æœå†å¢åŠ ä¸€ç§è¾“å…¥å™¨ï¼ŒCopierå°±éœ€è¦å†æ¬¡ä¿®æ”¹äº†ï¼Œè®¾è®¡å¾ˆåƒµç¡¬
 		copier.setReadFromPaper(true);
 		copier.copy();
 	}
 }
 
 /**
- * ĞèÇó±ä¸ü£º´Ó¼üÅÌ»òÖ½´ø¶ÁÈëÊı¾İ²¢Êä³öµ½´òÓ¡»ú´òÓ¡³öÀ´
+ * éœ€æ±‚å˜æ›´ï¼šä»é”®ç›˜æˆ–çº¸å¸¦è¯»å…¥æ•°æ®å¹¶è¾“å‡ºåˆ°æ‰“å°æœºæ‰“å°å‡ºæ¥
  */
 class Copier {
 
 	public static final int EOF = -1;
 
-	// ÎªÁËÊÊÓ¦ĞÂĞèÇó£¬Ôö¼ÓÁËÒ»¸öboolean±äÁ¿À´½â¾öÎÊÌâ
+	// ä¸ºäº†é€‚åº”æ–°éœ€æ±‚ï¼Œå¢åŠ äº†ä¸€ä¸ªbooleanå˜é‡æ¥è§£å†³é—®é¢˜
 	private boolean isReadFromPaper = false;
 
 	private KeyboardReader keyboardReader = new KeyboardReader();

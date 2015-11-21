@@ -4,13 +4,13 @@
 package chapter6.p65.e1;
 
 /**
- * ²»¿É±äCircle½Ó¿Ú
+ * ä¸å¯å˜Circleæ¥å£
  * <p>
- * Õâ¾ÍÊÇËùÎ½µÄimmutable interface¡£
+ * è¿™å°±æ˜¯æ‰€è°“çš„immutable interfaceã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public interface ImmutableCircle {
 

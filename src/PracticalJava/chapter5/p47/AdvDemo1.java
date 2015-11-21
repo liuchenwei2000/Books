@@ -4,11 +4,11 @@
 package chapter5.p47;
 
 /**
- * synchronized¸ß½×Ê¾Àı1
+ * synchronizedé«˜é˜¶ç¤ºä¾‹1
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-9
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-9
  */
 public class AdvDemo1 {
 
@@ -18,15 +18,15 @@ public class AdvDemo1 {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Foo f1 = new Foo();
-		new Thread(f1).start();// ´ËÏß³ÌÆô¶¯
-		f1.printM2();// Ö÷Ïß³ÌÖĞÖ´ĞĞ
+		new Thread(f1).start();// æ­¤çº¿ç¨‹å¯åŠ¨
+		f1.printM2();// ä¸»çº¿ç¨‹ä¸­æ‰§è¡Œ
 		
 		/*
-		 * ´òÓ¡ÈçÏÂ£º
+		 * æ‰“å°å¦‚ä¸‹ï¼š
 		 * 1 1 1 1 2 2 2 1 1 1 1 1 2 2 2 1 1 ....
 		 * 
-		 * ¿ÉÒÔ¿´µ½£¬Á½¸ö´òÓ¡·½·¨²¢·¢Ö´ĞĞÁË¡£
-		 * ÕâÊÇÒòÎªprintM1()·½·¨»ñÈ¡µÄÊÇ¶ÔÏóf1µÄlock£¬¶øprintM2()·½·¨»ñÈ¡µÄÊÇFoo.classÕâ¸ö¶ÔÏóµÄlock¡£
+		 * å¯ä»¥çœ‹åˆ°ï¼Œä¸¤ä¸ªæ‰“å°æ–¹æ³•å¹¶å‘æ‰§è¡Œäº†ã€‚
+		 * è¿™æ˜¯å› ä¸ºprintM1()æ–¹æ³•è·å–çš„æ˜¯å¯¹è±¡f1çš„lockï¼Œè€ŒprintM2()æ–¹æ³•è·å–çš„æ˜¯Foo.classè¿™ä¸ªå¯¹è±¡çš„lockã€‚
 		 */
 	}
 }

@@ -7,16 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * ²»Ê¹ÓÃfinallyÇåÀí·ÇÄÚ´æ×ÊÔ´µÄ·½Ê½
+ * ä¸ä½¿ç”¨finallyæ¸…ç†éå†…å­˜èµ„æºçš„æ–¹å¼
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-26
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-26
  */
 public class WithoutFinally {
 
 	/**
-	 * ÓĞÖØ¸´´úÂë²¢ÇÒ±È½Ï»ìÂÒ¡£
+	 * æœ‰é‡å¤ä»£ç å¹¶ä¸”æ¯”è¾ƒæ··ä¹±ã€‚
 	 */
 	public void foo() throws IOException {
 		FileReader fr = new FileReader("a.txt");

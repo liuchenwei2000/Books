@@ -6,14 +6,14 @@ package TDD.mockobject.v4;
 import junit.framework.TestCase;
 
 /**
- * ´æ¿î¼ÆËãÆ÷²âÊÔ
+ * å­˜æ¬¾è®¡ç®—å™¨æµ‹è¯•
  * <p>
- * ºóÀ´·¢ÏÖÖ±½Ó½«ÀûÂÊ²ÎÊı»¯£¬ÓÉÍâ²¿×¢Èë¸ü·½±ã
- * ÕâÑùÒ»À´£¬SavingCalculator¾ÍºÍBank½âñîÁË£¬Ò²¸üÈİÒ×²âÊÔ
+ * åæ¥å‘ç°ç›´æ¥å°†åˆ©ç‡å‚æ•°åŒ–ï¼Œç”±å¤–éƒ¨æ³¨å…¥æ›´æ–¹ä¾¿
+ * è¿™æ ·ä¸€æ¥ï¼ŒSavingCalculatorå°±å’ŒBankè§£è€¦äº†ï¼Œä¹Ÿæ›´å®¹æ˜“æµ‹è¯•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-21
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-21
  */
 public class SavingCalculatorTest extends TestCase {
 	
@@ -24,21 +24,21 @@ public class SavingCalculatorTest extends TestCase {
 }
 
 /**
- * ´æ¿î¼ÆËãÆ÷
+ * å­˜æ¬¾è®¡ç®—å™¨
  */
 class SavingCalculator {
 	
-	private double rate;// ÀûÂÊ
+	private double rate;// åˆ©ç‡
 	
 	public SavingCalculator(double rate) {
 		this.rate = rate;
 	}
 
 	/**
-	 * ·µ»Ø1Äê¶¨ÆÚµÄ±¾Ï¢
+	 * è¿”å›1å¹´å®šæœŸçš„æœ¬æ¯
 	 * 
 	 * @param amount
-	 *            ±¾½ğ
+	 *            æœ¬é‡‘
 	 */
 	public double save4OneYearFixed(double amount){
 		return amount * (1 + rate);

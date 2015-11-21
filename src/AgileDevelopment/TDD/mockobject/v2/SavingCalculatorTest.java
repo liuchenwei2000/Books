@@ -6,13 +6,13 @@ package TDD.mockobject.v2;
 import junit.framework.TestCase;
 
 /**
- * ´æ¿î¼ÆËãÆ÷²âÊÔ
+ * å­˜æ¬¾è®¡ç®—å™¨æµ‹è¯•
  * <p>
- * ²âÊÔ¸Ä±äÉè¼Æ£¬²ÉÓÃÁËMockObjectÄ£Ê½½øĞĞ²âÊÔ
+ * æµ‹è¯•æ”¹å˜è®¾è®¡ï¼Œé‡‡ç”¨äº†MockObjectæ¨¡å¼è¿›è¡Œæµ‹è¯•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-21
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-21
  */
 public class SavingCalculatorTest extends TestCase {
 
@@ -23,7 +23,7 @@ public class SavingCalculatorTest extends TestCase {
 	}
 
 	/**
-	 * ²âÊÔ×®£¬ÊÇMock Object
+	 * æµ‹è¯•æ¡©ï¼Œæ˜¯Mock Object
 	 */
 	private static class BankStub implements InterestRateGenerator {
 
@@ -35,22 +35,22 @@ public class SavingCalculatorTest extends TestCase {
 }
 
 /**
- * ÀûÂÊÉú³ÉÆ÷
+ * åˆ©ç‡ç”Ÿæˆå™¨
  */
 interface InterestRateGenerator {
 
 	/**
-	 * Éú³ÉÀûÂÊ
+	 * ç”Ÿæˆåˆ©ç‡
 	 */
 	public double generate();
 }
 
 /**
- * ´æ¿î¼ÆËãÆ÷
+ * å­˜æ¬¾è®¡ç®—å™¨
  */
 class SavingCalculator {
 
-	// ½«ÀûÂÊÀ´Ô´·â×°ÆğÀ´
+	// å°†åˆ©ç‡æ¥æºå°è£…èµ·æ¥
 	private InterestRateGenerator rategen;
 
 	public SavingCalculator() {
@@ -58,10 +58,10 @@ class SavingCalculator {
 	}
 
 	/**
-	 * ·µ»Ø1Äê¶¨ÆÚµÄ±¾Ï¢
+	 * è¿”å›1å¹´å®šæœŸçš„æœ¬æ¯
 	 * 
 	 * @param amount
-	 *            ±¾½ğ
+	 *            æœ¬é‡‘
 	 */
 	public double save4OneYearFixed(double amount) {
 		return amount * (1 + rategen.generate());

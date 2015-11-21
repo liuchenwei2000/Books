@@ -1,8 +1,8 @@
-����interfaces�еĺ���������ͻ
+避免interfaces中的函数发生冲突
 
 
-û��ʲô�ܹ���ֹ����interfaces�Գ���ʹ����ͬ���ƣ�������ͬ���ƻ�ǩ��ʽ���������������һ��classͬʱʵ������������������������interfaces������ܻ��������⡣
+没有什么能够防止两个interfaces对常量使用相同名称，或以相同名称或签名式来声明函数。如果一个class同时实现两个或多个具有这类特征的interfaces，则可能会引发问题。
 
-������Աʵ����Դ�ڲ�ͬ������interfacesʱ�����п����������Ƴ�ͻ���⡣���ԣ�Ӧ��������Ϊ�����ͳ�������������������interfaces���Ʒ�����ͻ�Ļ��ᡣ
+当程序员实现来源于不同程序库的interfaces时，最有可能遇到名称冲突问题。所以，应当谨慎的为函数和常量命名，减少与其他interfaces名称发生冲突的机会。
 
-һ�������������⣬����ܽӴ�����ЩinterfacesԴ�벢���ܹ��޸����ǣ����������������Щ���⡣���û��Դ�룬��ֻ�ܷ���һ��classͬʱʵ�����ͻ�������ӿڵ��뷨��ת��������������classes�ֱ�ʵ�֡�
+一旦遇到这类问题，如果能接触到这些interfaces源码并且能够修改它们，则可以轻松消除这些问题。如果没有源码，那只能放弃一个class同时实现相冲突的两个接口的想法，转而用两个独立的classes分别实现。

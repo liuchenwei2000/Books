@@ -1,12 +1,12 @@
-��Ҫ����equals()��ȱʡʵ��
+不要依赖equals()的缺省实现
 
 
-׼�����£�
+准则如下：
 1.
-��Ҫ�Ƚ϶����Ƿ���ȣ���class�������ṩһ����ȷ��equals()��
+若要比较对象是否相等，其class有责任提供一个正确的equals()。
 2.
-���뵱Ȼ�ĵ���equals()֮ǰ��Ӧ�ȼ�鲢ȷ����ʹ�õ�class��ȷʵ����equals()��
+在想当然的调用equals()之前，应先检查并确保所使用的class的确实现了equals()。
 3.
-�����ʹ�õ�class��δʵ��equals()��Ҫ�ж�java.lang.Object��ȱʡ�����Ƿ��ʤ�Ρ�
+如果所使用的class并未实现equals()，要判断java.lang.Object的缺省函数是否可胜任。
 4.
-����޷�ʤ�Σ���Ӧ����ĳ����װ���������׫д�Լ���equals()��
+如果无法胜任，就应该在某个包装类或子类中撰写自己的equals()。

@@ -1,6 +1,6 @@
-�Բ����data��object referencesʹ��final
+对不变的data和object references使用final
 
 
-�ؼ���finalֻ�ܷ�ֹ����ֵ�ĸı䡣
-���������Ϊfinal�ı����Ǹ�object reference����ô��reference���ܸı䣬������Զָ��ͬһ������
-Ȼ����ָ����Ǹ�����(������)�������ı䡣
+关键词final只能防止变量值的改变。
+如果被声明为final的变量是个object reference，那么该reference不能改变，必须永远指向同一个对象。
+然而被指向的那个对象(的属性)可以随便改变。

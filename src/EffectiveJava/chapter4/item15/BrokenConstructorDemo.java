@@ -6,11 +6,11 @@ package chapter4.item15;
 import java.util.Date;
 
 /**
- * Ôâµ½ÆÆ»µµÄ¹¹ÔìÆ÷ÑİÊ¾
+ * é­åˆ°ç ´åçš„æ„é€ å™¨æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-10
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-10
  */
 public class BrokenConstructorDemo {
 
@@ -18,7 +18,7 @@ public class BrokenConstructorDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Ô¤ÆÚÓ¦¸Ã½«ÈÕÆÚ´òÓ¡³öÀ´Á½´Î£¬Êµ¼ÊÉÏµÚÒ»´Î´òÓ¡³öÀ´µÄÊÇnull
+		// é¢„æœŸåº”è¯¥å°†æ—¥æœŸæ‰“å°å‡ºæ¥ä¸¤æ¬¡ï¼Œå®é™…ä¸Šç¬¬ä¸€æ¬¡æ‰“å°å‡ºæ¥çš„æ˜¯null
 		new SubClass().method();
 	}
 }
@@ -26,7 +26,7 @@ public class BrokenConstructorDemo {
 class SuperClass {
 
 	/**
-	 * Õâ¸ö¹¹Ôì·½·¨µ÷ÓÃÁË¿É±»¸ÄĞ´µÄ(overridable)·½·¨£¬Ôì³É´íÎó
+	 * è¿™ä¸ªæ„é€ æ–¹æ³•è°ƒç”¨äº†å¯è¢«æ”¹å†™çš„(overridable)æ–¹æ³•ï¼Œé€ æˆé”™è¯¯
 	 */
 	public SuperClass() {
 		method();
@@ -41,7 +41,7 @@ class SubClass extends SuperClass {
 	private final Date date;
 
 	public SubClass() {
-		// ÕâÀïÒşº¬×Åµ÷ÓÃÁËsuper();
+		// è¿™é‡Œéšå«ç€è°ƒç”¨äº†super();
 		this.date = new Date();
 	}
 

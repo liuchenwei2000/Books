@@ -7,11 +7,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Ê¹ÓÃfinallyÇåÀí·ÇÄÚ´æ×ÊÔ´µÄ·½Ê½
+ * ä½¿ç”¨finallyæ¸…ç†éå†…å­˜èµ„æºçš„æ–¹å¼
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-26
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-26
  */
 public class WithFinally {
 

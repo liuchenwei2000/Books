@@ -4,23 +4,23 @@
 package chapter5.p47;
 
 /**
- * synchronizedÓÃ·¨Ê¾Àı
+ * synchronizedç”¨æ³•ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-9
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-9
  */
 public class SynchronizedDemo {
 
 	/**
-	 * synchronizedĞŞÊÎstatic·½·¨
+	 * synchronizedä¿®é¥°staticæ–¹æ³•
 	 */
 	public synchronized static void method1() {
 		// ...
 	}
 
 	/**
-	 * synchronizedĞŞÊÎClass×ÖÃæÁ¿
+	 * synchronizedä¿®é¥°Classå­—é¢é‡
 	 */
 	public void method2() {
 		synchronized (SynchronizedDemo.class) {

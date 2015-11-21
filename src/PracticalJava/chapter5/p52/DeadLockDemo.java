@@ -6,11 +6,11 @@ package chapter5.p52;
 import chapter5.p51.Demo;
 
 /**
- * ËÀËøÊ¾Àý
+ * æ­»é”ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-12-16
+ * åˆ›å»ºæ—¥æœŸï¼š2012-12-16
  */
 public class DeadLockDemo {
 
@@ -23,12 +23,12 @@ public class DeadLockDemo {
 		
 		final Demo demo = new Demo();
 		/*
-		 * ÒÔp51.Demo.sumArrays2(int[] a1, int[] a2)·½·¨ÎªÀý£¬ËüËäÈ»±£Ö¤ÁË¶àÏß³Ì°²È«ÐÔ£¬µ«ÖÆÔìÁËÒ»¸öÇ±ÔÚµÄËÀËøÏÝÚå¡£
-		 * ³ý·ÇÁíÒ»¸öÏß³Ì¶ÔÍ¬Ò»¸ö¶ÔÏóµ÷ÓÃ´Ëº¯ÊýÊ±¸ñÍâÐ¡ÐÄ½÷É÷¡£
+		 * ä»¥p51.Demo.sumArrays2(int[] a1, int[] a2)æ–¹æ³•ä¸ºä¾‹ï¼Œå®ƒè™½ç„¶ä¿è¯äº†å¤šçº¿ç¨‹å®‰å…¨æ€§ï¼Œä½†åˆ¶é€ äº†ä¸€ä¸ªæ½œåœ¨çš„æ­»é”é™·é˜±ã€‚
+		 * é™¤éžå¦ä¸€ä¸ªçº¿ç¨‹å¯¹åŒä¸€ä¸ªå¯¹è±¡è°ƒç”¨æ­¤å‡½æ•°æ—¶æ ¼å¤–å°å¿ƒè°¨æ…Žã€‚
 		 * 
-		 * ÈçÏÂ£¬µÚÒ»¸öÏß³Ìµ÷ÓÃdemo¶ÔÏóµÄsumArrays2·½·¨£¬´«ÈëµÄÊÇa1,a2£»
-		 * µÚ¶þ¸öÏß³Ìµ÷ÓÃdemo¶ÔÏóµÄsumArrays2·½·¨£¬´«ÈëµÄÊÇa2,a1¡£
-		 * ÕâÑùÒ»À´£¬ÕâÁ½¸öÏß³Ì¾Í¿ÉÄÜ»á·¢ÉúËÀËø¡£
+		 * å¦‚ä¸‹ï¼Œç¬¬ä¸€ä¸ªçº¿ç¨‹è°ƒç”¨demoå¯¹è±¡çš„sumArrays2æ–¹æ³•ï¼Œä¼ å…¥çš„æ˜¯a1,a2ï¼›
+		 * ç¬¬äºŒä¸ªçº¿ç¨‹è°ƒç”¨demoå¯¹è±¡çš„sumArrays2æ–¹æ³•ï¼Œä¼ å…¥çš„æ˜¯a2,a1ã€‚
+		 * è¿™æ ·ä¸€æ¥ï¼Œè¿™ä¸¤ä¸ªçº¿ç¨‹å°±å¯èƒ½ä¼šå‘ç”Ÿæ­»é”ã€‚
 		 */
 		new Thread(new Runnable() {
 

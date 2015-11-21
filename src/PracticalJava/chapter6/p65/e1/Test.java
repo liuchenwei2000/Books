@@ -4,11 +4,11 @@
 package chapter6.p65.e1;
 
 /**
- * ¿Í»§¶Ë²âÊÔÀà
+ * å®¢æˆ·ç«¯æµ‹è¯•ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class Test {
 
@@ -17,12 +17,12 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		ImmutableCircle ic = createCircle(3);
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 		// ic.setRedius(5);
 		/*
-		 * ÓÉÓÚimmutable interface½ö½ö±©Â¶ÁËµ×²ãclassµÄ·Ç¿É±äº¯Êı£¬ËùÒÔ
-		 * Í¨¹ıÕâ¸öinterface·ÃÎÊµÄobjectsÄÜ±£³Ö²»±äĞÔ¡£
-		 * µ«ÊÇ£¬ÓÃ»§ÈÔÈ»¿ÉÒÔÊ¹ÓÃ¼òµ¥µÄ×ªĞÍ(cast)¶¯×÷ÇáÒ×Ïû³ı²»±äĞÔ£¬ÈçÏÂ£º
+		 * ç”±äºimmutable interfaceä»…ä»…æš´éœ²äº†åº•å±‚classçš„éå¯å˜å‡½æ•°ï¼Œæ‰€ä»¥
+		 * é€šè¿‡è¿™ä¸ªinterfaceè®¿é—®çš„objectsèƒ½ä¿æŒä¸å˜æ€§ã€‚
+		 * ä½†æ˜¯ï¼Œç”¨æˆ·ä»ç„¶å¯ä»¥ä½¿ç”¨ç®€å•çš„è½¬å‹(cast)åŠ¨ä½œè½»æ˜“æ¶ˆé™¤ä¸å˜æ€§ï¼Œå¦‚ä¸‹ï¼š
 		 */
 		((MutableCircle) ic).setRedius(5);
 	}

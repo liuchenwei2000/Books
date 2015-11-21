@@ -4,18 +4,18 @@
 package fields.f15.after;
 
 /**
- * ¹ÍÔ±Àà(ĞÂ)
+ * é›‡å‘˜ç±»(æ–°)
  * 
- * ¹¤³ÌÊ¦»òÊÛ»õÔ±¿ÉÒÔ±»Ìá°ÎÎª¾­Àí
- * ÕâÑù¶ÔÏóµÄtypeÔÚ¶ÔÏóÉúÃüÆÚÄÚÊÇ¿É±äµÄ
+ * å·¥ç¨‹å¸ˆæˆ–å”®è´§å‘˜å¯ä»¥è¢«ææ‹”ä¸ºç»ç†
+ * è¿™æ ·å¯¹è±¡çš„typeåœ¨å¯¹è±¡ç”Ÿå‘½æœŸå†…æ˜¯å¯å˜çš„
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public class Employee {
 
-	private EmployeeType type;// ¹ÍÔ±ÀàĞÍ
+	private EmployeeType type;// é›‡å‘˜ç±»å‹
 
 	public Employee(int type) {
 		this.type = EmployeeType.newType(type);
@@ -37,7 +37,7 @@ public class Employee {
 	}
 
 	/**
-	 * ¸ù¾İ¹ÍÔ±ÀàĞÍ·µ»ØÏàÓ¦¹¤×Ê
+	 * æ ¹æ®é›‡å‘˜ç±»å‹è¿”å›ç›¸åº”å·¥èµ„
 	 */
 	public int getPayment() {
 		switch (getType()) {
@@ -48,7 +48,7 @@ public class Employee {
 		case EmployeeType.MANAGER:
 			return 2000;
 		default:
-			throw new RuntimeException("·Ç·¨ÓÃ»§");
+			throw new RuntimeException("éæ³•ç”¨æˆ·");
 		}
 	}
 }

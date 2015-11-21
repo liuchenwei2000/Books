@@ -4,11 +4,11 @@
 package fields.f15.after;
 
 /**
- * ManagerÀàÐÍ
+ * Managerç±»åž‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public class Manager extends EmployeeType {
 

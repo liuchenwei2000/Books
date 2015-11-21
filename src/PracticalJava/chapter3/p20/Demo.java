@@ -4,16 +4,16 @@
 package chapter3.p20;
 
 /**
- * ²»Í¬µÄthrowsÉùÃ÷·½Ê½
+ * ä¸åŒçš„throwså£°æ˜æ–¹å¼
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-26
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-26
  */
 public class Demo {
 
 	/**
-	 * ÕâÖÖ·½Ê½µÄthrows×Ó¾ä»áÈÃ¿Í»§¶ËÃÔ»ó
+	 * è¿™ç§æ–¹å¼çš„throwså­å¥ä¼šè®©å®¢æˆ·ç«¯è¿·æƒ‘
 	 */
 	public void foo(int i) throws Exception1 {
 		if (i == 1) {
@@ -28,7 +28,7 @@ public class Demo {
 	}
 	
 	/**
-	 * ÕâÖÖ·½Ê½µÄthrows×Ó¾ä²ÅÊÇÌá³«µÄ
+	 * è¿™ç§æ–¹å¼çš„throwså­å¥æ‰æ˜¯æå€¡çš„
 	 */
 	public void bar(int i) throws Exception1, Exception2, Exception3 {
 		if (i == 1) {

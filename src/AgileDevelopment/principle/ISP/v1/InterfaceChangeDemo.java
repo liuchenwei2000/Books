@@ -4,22 +4,22 @@
 package principle.ISP.v1;
 
 /**
- * ½Ó¿Ú¸Ä±äÑİÊ¾Àà
+ * æ¥å£æ”¹å˜æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-11-1
+ * åˆ›å»ºæ—¥æœŸï¼š2010-11-1
  */
 public class InterfaceChangeDemo {
 }
 
 /**
- * ¿Í»§¶Ë³ÌĞò
+ * å®¢æˆ·ç«¯ç¨‹åº
  */
 class Client {
 
 	/**
-	 * ²Ù×÷OriginalInterfaceµÄ·½·¨
+	 * æ“ä½œOriginalInterfaceçš„æ–¹æ³•
 	 */
 	public void operation(OriginalInterface oi) {
 		oi.operation1();
@@ -27,7 +27,7 @@ class Client {
 }
 
 /**
- * Ô­Ê¼½Ó¿Ú
+ * åŸå§‹æ¥å£
  */
 interface OriginalInterface {
 

@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
- * ObjectµÄ·½·¨»áÓ°Ïì¼¯ºÏÀàµÄĞĞÎªÑİÊ¾
+ * Objectçš„æ–¹æ³•ä¼šå½±å“é›†åˆç±»çš„è¡Œä¸ºæ¼”ç¤º
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-2-26
+ * åˆ›å»ºæ—¥æœŸï¼š2011-2-26
  */
 public class ObjectInCollection {
 
@@ -25,26 +25,26 @@ public class ObjectInCollection {
 	}
 
 	/**
-	 * equals·½·¨Ö÷ÒªÊ¹ÓÃÔÚ¼¯ºÏÀàµÄcontains·½·¨ÖĞ£¬ÒÔÅĞ¶Ï¼¯ºÏÖĞÊÇ·ñ°üº¬²ÎÊı¶ÔÏó£¬²»Í¬µÄ¼¯ºÏÀàÓĞ²»Í¬µÄÊµÏÖ¡£
-	 * hashCode·½·¨Ö÷ÒªÓ°Ïì»ùÓÚ¹şÏ£ÂëµÄ¼¯ºÏ£¬±ÈÈçHashSet¡¢HashMap¡£
-	 * compareTo·½·¨Ö÷ÒªÓ°Ïì»ùÓÚÅÅĞòµÄ¼¯ºÏ£¬±ÈÈçTreeSet¡¢TreeMap¡£
+	 * equalsæ–¹æ³•ä¸»è¦ä½¿ç”¨åœ¨é›†åˆç±»çš„containsæ–¹æ³•ä¸­ï¼Œä»¥åˆ¤æ–­é›†åˆä¸­æ˜¯å¦åŒ…å«å‚æ•°å¯¹è±¡ï¼Œä¸åŒçš„é›†åˆç±»æœ‰ä¸åŒçš„å®ç°ã€‚
+	 * hashCodeæ–¹æ³•ä¸»è¦å½±å“åŸºäºå“ˆå¸Œç çš„é›†åˆï¼Œæ¯”å¦‚HashSetã€HashMapã€‚
+	 * compareToæ–¹æ³•ä¸»è¦å½±å“åŸºäºæ’åºçš„é›†åˆï¼Œæ¯”å¦‚TreeSetã€TreeMapã€‚
 	 */
 	private static void testAll() {
 		/*
 		 * List.contains
 		 * 
-		 * Í¨¹ı±éÀúÕû¸ö¼¯ºÏ£¬°ÑÃ¿Ò»¸ö¶ÔÏóÓë²ÎÊı¶ÔÏó½øĞĞequals±È½ÏÀ´ÅĞ¶ÏÊÇ·ñÏàµÈ¡£
+		 * é€šè¿‡éå†æ•´ä¸ªé›†åˆï¼ŒæŠŠæ¯ä¸€ä¸ªå¯¹è±¡ä¸å‚æ•°å¯¹è±¡è¿›è¡Œequalsæ¯”è¾ƒæ¥åˆ¤æ–­æ˜¯å¦ç›¸ç­‰ã€‚
 		 */
 		List<String> list = new ArrayList<String>();
 		list.add("a");
 		System.out.println("List contains a? " + list.contains("a"));// true
 		
 		/*
-		 * HashSet.contains¡¢HashMap.containsKey
+		 * HashSet.containsã€HashMap.containsKey
 		 * 
-		 * ÓëhashÂëÓĞ¹ØµÄ¼¯ºÏÀà¶¼»áÏÈ¼ÆËã³öÀ´²ÎÊı¶ÔÏóµÄ¹şÏ£Âë£¬È»ºó²é¿´×Ô¼ºÊÇ·ñ°üÀ¨´Ë¹şÏ£Âë£»
-		 * Èç¹û²»°üÀ¨´Ë¹şÏ£Âë£¬ÔòÖ±½Ó·µ»Øfalse£¬ÈÏÎª²»°üÀ¨´Ë²ÎÊı¶ÔÏó£»
-		 * Èç¹û°üÀ¨´Ë¹şÏ£Âë£¬Ôò½«¸Ã¹şÏ£Âë¶ÔÓ¦µÄ¶ÔÏóÈ¡³öÀ´Óë²ÎÊı¶ÔÏó½øĞĞequals±È½ÏÀ´ÅĞ¶ÏÊÇ·ñÏàµÈ¡£
+		 * ä¸hashç æœ‰å…³çš„é›†åˆç±»éƒ½ä¼šå…ˆè®¡ç®—å‡ºæ¥å‚æ•°å¯¹è±¡çš„å“ˆå¸Œç ï¼Œç„¶åæŸ¥çœ‹è‡ªå·±æ˜¯å¦åŒ…æ‹¬æ­¤å“ˆå¸Œç ï¼›
+		 * å¦‚æœä¸åŒ…æ‹¬æ­¤å“ˆå¸Œç ï¼Œåˆ™ç›´æ¥è¿”å›falseï¼Œè®¤ä¸ºä¸åŒ…æ‹¬æ­¤å‚æ•°å¯¹è±¡ï¼›
+		 * å¦‚æœåŒ…æ‹¬æ­¤å“ˆå¸Œç ï¼Œåˆ™å°†è¯¥å“ˆå¸Œç å¯¹åº”çš„å¯¹è±¡å–å‡ºæ¥ä¸å‚æ•°å¯¹è±¡è¿›è¡Œequalsæ¯”è¾ƒæ¥åˆ¤æ–­æ˜¯å¦ç›¸ç­‰ã€‚
 		 */
 		HashSet<BadHashCodeObject> hashSet = new HashSet<BadHashCodeObject>();
 		hashSet.add(new BadHashCodeObject(0));
@@ -56,10 +56,10 @@ public class ObjectInCollection {
 		System.out.println("HashSet contains GoodHashCodeObject? "
 				+ hashSet2.contains(new GoodHashCodeObject(0)));// true
 		/*
-		 * TreeSet.contains¡¢TreeMap.containsKey
+		 * TreeSet.containsã€TreeMap.containsKey
 		 * 
-		 * ÓëÅÅĞòÓĞ¹ØµÄ¼¯ºÏÀà¶¼»áÊ¹ÓÃComparable½Ó¿ÚµÄcompareTo·½·¨¶ÔÁ½¸ö¶ÔÏó½øĞĞÏàµÈ²âÊÔ£¬
-		 * ¶ø²»»áÏñÆäËû¼¯ºÏÄÇÑùÊ¹ÓÃequals·½·¨¡£
+		 * ä¸æ’åºæœ‰å…³çš„é›†åˆç±»éƒ½ä¼šä½¿ç”¨Comparableæ¥å£çš„compareToæ–¹æ³•å¯¹ä¸¤ä¸ªå¯¹è±¡è¿›è¡Œç›¸ç­‰æµ‹è¯•ï¼Œ
+		 * è€Œä¸ä¼šåƒå…¶ä»–é›†åˆé‚£æ ·ä½¿ç”¨equalsæ–¹æ³•ã€‚
 		 */
 		TreeSet<BadComparableObject> treeSet = new TreeSet<BadComparableObject>();
 		treeSet.add(new BadComparableObject(0));
@@ -71,12 +71,12 @@ public class ObjectInCollection {
 		System.out.println("TreeSet contains GoodComparableObject? "
 				+ treeSet2.contains(new GoodComparableObject(0)));// true
 		/*
-		 * Set.add¡¢Map.put
+		 * Set.addã€Map.put
 		 * 
-		 * SetÈ·±£ÏàµÈµÄ¶ÔÏó×î¶àÖ»ÓĞÒ»¸ö£¬ÔÚÊ¹ÓÃadd·½·¨ÏòSetÖĞÌí¼Ó¶ÔÏóµÄÊ±ºò£¬
-		 * Ëü»á¸ù¾İcontains·½·¨·µ»ØµÄ½á¹ûÀ´¾ö¶¨ÊÇ·ñÒª½«²ÎÊı¶ÔÏóÌí¼Ó½øÈ¥¡£
-		 * MapÈ·±£keyÖĞ²»´æÔÚÏàµÈµÄ¶ÔÏó£¬ÔÚÊ¹ÓÃput·½·¨ÏòMapÖĞÌí¼Ó¼üÖµ¶ÔµÄÊ±ºò£¬
-		 * Ëü»á¸ù¾İcontainsKey·½·¨·µ»ØµÄ½á¹ûÀ´¾ö¶¨ÊÇ·ñÒª½«²ÎÊı¶ÔÏóÌí¼Ó½øÈ¥¡£
+		 * Setç¡®ä¿ç›¸ç­‰çš„å¯¹è±¡æœ€å¤šåªæœ‰ä¸€ä¸ªï¼Œåœ¨ä½¿ç”¨addæ–¹æ³•å‘Setä¸­æ·»åŠ å¯¹è±¡çš„æ—¶å€™ï¼Œ
+		 * å®ƒä¼šæ ¹æ®containsæ–¹æ³•è¿”å›çš„ç»“æœæ¥å†³å®šæ˜¯å¦è¦å°†å‚æ•°å¯¹è±¡æ·»åŠ è¿›å»ã€‚
+		 * Mapç¡®ä¿keyä¸­ä¸å­˜åœ¨ç›¸ç­‰çš„å¯¹è±¡ï¼Œåœ¨ä½¿ç”¨putæ–¹æ³•å‘Mapä¸­æ·»åŠ é”®å€¼å¯¹çš„æ—¶å€™ï¼Œ
+		 * å®ƒä¼šæ ¹æ®containsKeyæ–¹æ³•è¿”å›çš„ç»“æœæ¥å†³å®šæ˜¯å¦è¦å°†å‚æ•°å¯¹è±¡æ·»åŠ è¿›å»ã€‚
 		 */
 		HashSet<BadHashCodeObject> hashSet3 = new HashSet<BadHashCodeObject>();
 		hashSet3.add(new BadHashCodeObject(0));
@@ -100,8 +100,8 @@ public class ObjectInCollection {
 	}
 	
 	/**
-	 * ÕâÊÇÒ»¸ö²»ºÃµÄÀà£¬ËüÔÚ¸ÄĞ´equals·½·¨µÄÍ¬Ê±Ã»ÓĞ¸ÄĞ´hashCode¡£
-	 * ÕâÑù¾Íµ¼ÖÂ¼´Ê¹ÊÇequalsµÄÁ½¸ö¶ÔÏó£¬ËüÃÇµÄhashCodeÒ²²»Ò»Ñù¡£
+	 * è¿™æ˜¯ä¸€ä¸ªä¸å¥½çš„ç±»ï¼Œå®ƒåœ¨æ”¹å†™equalsæ–¹æ³•çš„åŒæ—¶æ²¡æœ‰æ”¹å†™hashCodeã€‚
+	 * è¿™æ ·å°±å¯¼è‡´å³ä½¿æ˜¯equalsçš„ä¸¤ä¸ªå¯¹è±¡ï¼Œå®ƒä»¬çš„hashCodeä¹Ÿä¸ä¸€æ ·ã€‚
 	 */
 	private static class BadHashCodeObject {
 		
@@ -127,8 +127,8 @@ public class ObjectInCollection {
 	}
 	
 	/**
-	 * ÕâÊÇÒ»¸öºÃµÄÀà£¬ËüÔÚ¸ÄĞ´equals·½·¨µÄÍ¬Ê±¸ÄĞ´ÁËhashCode¡£
-	 * ÕâÑùequalsµÄÁ½¸ö¶ÔÏó£¬ËüÃÇµÄhashCodeÒ²ÊÇ²»Ò»ÑùµÄ¡£
+	 * è¿™æ˜¯ä¸€ä¸ªå¥½çš„ç±»ï¼Œå®ƒåœ¨æ”¹å†™equalsæ–¹æ³•çš„åŒæ—¶æ”¹å†™äº†hashCodeã€‚
+	 * è¿™æ ·equalsçš„ä¸¤ä¸ªå¯¹è±¡ï¼Œå®ƒä»¬çš„hashCodeä¹Ÿæ˜¯ä¸ä¸€æ ·çš„ã€‚
 	 */
 	private static class GoodHashCodeObject {
 		
@@ -162,8 +162,8 @@ public class ObjectInCollection {
 	}
 	
 	/**
-	 * ÕâÊÇÒ»¸ö²»ºÃµÄÀà£¬ËüÊµÏÖµÄcompareTo·½·¨Ã»ÓĞºÍequals·½·¨±£³ÖÒ»ÖÂ¡£
-	 * ÕâÑù¼´±ãÁ½¸öequalsÏàµÈµÄ¶ÔÏó£¬compareTo·½·¨È´ÈÏÎªËüÃÇ²»ÏàµÈ¡£
+	 * è¿™æ˜¯ä¸€ä¸ªä¸å¥½çš„ç±»ï¼Œå®ƒå®ç°çš„compareToæ–¹æ³•æ²¡æœ‰å’Œequalsæ–¹æ³•ä¿æŒä¸€è‡´ã€‚
+	 * è¿™æ ·å³ä¾¿ä¸¤ä¸ªequalsç›¸ç­‰çš„å¯¹è±¡ï¼ŒcompareToæ–¹æ³•å´è®¤ä¸ºå®ƒä»¬ä¸ç›¸ç­‰ã€‚
 	 */
 	private static class BadComparableObject implements
 			Comparable<BadComparableObject> {
@@ -204,8 +204,8 @@ public class ObjectInCollection {
 	}
 
 	/**
-	 * ÕâÊÇÒ»¸öºÃµÄÀà£¬ËüÊµÏÖµÄcompareTo·½·¨ºÍequals·½·¨±£³ÖÒ»ÖÂ¡£
-	 * ÕâÑùÁ½¸öequalsÏàµÈµÄ¶ÔÏó£¬compareTo·½·¨Ò²ÈÏÎªËüÃÇÏàµÈ¡£
+	 * è¿™æ˜¯ä¸€ä¸ªå¥½çš„ç±»ï¼Œå®ƒå®ç°çš„compareToæ–¹æ³•å’Œequalsæ–¹æ³•ä¿æŒä¸€è‡´ã€‚
+	 * è¿™æ ·ä¸¤ä¸ªequalsç›¸ç­‰çš„å¯¹è±¡ï¼ŒcompareToæ–¹æ³•ä¹Ÿè®¤ä¸ºå®ƒä»¬ç›¸ç­‰ã€‚
 	 */
 	private static class GoodComparableObject implements
 			Comparable<GoodComparableObject> {

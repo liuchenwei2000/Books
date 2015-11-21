@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ²»ÑÚ¸ÇÒì³£Ê¾Àı
+ * ä¸æ©ç›–å¼‚å¸¸ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-24
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-24
  */
 public class NotHiddenException {
 
@@ -26,13 +26,13 @@ public class NotHiddenException {
 		try {
 			readFile();
 		} catch (ReadFileExceptions e) {
-			// »ñÈ¡ËùÓĞÒì³££¬½øĞĞÏÂÒ»²½²Ù×÷¡£
+			// è·å–æ‰€æœ‰å¼‚å¸¸ï¼Œè¿›è¡Œä¸‹ä¸€æ­¥æ“ä½œã€‚
 			e.getExceptions();
 		}
 	}
 	
 	/**
-	 * ĞÂÒì³£ÀàĞÍ£¬ÓÃÀ´±£´æÖ¸ÏòÒì³£ListµÄÒıÓÃ¡£
+	 * æ–°å¼‚å¸¸ç±»å‹ï¼Œç”¨æ¥ä¿å­˜æŒ‡å‘å¼‚å¸¸Listçš„å¼•ç”¨ã€‚
 	 */
 	static class ReadFileExceptions extends IOException {
 
@@ -50,7 +50,7 @@ public class NotHiddenException {
 	}
 	
 	public static void readFile() throws ReadFileExceptions {
-		// Òì³£List£¬ÓÃÀ´¼ÇÂ¼±¾·½·¨ÄÚ·¢ÉúµÄËùÓĞÒì³£¡£
+		// å¼‚å¸¸Listï¼Œç”¨æ¥è®°å½•æœ¬æ–¹æ³•å†…å‘ç”Ÿçš„æ‰€æœ‰å¼‚å¸¸ã€‚
 		List<Exception> exceptions = new ArrayList<Exception>();
 		 
 		BufferedReader br = null;
@@ -61,18 +61,18 @@ public class NotHiddenException {
 			br.read();
 			// ...
 		} catch (FileNotFoundException e) {
-			exceptions.add(e);// Ìí¼ÓÒ»¸öÒì³£
+			exceptions.add(e);// æ·»åŠ ä¸€ä¸ªå¼‚å¸¸
 		} catch (IOException e) {
-			exceptions.add(e);// Ìí¼ÓÒ»¸öÒì³£
+			exceptions.add(e);// æ·»åŠ ä¸€ä¸ªå¼‚å¸¸
 		} finally {
 			if (br != null) {
 				try {
 					br.close();
 				} catch (IOException e) {
-					exceptions.add(e);// Ìí¼ÓÒ»¸öÒì³£
+					exceptions.add(e);// æ·»åŠ ä¸€ä¸ªå¼‚å¸¸
 				}
 			}
-			// Èç¹ûÕæÓĞÒì³£·¢ÉúÁË£¬Å×³öĞÂĞÍÒì³££¬²¢°ÑÒì³£List´«¸øËü¡£
+			// å¦‚æœçœŸæœ‰å¼‚å¸¸å‘ç”Ÿäº†ï¼ŒæŠ›å‡ºæ–°å‹å¼‚å¸¸ï¼Œå¹¶æŠŠå¼‚å¸¸Listä¼ ç»™å®ƒã€‚
 			if(exceptions.size() > 0) {
 				throw new ReadFileExceptions(exceptions);
 			}

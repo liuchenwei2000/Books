@@ -8,15 +8,15 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * ÈËÀà(¾É)
+ * äººç±»(æ—§)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class Person {
 
-	private Set<Course> courses;// ¿Î³Ì
+	private Set<Course> courses;// è¯¾ç¨‹
 
 	public Person() {
 	}
@@ -36,21 +36,21 @@ public class Person {
 	}
 
 	/**
-	 * ÑÝÊ¾Ê¹ÓÃ±¾ÀàµÄ¹ý³Ì
+	 * æ¼”ç¤ºä½¿ç”¨æœ¬ç±»çš„è¿‡ç¨‹
 	 */
 	public static void main(String[] args) {
 		Person person = new Person();
-		// ÉèÖÃ¿Î³Ì
+		// è®¾ç½®è¯¾ç¨‹
 		Set<Course> courses = new HashSet<Course>();
 		courses.add(new Course("English", false));
 		courses.add(new Course("Math", true));
 		person.setCourses(courses);
-		// Ìí¼ÓÐÂ¿Î³Ì
+		// æ·»åŠ æ–°è¯¾ç¨‹
 		Course java = new Course("Java", true);
 		person.getCourses().add(java);
-		// É¾³ý¿Î³Ì
+		// åˆ é™¤è¯¾ç¨‹
 		person.getCourses().remove(java);
-		// ²é¿´¸ß¼¶¿Î³ÌÊýÄ¿
+		// æŸ¥çœ‹é«˜çº§è¯¾ç¨‹æ•°ç›®
 		int counter = 0;
 		Iterator<Course> it = person.getCourses().iterator();
 		while (it.hasNext()) {

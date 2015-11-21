@@ -1,3 +1,3 @@
-16��Replace Subclass with Fields(��ֵ��ȡ������)
-�������Ψһ���ֻ�ڷ��س������ݵĺ����ϣ��޸���Щ������
-ʹ���Ƿ��ػ����е�ĳ������ֵ��Ȼ���������ࡣ
+16，Replace Subclass with Fields(以值域取代子类)
+若子类的唯一差别只在返回常量数据的函数上，修改这些函数，
+使它们返回基类中的某个新增值域，然后销毁子类。

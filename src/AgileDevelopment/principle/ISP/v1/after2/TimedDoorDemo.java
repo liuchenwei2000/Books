@@ -4,21 +4,21 @@
 package principle.ISP.v1.after2;
 
 /**
- * ���ж�ʱ���ܵ�����ʾ��
+ * 具有定时功能的门演示类
  * <p>
- * ������Ҫһ�����ж�ʱ���ܵ��ţ����ǻ�������Ĵ�����������µĸĶ�����ѭISP
+ * 现在需要一个具有定时功能的门，于是基于最初的代码进行了如下的改动，遵循ISP
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-10-31
+ * 创建日期：2010-10-31
  */
 public class TimedDoorDemo {
 }
 
 /**
- * ����
+ * 门类
  * <p>
- * �������κ��޸�
+ * 不再做任何修改
  */
 abstract class Door {
 
@@ -30,9 +30,9 @@ abstract class Door {
 }
 
 /**
- * ľ�ţ��ŵ�һ����ͨʵ����
+ * 木门，门的一个普通实现类
  * <p>
- * ��ʱ��Ͳ���Ҫ�Ա�������κα䶯��
+ * 这时候就不需要对本类进行任何变动了
  */
 class WoodDoor extends Door {
 
@@ -50,17 +50,17 @@ class WoodDoor extends Door {
 }
 
 /**
- * ��ʱ����
+ * 定时器类
  */
 class Timer {
 
 	/**
-	 * ע��һ����ʱ�ͻ���
+	 * 注册一个定时客户端
 	 * 
 	 * @param timerClient
-	 *            ��ʱ���ͻ���
+	 *            定时器客户端
 	 * @param timeout
-	 *            ��ʱ����
+	 *            超时秒数
 	 */
 	public void register(TimerClient timerClient, int timeout) {
 		for (int i = timeout; i > 0; i--) {
@@ -70,28 +70,28 @@ class Timer {
 				e.printStackTrace();
 			}
 		}
-		// ��ʱʱ�䵽��֮��֪ͨ��ʱ���ͻ���ִ�в���
+		// 定时时间到了之后通知定时器客户端执行操作
 		timerClient.timeOut();
 	}
 }
 
 /**
- * ��ʱ�ͻ���
+ * 定时客户端
  */
 interface TimerClient {
 
 	/**
-	 * ���˶�ʱʱ�����Ĳ���
+	 * 到了定时时间做的操作
 	 */
 	public void timeOut();
 }
 
 /**
- * ���ж�ʱ���ܵ���
+ * 具有定时功能的门
  * <p>
- * �̳���Door������ʵ����TimerClient����˾��ж�ʱ������
+ * 继承自Door，并且实现了TimerClient，因此具有定时功能了
  * <p>
- * ʹ��ί�з���ӿڣ�Ҳ���Ƕ����������ģʽ
+ * 使用委托分离接口，也就是对象的适配器模式
  */
 class TimedDoor extends Door {
 
@@ -110,12 +110,12 @@ class TimedDoor extends Door {
 }
 
 /**
- * TimedDoor�����������Ա��ڿ�����ɶ�ʱ����
+ * TimedDoor的适配器，以便于可以完成定时功能
  * <p>
- * ������������̫���ţ�ÿ����ҪΪTimedDoorע��һ����ʱ����ʱ��
- * ��Ҫȥ����һ���µ�����������(TimedDoorAdapter)�����ռ���ڴ沢Ӱ������ʱ��
- * ͨ��������ѡ�����������ģʽ��ֻ�е�TimedDoorAdapter������Ҫ����ת���Ǳ����
- * (���޷��޸�TimedDoor��Դ��)�����߲�ͬ��ʱ�����Ҫ��ͬ��ת��ʱ���Ż�ѡ������������ģʽ
+ * 这个解决方案不太优雅，每次想要为TimedDoor注册一个超时请求时，
+ * 都要去创建一个新的适配器对象(TimedDoorAdapter)，这会占用内存并影响运行时间
+ * 通常会优先选择类的适配器模式，只有当TimedDoorAdapter对象所要做的转换是必须的
+ * (如无法修改TimedDoor的源码)，或者不同的时候会需要不同的转换时，才会选择对象的适配器模式
  */
 class TimedDoorAdapter implements TimerClient {
 

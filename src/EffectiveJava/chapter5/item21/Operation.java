@@ -4,15 +4,15 @@
 package chapter5.item21;
 
 /**
- * ÔËËã²Ù×÷Ã¶¾Ù
+ * è¿ç®—æ“ä½œæšä¸¾
  * <p>
- * Èç¹ûÒ»¸öÀàĞÍ°²È«Ã¶¾ÙÀàÓĞÒ»Ğ©·½·¨£¬¶ÔÓÚ²»Í¬µÄ³£Á¿ÆäĞĞÎªÓĞºÜ´óµÄ±ä»¯£¬
- * ÄÇÃ´Ó¦¸ÃÎªÃ¿Ò»¸ö³£Á¿ÓÃÒ»¸öµ¥¶ÀµÄË½ÓĞÀà»òÕßÄäÃûµÄÄÚ²¿Àà¡£
- * ÕâÊ¹µÃÃ¿¸ö³£Á¿¶ÔÓÚÃ¿¸öÕâÑùµÄ·½·¨¶¼ÓĞ×Ô¼ºµÄÊµÏÖ£¬¶øÇÒÒ²¿ÉÒÔ×Ô¶¯µ÷ÓÃÕıÈ·µÄ·½·¨ÊµÏÖ¡£
+ * å¦‚æœä¸€ä¸ªç±»å‹å®‰å…¨æšä¸¾ç±»æœ‰ä¸€äº›æ–¹æ³•ï¼Œå¯¹äºä¸åŒçš„å¸¸é‡å…¶è¡Œä¸ºæœ‰å¾ˆå¤§çš„å˜åŒ–ï¼Œ
+ * é‚£ä¹ˆåº”è¯¥ä¸ºæ¯ä¸€ä¸ªå¸¸é‡ç”¨ä¸€ä¸ªå•ç‹¬çš„ç§æœ‰ç±»æˆ–è€…åŒ¿åçš„å†…éƒ¨ç±»ã€‚
+ * è¿™ä½¿å¾—æ¯ä¸ªå¸¸é‡å¯¹äºæ¯ä¸ªè¿™æ ·çš„æ–¹æ³•éƒ½æœ‰è‡ªå·±çš„å®ç°ï¼Œè€Œä¸”ä¹Ÿå¯ä»¥è‡ªåŠ¨è°ƒç”¨æ­£ç¡®çš„æ–¹æ³•å®ç°ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-14
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-14
  */
 public abstract class Operation {
 
@@ -23,7 +23,7 @@ public abstract class Operation {
 	}
 
 	/**
-	 * ·µ»ØÔËËã½á¹û
+	 * è¿”å›è¿ç®—ç»“æœ
 	 */
 	abstract double eval(double x, double y);
 
@@ -32,7 +32,7 @@ public abstract class Operation {
 	}
 
 	/**
-	 * ¼Ó·¨
+	 * åŠ æ³•
 	 */
 	public static final Operation PLUS = new Operation("+") {
 
@@ -43,7 +43,7 @@ public abstract class Operation {
 	};
 
 	/**
-	 * ¼õ·¨
+	 * å‡æ³•
 	 */
 	public static final Operation MINUS = new Operation("-") {
 
@@ -54,7 +54,7 @@ public abstract class Operation {
 	};
 
 	/**
-	 * ³Ë·¨
+	 * ä¹˜æ³•
 	 */
 	public static final Operation TIMES = new Operation("*") {
 
@@ -65,7 +65,7 @@ public abstract class Operation {
 	};
 
 	/**
-	 * ³ı·¨
+	 * é™¤æ³•
 	 */
 	public static final Operation DIVIDE = new Operation("/") {
 

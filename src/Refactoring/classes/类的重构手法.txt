@@ -1,41 +1,41 @@
-                                               �� �� �� �� �� ��
-1��Move Method(���ƺ���)
-ĳ���������ڵ�������һ������и���Ľ��������ú��߻��߱����ߵ��á�
-����ڸú�������õ����н���һ������������Ϊ���º��������ɺ������һ��������ί�к��������߽��ɺ�����ȫ�Ƴ���
-���һ������̫�����Ϊ������������һ������̫�����(��ʹ����һ����Ķ���Ĵ����ܶ�)���γɸ߶���ϣ��Ǿ�Ӧ�ð��ƺ�����������þ����򵥡�
-2��Move Field(����ֵ��)
-ĳ��Field�������ڵ���֮�����һ���������õ��������Ŀ�����н���һ���µ�Field��
-��ͬʱ������Ӧ��set/get�������޸�Դ������к�����ʹ���Ǹ����µ�Field(���û��һ���ֳɵ�Field���߷������Եõ�Ŀ�������
-������Դ���н���һ��Field���Ŀ�������)��ͬʱ�޸�Field��set/get������
-3��Extract Class(������)
-ĳ�������˲�ֹһ��������Ӧ�ý���һ���µ��࣬����ص�Field�ͺ����Ӿɵ�����Ƶ��µ��ࡣ
-���ĳЩ���ݺ�ĳЩ��������һ����֣�����ĳЩ���ݾ���ͬʱ�仯�����˴��������߾�Ӧ�ý����Ƿ����ȥ��
-������
-������ηֽ������������Σ�Ȼ����һ�����࣬���Ա��ִӾɵ����з���������Ρ�
-ʹ��Move Field �� Move Method������ֵ��ͺ������Ƶ������У��Ȱ��ƽϵײ�ĺ����ٰ��ƽϸ߲�ġ�
-4��Inline Class(����������)
-���һ����û����̫�������(û�ге��㹻������)���������������԰��Ƶ���һ����(��Դ���ʹ����Ƶ������)�в�ɾ��Դ�ࡣ
-������
-�ںϲ��˵����Ͻ���Դ���ṩ�����е�publicЭ�飬Ȼ�����е�Դ������õ��Ϊ���úϲ����࣬
-ʹ��Move Field��Move Method��������Դ���������ͺ��������ɾ��Դ�ࡣ
-5��Hide Delegate(����ί�й�ϵ)
-���ͻ��˵�����ֱ�ӵ�����������(server object)��ί����(delegate class)�ĺ���ʱ��
-�ڷ����ཨ���ͻ�����������к�������������ί�й�ϵ����ǿ��װ�ԡ�
-�����ĳ���ͻ��˵����˽����ڷ������(server object)��ĳ��ֵ�����֮�ϵĺ�����
-��ô�ͻ��˾ͱ���֪����һί�ж���(delegate object����server object���Ǹ�ֵ��)��һί�й�ϵ�����仯�ͻ���Ҳ�ø�����Ӧ�仯��
-��ʱ������server������һ���򵥵�ί�к���(delegating method)��ί�й�ϵ�����������Ӷ�ȥ�����������ԡ�
-��ʱ�ٷ���ί�й�ϵ�ϵı仯���仯����������server�в��Შ���ͻ��ˡ�
-������
-��ÿһ��ί�й�ϵ�еĺ�����zaiserver�˽���һ���򵥵�ί�к�����
-Ȼ������ͻ��ˣ�����ֻ����server�ṩ�ĺ�������׼���������Ե����²㣬
-��������������κοͻ�����Ҫȡ�������࣬����Ƴ�server����صķ��ʺ�����
-6��Remove Middle Man(�Ƴ��м���)
-��ĳ�������˹���ļ�ί�ж���ʱ���ÿͻ���ֱ�ӵ��������ࡣ
-����ַ�������ί�����෴�ģ���server��ȫ�����һ��ί����ʱ��Ӧ���ÿͻ���ֱ�ӵ����������ˡ�����������ί��ǡǡ�෴��
-7��Introduce Foreign Method(������Ӻ���)
-����ͻ�����ʹ�õ�server class��Ҫһ�����⺯�������ͻ����޷��޸�����࣬�Ǿ��ڿͻ������н���һ��������
-����һ��server classʵ����Ϊ��һ��������ʵ������Ҫ�Ĺ��ܡ�����������������ʹ�ã���ô���������Ӧ�ñ����뵽server class���ˡ�
-(���ֻ��Ҫ���������Ķ��⺯�������ñ��ַ������������������������ַ�)
-8��Introduce Local Extension(���뱾����չ)
-����ͻ�����ʹ�õ�server classȷʵ��ҪһЩ���⺯�������ǿͻ����޷��޸����server class��
-��ʱ��Ӧ�ý���һ�����࣬����server class������(subclass)���߰�װ��(Wrapper)��ʹ����������Щ�������ĺ�����
+                                               类 的 重 构 手 法
+1，Move Method(搬移函数)
+某个函数所在的类与另一个类进行更多的交流：调用后者或者被后者调用。
+则可在该函数最常引用的类中建立一个有着类似行为的新函数，将旧函数变成一个单纯的委托函数，或者将旧函数完全移除。
+如果一个类有太多的行为，或者它与另一个类有太多合作(如使用另一个类的对象的次数很多)而形成高度耦合，那就应该搬移函数是这个类变得尽量简单。
+2，Move Field(搬移值域)
+某个Field被其所在的类之外的另一个类更多的用到，则可在目标类中建立一个新的Field，
+并同时建立相应的set/get方法，修改源类的所有函数，使它们改用新的Field(如果没有一个现成的Field或者方法可以得到目标类对象，
+可以在源类中建立一个Field存放目标类对象)，同时修改Field的set/get方法。
+3，Extract Class(提炼类)
+某个类做了不止一件事情则应该建立一个新的类，把相关的Field和函数从旧的类搬移到新的类。
+如果某些数据和某些函数总是一起出现，或者某些数据经常同时变化甚至彼此相依，者就应该将它们分离出去。
+作法：
+决定如何分解类所负的责任，然后建立一个新类，用以表现从旧的类中分离出的责任。
+使用Move Field 和 Move Method方法将值域和函数搬移到新类中，先搬移较底层的函数再搬移较高层的。
+4，Inline Class(将类内联化)
+如果一个类没有做太多的事情(没有承担足够的责任)则将这个类的所有特性搬移到另一个类(对源类的使用最频繁的类)中并删除源类。
+作法：
+在合并端的类上建立源类提供的所有的public协议，然后将所有的源类的引用点改为引用合并端类，
+使用Move Field和Move Method方法搬移源类的所有域和函数，最后删除源类。
+5，Hide Delegate(隐藏委托关系)
+当客户端的类能直接调用其服务对象(server object)的委托类(delegate class)的函数时，
+在服务类建立客户端所需的所有函数，用以隐藏委托关系以增强封装性。
+即如果某个客户端调用了建立于服务对象(server object)的某个值域基础之上的函数，
+那么客户端就必须知晓这一委托对象(delegate object，即server object的那个值域)万一委托关系发生变化客户端也得跟着相应变化，
+这时可以在server端增加一个简单的委托函数(delegating method)将委托关系隐藏起来，从而去除这种依赖性。
+这时再发生委托关系上的变化，变化将被限制在server中不会波及客户端。
+作法：
+对每一个委托关系中的函数，zaiserver端建立一个简单的委托函数。
+然后调整客户端，令它只调用server提供的函数，不准其跳过径自调用下层，
+如果将来不再有任何客户端需要取用受托类，便可移除server中相关的访问函数。
+6，Remove Middle Man(移除中间人)
+当某个类做了过多的简单委托动作时就让客户端直接调用受托类。
+这个手法和隐藏委托是相反的，当server完全变成了一个委托类时就应该让客户端直接调用受托类了。作法和隐藏委托恰恰相反。
+7，Introduce Foreign Method(引入外加函数)
+如果客户端所使用的server class需要一个额外函数，但客户端无法修改这个类，那就在客户端类中建立一个函数，
+并以一个server class实体作为第一个参数来实现所需要的功能。如果这个函数被大量使用，那么这个函数就应该被放入到server class中了。
+(如果只需要少于两个的额外函数可以用本手法，如果多于两个则用下面的手法)
+8，Introduce Local Extension(引入本地扩展)
+如果客户端所使用的server class确实需要一些额外函数，但是客户端无法修改这个server class。
+这时就应该建立一个新类，它是server class的子类(subclass)或者包装类(Wrapper)，使这个类包含这些额外必需的函数。

@@ -1,6 +1,6 @@
-synchronizedÐÞÊÎstaticº¯ÊýÓëinstanceº¯ÊýÊÇÓÐ²îÒìµÄ
+synchronizedä¿®é¥°staticå‡½æ•°ä¸Žinstanceå‡½æ•°æ˜¯æœ‰å·®å¼‚çš„
 
 
-¹Ø¼ü´Êsynchronized¿É×÷ÓÃÓÚstaticº¯ÊýºÍclass×ÖÃæÁ¿(¼´Object.classÕâÖÖ¶ÔÏó)£¬¾ÍÏñ×÷ÓÃÓÚinstanceº¯ÊýºÍ¶ÔÏóÉÏÒ»Ñù¡£
-µ±µ÷ÓÃÒ»¸ösynchronized staticº¯ÊýÊ±£¬»ñµÃµÄlock½«Óë¶¨Òå¸Ãº¯ÊýµÄclassµÄClass¶ÔÏóÏà¹ØÁª£¬¶ø²»ÊÇµ÷ÓÃº¯ÊýµÄÄÇ¸ö¶ÔÏóÏà¹ØÁª¡£
-µ±¶ÔÒ»¸öclass×ÖÃæÁ¿µ÷ÓÃÆäsynchronizedÇø¶ÎÊ±£¬»ñµÃµÄÒ²ÊÇÍ¬ÑùÄÇ¸ölock£¬Ò²¾ÍÊÇÓëÌØ¶¨Class¶ÔÏóÏà¹ØÁªµÄlock¡£
+å…³é”®è¯synchronizedå¯ä½œç”¨äºŽstaticå‡½æ•°å’Œclasså­—é¢é‡(å³Object.classè¿™ç§å¯¹è±¡)ï¼Œå°±åƒä½œç”¨äºŽinstanceå‡½æ•°å’Œå¯¹è±¡ä¸Šä¸€æ ·ã€‚
+å½“è°ƒç”¨ä¸€ä¸ªsynchronized staticå‡½æ•°æ—¶ï¼ŒèŽ·å¾—çš„lockå°†ä¸Žå®šä¹‰è¯¥å‡½æ•°çš„classçš„Classå¯¹è±¡ç›¸å…³è”ï¼Œè€Œä¸æ˜¯è°ƒç”¨å‡½æ•°çš„é‚£ä¸ªå¯¹è±¡ç›¸å…³è”ã€‚
+å½“å¯¹ä¸€ä¸ªclasså­—é¢é‡è°ƒç”¨å…¶synchronizedåŒºæ®µæ—¶ï¼ŒèŽ·å¾—çš„ä¹Ÿæ˜¯åŒæ ·é‚£ä¸ªlockï¼Œä¹Ÿå°±æ˜¯ä¸Žç‰¹å®šClasså¯¹è±¡ç›¸å…³è”çš„lockã€‚

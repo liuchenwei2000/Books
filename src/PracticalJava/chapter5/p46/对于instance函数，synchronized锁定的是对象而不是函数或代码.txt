@@ -1,20 +1,20 @@
-¶ÔÓÚinstanceº¯Êý£¬synchronizedËø¶¨µÄÊÇ¶ÔÏó¶ø²»ÊÇº¯Êý»ò´úÂë
+å¯¹äºŽinstanceå‡½æ•°ï¼Œsynchronizedé”å®šçš„æ˜¯å¯¹è±¡è€Œä¸æ˜¯å‡½æ•°æˆ–ä»£ç 
 
 
-¹Ø¼ü´Êsynchronized¿ÉÓÃ×÷º¯ÊýÐÞÊÎ·û£¬Ò²¿ÉÓÃ×÷º¯ÊýÄÚµÄÓï¾ä¡£
+å…³é”®è¯synchronizedå¯ç”¨ä½œå‡½æ•°ä¿®é¥°ç¬¦ï¼Œä¹Ÿå¯ç”¨ä½œå‡½æ•°å†…çš„è¯­å¥ã€‚
 
-¶ÔÓÚinstanceº¯Êý£¬¹Ø¼ü´ÊsynchronizedÆäÊµ²¢²»Ëø¶¨º¯Êý»ò´úÂë£¬ËüËø¶¨µÄÊÇ¶ÔÏó¡£
-¼Ç×¡£¬Ã¿¸ö¶ÔÏóÖ»ÓÐÒ»¸ölockÓëÖ®Ïà¹ØÁª¡£
+å¯¹äºŽinstanceå‡½æ•°ï¼Œå…³é”®è¯synchronizedå…¶å®žå¹¶ä¸é”å®šå‡½æ•°æˆ–ä»£ç ï¼Œå®ƒé”å®šçš„æ˜¯å¯¹è±¡ã€‚
+è®°ä½ï¼Œæ¯ä¸ªå¯¹è±¡åªæœ‰ä¸€ä¸ªlockä¸Žä¹‹ç›¸å…³è”ã€‚
 
-µ±synchronized±»µ±×÷º¯ÊýÐÞÊÎ·ûµÄÊ±ºò£¬ËüËùÈ¡µÃµÄlock½«±»½»¸øº¯Êýµ÷ÓÃÕß(Ä³¶ÔÏó)¡£
-Èç¹ûsynchronizedÓÃÓÚobject reference£¬ÔòÈ¡µÃµÄlock½«±»½»¸ø¸ÃreferenceËùÖ¸¶ÔÏó¡£
+å½“synchronizedè¢«å½“ä½œå‡½æ•°ä¿®é¥°ç¬¦çš„æ—¶å€™ï¼Œå®ƒæ‰€å–å¾—çš„lockå°†è¢«äº¤ç»™å‡½æ•°è°ƒç”¨è€…(æŸå¯¹è±¡)ã€‚
+å¦‚æžœsynchronizedç”¨äºŽobject referenceï¼Œåˆ™å–å¾—çš„lockå°†è¢«äº¤ç»™è¯¥referenceæ‰€æŒ‡å¯¹è±¡ã€‚
 
 
-¶ÔÒ»¸ö¶ÔÏó½øÐÐÍ¬²½¿ØÖÆµÄÒâÒå£¿
+å¯¹ä¸€ä¸ªå¯¹è±¡è¿›è¡ŒåŒæ­¥æŽ§åˆ¶çš„æ„ä¹‰ï¼Ÿ
 
-ËüÒâÎ¶×Åµ÷ÓÃsynchronizedº¯ÊýÖ®Ïß³Ì½«»áÈ¡µÃ¶ÔÏóµÄlock£¬³ÖÓÐ¶ÔÏóµÄlock£¬ÒâÎ¶×ÅÁíÒ»¸ö
-Í¨¹ýsynchronizedº¯Êý(»òÓï¾ä)À´ÉêÇë¶ÔÏólockµÄÏß³Ì£¬ÔÚ¸Ãlock±»ÊÍ·ÅÖ®Ç°½«ÎÞ·¨»ñµÃÂú×ã¡£
-È»¶øÈç¹ûÁíÒ»¸öÏß³Ì¶Ô¶ÔÏóËùÊôÀàµÄÁíÒ»¸ö¶ÔÏóBµ÷ÓÃÏàÍ¬µÄsynchronizedº¯Êý(»òÇø¿é)£¬¿ÉÒÔ»ñµÃ¶ÔÏóBµÄlock¡£
-Ò²¾ÍÊÇËµ£¬synchronizedº¯Êý(»òÇø¿é)ÄÚµÄ´úÂëÔÚÍ¬Ò»Ê±¿ÌÏÂ¿ÉÓÉ¶à¸öÏß³ÌÖ´ÐÐ¡ª¡ªÖ»ÒªÊÇ¶Ô²»Í¬µÄ¶ÔÏóµ÷ÓÃ¸Ãº¯Êý¡£
+å®ƒæ„å‘³ç€è°ƒç”¨synchronizedå‡½æ•°ä¹‹çº¿ç¨‹å°†ä¼šå–å¾—å¯¹è±¡çš„lockï¼ŒæŒæœ‰å¯¹è±¡çš„lockï¼Œæ„å‘³ç€å¦ä¸€ä¸ª
+é€šè¿‡synchronizedå‡½æ•°(æˆ–è¯­å¥)æ¥ç”³è¯·å¯¹è±¡lockçš„çº¿ç¨‹ï¼Œåœ¨è¯¥lockè¢«é‡Šæ”¾ä¹‹å‰å°†æ— æ³•èŽ·å¾—æ»¡è¶³ã€‚
+ç„¶è€Œå¦‚æžœå¦ä¸€ä¸ªçº¿ç¨‹å¯¹å¯¹è±¡æ‰€å±žç±»çš„å¦ä¸€ä¸ªå¯¹è±¡Bè°ƒç”¨ç›¸åŒçš„synchronizedå‡½æ•°(æˆ–åŒºå—)ï¼Œå¯ä»¥èŽ·å¾—å¯¹è±¡Bçš„lockã€‚
+ä¹Ÿå°±æ˜¯è¯´ï¼Œsynchronizedå‡½æ•°(æˆ–åŒºå—)å†…çš„ä»£ç åœ¨åŒä¸€æ—¶åˆ»ä¸‹å¯ç”±å¤šä¸ªçº¿ç¨‹æ‰§è¡Œâ€”â€”åªè¦æ˜¯å¯¹ä¸åŒçš„å¯¹è±¡è°ƒç”¨è¯¥å‡½æ•°ã€‚
 
-Í¬²½»úÖÆËø¶¨µÄÊÇ¶ÔÏó£¬¶ø²»ÊÇº¯Êý»ò´úÂë¡£º¯Êý»ò´úÂëÇø¶Î±»ÉùÃ÷Îªsynchronized²¢·ÇÒâÎ¶×ÅËüÔÚÍ¬Ò»Ê±¿ÌÖ»ÄÜÓÉÒ»¸öÏß³ÌÖ´ÐÐ¡£
+åŒæ­¥æœºåˆ¶é”å®šçš„æ˜¯å¯¹è±¡ï¼Œè€Œä¸æ˜¯å‡½æ•°æˆ–ä»£ç ã€‚å‡½æ•°æˆ–ä»£ç åŒºæ®µè¢«å£°æ˜Žä¸ºsynchronizedå¹¶éžæ„å‘³ç€å®ƒåœ¨åŒä¸€æ—¶åˆ»åªèƒ½ç”±ä¸€ä¸ªçº¿ç¨‹æ‰§è¡Œã€‚

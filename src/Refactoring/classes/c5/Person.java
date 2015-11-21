@@ -4,11 +4,11 @@
 package classes.c5;
 
 /**
- * ÈËÀà
+ * äººç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-29
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-29
  */
 public class Person {
 
@@ -19,8 +19,8 @@ public class Person {
 	}
 	
 	/**
-	 * ÈôÖ»ÊÇĞèÒª¸ÃPersonµÄ¾­ÀíĞÅÏ¢
-	 * ÔòÕâ¸öº¯ÊıÒ²¿ÉÒÔÉ¾³ıµô
+	 * è‹¥åªæ˜¯éœ€è¦è¯¥Personçš„ç»ç†ä¿¡æ¯
+	 * åˆ™è¿™ä¸ªå‡½æ•°ä¹Ÿå¯ä»¥åˆ é™¤æ‰
 	 */
 	public Department getDepartment() {
 		return department;
@@ -31,10 +31,10 @@ public class Person {
 	}
 
 	/**
-	 * Èç¹û¿Í»§¶ËÏ£ÍûÖªµÀÄ³ÈËµÄ¾­ÀíÊÇË­£¬¾Í±ØĞëÏÈÈ¡µÃDepartment¶ÔÏó£º
+	 * å¦‚æœå®¢æˆ·ç«¯å¸Œæœ›çŸ¥é“æŸäººçš„ç»ç†æ˜¯è°ï¼Œå°±å¿…é¡»å…ˆå–å¾—Departmentå¯¹è±¡ï¼š
 	 * manager = person.getDepartment().getManager();
-	 * ÕâÑùµÄ±àÂë¾Í¶Ô¿Í»§¶Ë½ÒÂ¶ÁËDepartmentµÄ¹¤×÷Ô­Àí£¬Èç¹û¶Ô¿Í»§¶ËÒş²ØDepartment¿ÉÒÔ¼õÉÙñîºÏ
-	 * Îª´ËÔÚPersonÖĞ½¨Á¢Ò»¸ö¼òµ¥µÄÎ¯ÍĞº¯Êı£º
+	 * è¿™æ ·çš„ç¼–ç å°±å¯¹å®¢æˆ·ç«¯æ­éœ²äº†Departmentçš„å·¥ä½œåŸç†ï¼Œå¦‚æœå¯¹å®¢æˆ·ç«¯éšè—Departmentå¯ä»¥å‡å°‘è€¦åˆ
+	 * ä¸ºæ­¤åœ¨Personä¸­å»ºç«‹ä¸€ä¸ªç®€å•çš„å§”æ‰˜å‡½æ•°ï¼š
 	 */
 	public Person getManager() {
 		return getDepartment().getManager();
@@ -42,9 +42,9 @@ public class Person {
 	
 	public static void main(String[] args) {
 		Person tom = new Person();
-		// Ã»ÓĞÎ¯ÍĞº¯ÊıµÄÓÃ·¨
+		// æ²¡æœ‰å§”æ‰˜å‡½æ•°çš„ç”¨æ³•
 		tom.getDepartment().getManager();
-		// Ê¹ÓÃÎ¯ÍĞº¯ÊıµÄÓÃ·¨
+		// ä½¿ç”¨å§”æ‰˜å‡½æ•°çš„ç”¨æ³•
 		tom.getManager();
 	}
 }

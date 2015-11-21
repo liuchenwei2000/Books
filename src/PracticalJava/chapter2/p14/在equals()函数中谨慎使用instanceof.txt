@@ -1,12 +1,12 @@
-ÔÚequals()º¯ÊýÖÐ½÷É÷Ê¹ÓÃinstanceof
+åœ¨equals()å‡½æ•°ä¸­è°¨æ…Žä½¿ç”¨instanceof
 
 
-ÕæÊµÊÀ½çÖÐÈ·Êµ´æÔÚÒ»Ð©ºÏÇéºÏÀíµÄ¿¼Á¿£¬Ï£Íû³ÌÐòÄÜ¹»Ö§³Ö»ùÀà¶ÔÏóºÍÅÉÉúÀà¶ÔÏóÖ®¼äµÄÏàµÈÐÔ±È½Ï¡£
-È»¶ø¿¼ÂÇµ½Ê¹ÓÃinstanceofËùÒý·¢µÄÖî¶àÎÊÌâ£¬»¹ÊÇÍÆ¼öÔÚequals()ÊµÏÖ´úÂëÖÐÊ¹ÓÃgetClass()¡£
-ÕâÑù×ö¾ÍÖ»ÔÊÐíÍ¬Ò»¸öclassËùÊôµÄ¶ÔÏó¿É±»ÊÓÎªÏàµÈ£¬½ø¶øÏû³ýÁËinstanceof×ö·¨Ëù´øÀ´µÄÒ»ÇÐºóÐøÎÊÌâ¡£
+çœŸå®žä¸–ç•Œä¸­ç¡®å®žå­˜åœ¨ä¸€äº›åˆæƒ…åˆç†çš„è€ƒé‡ï¼Œå¸Œæœ›ç¨‹åºèƒ½å¤Ÿæ”¯æŒåŸºç±»å¯¹è±¡å’Œæ´¾ç”Ÿç±»å¯¹è±¡ä¹‹é—´çš„ç›¸ç­‰æ€§æ¯”è¾ƒã€‚
+ç„¶è€Œè€ƒè™‘åˆ°ä½¿ç”¨instanceofæ‰€å¼•å‘çš„è¯¸å¤šé—®é¢˜ï¼Œè¿˜æ˜¯æŽ¨èåœ¨equals()å®žçŽ°ä»£ç ä¸­ä½¿ç”¨getClass()ã€‚
+è¿™æ ·åšå°±åªå…è®¸åŒä¸€ä¸ªclassæ‰€å±žçš„å¯¹è±¡å¯è¢«è§†ä¸ºç›¸ç­‰ï¼Œè¿›è€Œæ¶ˆé™¤äº†instanceofåšæ³•æ‰€å¸¦æ¥çš„ä¸€åˆ‡åŽç»­é—®é¢˜ã€‚
 
-ÔÚequals()º¯ÊýÖÐÃæ¶ÔgetClass()ºÍinstanceof½øÐÐÈ¡ÉáÊ±£¬Òª×ÐÏ¸Õå×ÃÒÔÏÂÎÊÌâ£º
-1£¬Èç¹ûÖ»ÔÊÐíÍ¬Ò»¸öclassËù²úÉúµÄ¶ÔÏó±»ÊÓÎªÏàµÈ£¬ÔòÍ¨³£Ê¹ÓÃgetClass()¡£
-2£¬Ö»ÓÐÔÚ²»µÃ²»¶ÔÅÉÉúÀà¶ÔÏóÓë»ùÀà¶ÔÏó½øÐÐ±È½ÏµÄ³¡ºÏÖÐ£¬²ÅÊ¹ÓÃinstanceof£¬ÒªÃ÷°×ÕâÑù´øÀ´µÄ¿ÉÄÜÎÊÌâºÍ¸´ÔÓ¶È¡£
-3£¬Èç¹ûÊ¹ÓÃinstanceof£¬¶øÇÒÅÉÉúÀàºÍ»ùÀà¶¼ÊµÏÖÓÐequals()£¬ÔòÒª×¢Òâ£¬ÕâÖÖ±È½Ï²»»áÕ¹ÏÖ¶Ô³ÆÏàµÈÐÔ¡£
-¼´  base.equals(derived) ºÍ  derived.equals(base)·µ»ØÖµÎ´±ØÏàÍ¬¡£ 
+åœ¨equals()å‡½æ•°ä¸­é¢å¯¹getClass()å’Œinstanceofè¿›è¡Œå–èˆæ—¶ï¼Œè¦ä»”ç»†æ–Ÿé…Œä»¥ä¸‹é—®é¢˜ï¼š
+1ï¼Œå¦‚æžœåªå…è®¸åŒä¸€ä¸ªclassæ‰€äº§ç”Ÿçš„å¯¹è±¡è¢«è§†ä¸ºç›¸ç­‰ï¼Œåˆ™é€šå¸¸ä½¿ç”¨getClass()ã€‚
+2ï¼Œåªæœ‰åœ¨ä¸å¾—ä¸å¯¹æ´¾ç”Ÿç±»å¯¹è±¡ä¸ŽåŸºç±»å¯¹è±¡è¿›è¡Œæ¯”è¾ƒçš„åœºåˆä¸­ï¼Œæ‰ä½¿ç”¨instanceofï¼Œè¦æ˜Žç™½è¿™æ ·å¸¦æ¥çš„å¯èƒ½é—®é¢˜å’Œå¤æ‚åº¦ã€‚
+3ï¼Œå¦‚æžœä½¿ç”¨instanceofï¼Œè€Œä¸”æ´¾ç”Ÿç±»å’ŒåŸºç±»éƒ½å®žçŽ°æœ‰equals()ï¼Œåˆ™è¦æ³¨æ„ï¼Œè¿™ç§æ¯”è¾ƒä¸ä¼šå±•çŽ°å¯¹ç§°ç›¸ç­‰æ€§ã€‚
+å³  base.equals(derived) å’Œ  derived.equals(base)è¿”å›žå€¼æœªå¿…ç›¸åŒã€‚ 

@@ -4,20 +4,20 @@
 package principle.DIP.v2;
 
 /**
- * ��ť���Ƶ���ʾ��
+ * 按钮控制灯演示类
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-10-31
+ * 创建日期：2010-10-31
  */
 public class ButtonLampDemo {
 }
 
 /**
- * ��ť��
+ * 按钮类
  * <p>
- * �����ƿ���ʹButton������ЩԸ��ʵ��Switchable�ӿڵ��κ��豸
- * �⸳�������Ǽ��������ԣ�Ҳ��ζ��Button�����ܿ��ƻ�û�б���������Ķ���
+ * 这个设计可以使Button控制那些愿意实现Switchable接口的任何设备
+ * 这赋予了我们极大的灵活性，也意味着Button对象将能控制还没有被创造出来的对象
  */
 class Button {
 
@@ -46,10 +46,10 @@ class Button {
 }
 
 /**
- * �ɿ��ص� �ӿ�
+ * 可开关的 接口
  * <p>
- * ����ӿ�û�������ߣ�ʵ���ϳ���Button������Ҳ����ʹ��
- * Ҳ����˵����ӿڿ��Էŵ���Button��ͬ�Ŀ��У���Switchable��ʹ�ò��ذ�����Button��ʹ�á�
+ * 这个接口没有所有者，实际上除了Button其他类也可以使用
+ * 也就是说这个接口可以放到和Button不同的库中，对Switchable的使用不必包含对Button的使用。
  */
 interface Switchable {
 
@@ -59,7 +59,7 @@ interface Switchable {
 }
 
 /**
- * ����
+ * 灯类
  */
 class Lamp implements Switchable {
 

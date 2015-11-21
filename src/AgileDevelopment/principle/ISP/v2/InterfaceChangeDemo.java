@@ -4,25 +4,25 @@
 package principle.ISP.v2;
 
 /**
- * �ӿڸı���ʾ��
+ * 接口改变演示类
  * <p>
- * ��ά����������Ӧ�ó���ʱ��������ı������������Ľӿڡ�
- * ͨ����Щ�ı䶼����ɾ޴��Ӱ�죬������ʹϵͳ�ľ��󲿷���Ҫ���±���Ͳ���
+ * 在维护面向对象的应用程序时，常常会改变现有类和组件的接口。
+ * 通常这些改变都会造成巨大的影响，并且迫使系统的绝大部分需要重新编译和部署。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-11-1
+ * 创建日期：2010-11-1
  */
 public class InterfaceChangeDemo {
 }
 
 /**
- * �ͻ��˳���
+ * 客户端程序
  */
 class Client {
 
 	/**
-	 * ����OriginalInterface�ķ���
+	 * 操作OriginalInterface的方法
 	 */
 	public void operation(OriginalInterface oi) {
 		oi.operation1();
@@ -31,9 +31,9 @@ class Client {
 }
 
 /**
- * ԭʼ�ӿ�
+ * 原始接口
  * <p>
- * �ӿڸı��ˣ��¼���һ����������͵������е�ʵ���඼Ҫ���±���
+ * 接口改变了，新加了一个方法，这就导致所有的实现类都要重新编译
  */
 interface OriginalInterface {
 

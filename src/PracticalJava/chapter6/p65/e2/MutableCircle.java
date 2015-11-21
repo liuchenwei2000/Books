@@ -4,15 +4,15 @@
 package chapter6.p65.e2;
 
 /**
- * ¿É±äCircleÀà
+ * å¯å˜Circleç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-18
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-18
  */
 public class MutableCircle implements Circle {
 
-	private double redius;// °ë¾¶
+	private double redius;// åŠå¾„
 
 	public MutableCircle(double redius) {
 		this.redius = redius;

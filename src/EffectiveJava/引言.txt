@@ -1,9 +1,9 @@
-                               Effective Jave�Ļ���ԭ��
+                               Effective Jave的基本原则
 
 
-����Ӧ�ñ����ã������Ǳ���������������
-ģ��(ָ�κο����õ�����������ӵ�������������������ĸ���ϵͳ��������һ��ģ��)֮���������Ӧ�þ����ܵĽ��͵���С����������
-����Ӧ�þ��类��������������������ڱ���ʱ�̡�������׳
+代码应该被重用，而不是被拷贝。——复用
+模块(指任何可重用的软件组件，从单个方法到包含多个包的复杂系统都可以是一个模块)之间的相依性应该尽可能的降低到最小。——解耦
+错误应该尽早被检测出来，理想情况下是在编译时刻。——健壮
 
-API(Application Programming Interface)��ָ�ࡢ�ӿڡ����캯������Ա�����л���ʽ������Աͨ�����ǿ��Է���һ���ࡢ�ӿڻ����
-ʹ��API��д����ĳ���Ա����Ϊ��API���û�(user)�������ʵ����ʹ����API���౻��Ϊ��API�Ŀͻ�(client)��
+API(Application Programming Interface)是指类、接口、构造函数、成员和序列化形式，程序员通过它们可以访问一个类、接口或包。
+使用API编写程序的程序员被称为该API的用户(user)，在类的实现中使用了API的类被称为该API的客户(client)。

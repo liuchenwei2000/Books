@@ -1,7 +1,7 @@
-����super.equals()�Ի���base class�������Ϊ
+调用super.equals()以唤起base class的相关行为
 
 
-Ҫ��Ƚϻ�������ԣ������equals()����Ҳ�����ã�Ϊ��׼ȷ����ıȽ���Щ���󣬱���ȷ��������������equals()�����ִ�С�
-������equals()����ʵ�ֲμ�ʾ�����롣
+要想比较基类的属性，基类的equals()必须也被调用，为求准确无误的比较这些对象，必须确保基类和派生类的equals()都获得执行。
+派生类equals()具体实现参见示例代码。
 
-��Ϊһ��������׫дequals()ʱ��������java.lang.Object֮������л��࣬���������Ƿ�ʵ����equals()������У���ôһ��Ҫ����super.equals().
+当为一个派生类撰写equals()时，必须检查java.lang.Object之外的所有基类，看看它们是否都实现有equals()。如果有，那么一定要调用super.equals().

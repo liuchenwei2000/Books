@@ -4,15 +4,15 @@
 package fields.f13.after;
 
 /**
- * ÈËÀà(ĞÂ)
+ * äººç±»(æ–°)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2007-10-26
+ * åˆ›å»ºæ—¶é—´ï¼š2007-10-26
  */
 public class Person {
 
-	private BloodGroup bloodGroup;// ÑªĞÍ
+	private BloodGroup bloodGroup;// è¡€å‹
 
 	public Person(BloodGroup bloodGroup) {
 		this.bloodGroup = bloodGroup;
@@ -34,14 +34,14 @@ public class Person {
 	}
 
 	/**
-	 * ·µ»ØÑªĞÍ±àÂë
+	 * è¿”å›è¡€å‹ç¼–ç 
 	 */
 	public int getBloodGroupCode() {
 		return bloodGroup.getCode();
 	}
 	
 	public static void main(String[] args) {
-		// ÕâÑù¾ÍÄÜ¹»½øĞĞÀàĞÍ¼ì²é±£Ö¤²ÎÊıµÄºÏ·¨ĞÔ
+		// è¿™æ ·å°±èƒ½å¤Ÿè¿›è¡Œç±»å‹æ£€æŸ¥ä¿è¯å‚æ•°çš„åˆæ³•æ€§
 		Person p1 = new Person(BloodGroup.A);
 		p1.getBloodGroup();
 		p1.getBloodGroupCode();

@@ -7,15 +7,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * ÊµÏÖ×ÔÎÒ¹ÜÀí·ÇÄÚ´æ×ÊÔ´µÄÀà
+ * å®ç°è‡ªæˆ‘ç®¡ç†éå†…å­˜èµ„æºçš„ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2012-11-19
+ * åˆ›å»ºæ—¥æœŸï¼š2012-11-19
  */
 public class Communication {
 
-	// ·ÇÄÚ´æ×ÊÔ´
+	// éå†…å­˜èµ„æº
 	private FileInputStream fis;
 
 	public Communication() {
@@ -27,17 +27,17 @@ public class Communication {
 	}
 
 	/**
-	 * ¸ºÔğÊÍ·Å·ÇÄÚ´æ×ÊÔ´µÄpublic·½·¨£¬¿ÉÒÔÔÚÈÎºÎÊ±ºò±»ÆäËû´úÂëµ÷ÓÃ¡£
+	 * è´Ÿè´£é‡Šæ”¾éå†…å­˜èµ„æºçš„publicæ–¹æ³•ï¼Œå¯ä»¥åœ¨ä»»ä½•æ—¶å€™è¢«å…¶ä»–ä»£ç è°ƒç”¨ã€‚
 	 */
 	public synchronized void cleanup() throws IOException {
-		if (fis != null) {// ·ÀÖ¹¶à´ÎÖØ¸´µ÷ÓÃ
+		if (fis != null) {// é˜²æ­¢å¤šæ¬¡é‡å¤è°ƒç”¨
 			fis.close();
 			fis = null;
 		}
 	}
 
 	/**
-	 * ÖØĞ´ÁËfinalize()£¬Ëüµ÷ÓÃcleanup()¡£µ±JVMµ÷ÓÃfinalize()Ê±£¬¾Í»áÊÍ·Å·ÇÄÚ´æ×ÊÔ´¡£
+	 * é‡å†™äº†finalize()ï¼Œå®ƒè°ƒç”¨cleanup()ã€‚å½“JVMè°ƒç”¨finalize()æ—¶ï¼Œå°±ä¼šé‡Šæ”¾éå†…å­˜èµ„æºã€‚
 	 */
 	@Override
 	protected void finalize() throws Throwable {

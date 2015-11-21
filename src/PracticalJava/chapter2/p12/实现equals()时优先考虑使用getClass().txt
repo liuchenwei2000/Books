@@ -1,16 +1,16 @@
-ʵ��equals()ʱ���ȿ���ʹ��getClass()
+实现equals()时优先考虑使用getClass()
 
 
-����������������ڲ�ͬ��classes��types�������Ǳز���ȡ�
-����ʵ��equals()���ԣ�Ψ����ͬclass�������Ķ���ű���Ϊ�����һ�����������ķ�����
-Ϊ�˴����һ�㣬������equals()ʵ�ִ�����ʹ��getClass()���磺
+如果两个对象隶属于不同的classes或types，则它们必不相等。
+对于实现equals()而言，唯有相同class所产生的对象才被视为相等是一个清晰简明的方案。
+为了达成这一点，必须在equals()实现代码中使用getClass()。如：
 
 if(getClass() != obj.getClass())
 
-getClass()�᷵��ĳ��������������ࡣ
+getClass()会返回某个对象的运行期类。
 
-�������ȽϵĶ���������ͬһ��class����ôһ������ͨ��getClass()���ԣ���ʱ��equals()�Ƿ񷵻�true����ȡ������Щ����������Ƿ���ȡ�
-��ˣ�һ��ʹ��getClass()�ͱ�ʾ�������������������������Ϊ��ȡ�
+如果参与比较的对象隶属于同一个class，那么一定可以通过getClass()测试，这时的equals()是否返回true，就取决于这些对象的属性是否相等。
+因此，一旦使用getClass()就表示不允许派生类对象与基类对象被视为相等。
 
-equals()�����ʵ�ַ�ʽ���Ǵ���getClass()�����߿�ȷ��ֻ����ͬclass�������Ķ�����л��ᱻ��Ϊ��ȡ�
-���⣬equals()Ӧ���鿴����ȽϵĶ����Ƿ�Ϊͬһ������equals()���ض�ÿһ�����Խ��бȽϣ�ֻ����Щ��������Ե����Բ���Ҫ�Ƚϡ�
+equals()的最佳实现方式就是搭配getClass()，后者可确保只有相同class所产生的对象才有机会被视为相等。
+此外，equals()应当查看参与比较的对象是否为同一个对象。equals()不必对每一个属性进行比较，只有那些攸关相等性的属性才需要比较。

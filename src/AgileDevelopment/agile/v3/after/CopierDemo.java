@@ -4,11 +4,11 @@
 package agile.v3.after;
 
 /**
- * Copierʾ��
+ * Copier示例
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2010-10-24
+ * 创建日期：2010-10-24
  */
 public class CopierDemo {
 	
@@ -17,18 +17,18 @@ public class CopierDemo {
 	 */
 	public static void main(String[] args) {
 		Copier copier = new Copier();
-		// �����Ҫ��ӡ����Ļ�ϣ���Ҫ�޸�main����(���ͻ��˳���)������Ҫ�޸�Copier
-		// ��ʹ��������������豸��ֻҪ�ͻ��˳����Լ������ϾͿ����ˣ������޸�Copier
+		// 如果想要打印在屏幕上，需要修改main方法(即客户端程序)，不需要修改Copier
+		// 即使再增加其他输出设备，只要客户端程序自己设置上就可以了，不需修改Copier
 		copier.setPrinter(new Screen());
 		copier.copy();
 	}
 }
 
 /**
- * �����������������������ݲ����������豸��ӡ����
+ * 需求变更：从输入器读入数据并输出到输出设备打印出来
  * <p>
- * �����Ŷӵķ�Ӧ���޸���Ʋ�ʹ�޸ĺ����ƶ�����һ������ı仯���е���
- * ʵ�����޸���ѭ��OCP
+ * 敏捷团队的反应：修改设计并使修改后的设计对于这一类需求的变化具有弹性
+ * 实际上修改遵循了OCP
  */
 class Copier {
 

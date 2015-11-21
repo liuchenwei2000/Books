@@ -4,11 +4,11 @@
 package principle.OCP.v2;
 
 /**
- * Client-ServerÊ¾Àı
+ * Client-Serverç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-10-28
+ * åˆ›å»ºæ—¥æœŸï¼š2010-10-28
  */
 public class ClientServerDemo {
 
@@ -18,20 +18,20 @@ public class ClientServerDemo {
 	public static void main(String[] args) {
 		Client client = new Client();
 		client.connect();
-		// Èç¹ûClient¶ÔÏóÏ£ÍûÊ¹ÓÃÁíÍâÒ»¸ö²»Í¬µÄ·şÎñÆ÷¶ÔÏó£¬¾Í²»ĞèÒªĞŞ¸ÄClientµÄÔ´ÂëÁË
+		// å¦‚æœClientå¯¹è±¡å¸Œæœ›ä½¿ç”¨å¦å¤–ä¸€ä¸ªä¸åŒçš„æœåŠ¡å™¨å¯¹è±¡ï¼Œå°±ä¸éœ€è¦ä¿®æ”¹Clientçš„æºç äº†
 		client.setClientInterface(new NewServer());
 	}
 }
 
 /**
- * ¼È¿ª·ÅÓÖ·â±ÕµÄClientÀà
+ * æ—¢å¼€æ”¾åˆå°é—­çš„Clientç±»
  */
 class Client {
 	
 	/*
-	 * ClientĞèÒªÊµÏÖÒ»Ğ©¹¦ÄÜ£¬Ëü¿ÉÒÔÊ¹ÓÃClientInterface½Ó¿ÚÈ¥Ãè»æÄÇĞ©¹¦ÄÜ
-	 * ClientInterfaceµÄ×ÓÀàĞÍ¿ÉÒÔÒÔÈÎºÎËüÃÇËùÑ¡ÔñµÄ·½Ê½È¥ÊµÏÖÕâ¸ö½Ó¿Ú
-	 * ÕâÑù¾Í¿ÉÒÔÍ¨¹ı´´½¨ClientInterfaceµÄĞÂµÄ×ÓÀàĞÍµÄ·½Ê½È¥À©Õ¹¡¢¸ü¸ÄClientÖĞÖ¸¶¨µÄĞĞÎª
+	 * Clientéœ€è¦å®ç°ä¸€äº›åŠŸèƒ½ï¼Œå®ƒå¯ä»¥ä½¿ç”¨ClientInterfaceæ¥å£å»æç»˜é‚£äº›åŠŸèƒ½
+	 * ClientInterfaceçš„å­ç±»å‹å¯ä»¥ä»¥ä»»ä½•å®ƒä»¬æ‰€é€‰æ‹©çš„æ–¹å¼å»å®ç°è¿™ä¸ªæ¥å£
+	 * è¿™æ ·å°±å¯ä»¥é€šè¿‡åˆ›å»ºClientInterfaceçš„æ–°çš„å­ç±»å‹çš„æ–¹å¼å»æ‰©å±•ã€æ›´æ”¹Clientä¸­æŒ‡å®šçš„è¡Œä¸º
 	 */
 	private ClientInterface clientInterface;
 
@@ -45,8 +45,8 @@ class Client {
 }
 
 /**
- * Ö®ËùÒÔ²»°Ñ½Ó¿ÚÃüÃûÎªAbstractServerÊÇÒòÎª³éÏóÀà(½Ó¿Ú)
- * ºÍËüÃÇµÄ¿Í»§µÄ¹ØÏµÒª±ÈºÍÊµÏÖËüÃÇµÄÀàµÄ¹ØÏµ¸üÃÜÇĞÒ»Ğ©
+ * ä¹‹æ‰€ä»¥ä¸æŠŠæ¥å£å‘½åä¸ºAbstractServeræ˜¯å› ä¸ºæŠ½è±¡ç±»(æ¥å£)
+ * å’Œå®ƒä»¬çš„å®¢æˆ·çš„å…³ç³»è¦æ¯”å’Œå®ç°å®ƒä»¬çš„ç±»çš„å…³ç³»æ›´å¯†åˆ‡ä¸€äº›
  */
 interface ClientInterface {
 }
